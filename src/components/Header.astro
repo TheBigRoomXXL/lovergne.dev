@@ -18,9 +18,9 @@ import { siteConfig } from "src/site.config";
             </h1>
         </a>
         <div class="menu-list">
-            <a href="/home" >Home</a>
-            <a href="/readings">Reading list</a>
-            <a href="/resume">Resume</a>
+            <a href="/" rel="prefetch">Home</a>
+            <a href="/readings" rel="prefetch">Reading list</a>
+            <a href="/resume" rel="prefetch">Resume</a>
         </div>
     </div>
 </nav>
@@ -34,6 +34,7 @@ import { siteConfig } from "src/site.config";
 
     .logo { 
         height: 6rem;
+        width: 6rem;
         margin-right: 0.33rem;
     }
 
@@ -46,7 +47,7 @@ import { siteConfig } from "src/site.config";
     }
 
     .title {
-        color: var(--color-dark-text) ;
+        color: var(--color-primary) ;
         font-size: 1.75rem;
         margin-top: 0rem;
         margin-bottom: 0.5rem;
@@ -57,6 +58,7 @@ import { siteConfig } from "src/site.config";
     }
 
     .menu-list > a {
+        color: var(--color-secondary);
         font-size: 1rem;
     }
 
