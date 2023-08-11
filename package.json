@@ -3,13 +3,19 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "astro dev --host=0.0.0.0",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
+    "@csstools/normalize.css": "^12.0.0",
     "astro": "^2.10.2"
+  },
+  "devDependencies": {
+    "@unocss/preset-uno": "^0.55.0",
+    "@unocss/reset": "^0.55.0",
+    "unocss": "^0.55.0"
   }
 }

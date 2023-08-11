@@ -1,0 +1,97 @@
+:root {
+    --color-primary: #0AC8F5;
+    --color-secondary: #D2F00F;
+    --color-dark-text: #AAABAC;
+    --color-dark-bg: #1D1F21;
+
+    --content-max-width: 50rem;
+    --minimum-margin: calc(1rem + 1vw);
+}
+
+
+html {
+    color: var(--color-dark-text);
+    background-color: var(--color-dark-bg);
+
+    font-size: calc((1rem + 0.75vw) * 0.6);
+    font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+    /* line-height: 1.5rem; */
+    /* font-weight: 400; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0 max(var(--minimum-margin), 50% - var(--content-max-width) / 2);
+    max-width: 50rem 
+}
+
+
+h1 {
+    font-size: 2.8rem;
+}
+
+h2 {
+    font-size: 2.3rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4, h5, h6 {
+    font-size: 1.4rem;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+}
+
+
+a:link {
+    color: var(--color-primary)
+}
+
+a:visited {
+    color: var(--color-secondary)
+}
+
+p {
+    text-align: justify;
+}
+
+ul {
+    margin-block-start: .5em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 1em;
+}
+
+blockquote {
+    border-left: solid 1px;
+    padding-left: 0.5em;
+    margin-inline-start: 0.5em;
+    margin-inline-end: 0px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th { 
+    padding: 0.125rem;
+    border-bottom: solid 1px;
+}
+
+td {
+    padding: 0.5rem;
+}
+
+th + th, td + td {
+    border-left: solid 1px ;
+}
+
+img {
+    max-width: min(var(--content-max-width) ,100vw - 2* var(--minimum-margin) ) 
+}

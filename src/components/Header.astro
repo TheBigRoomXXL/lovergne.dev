@@ -1,0 +1,67 @@
+---
+import { siteConfig } from "src/site.config";
+---
+
+<nav>
+    <a href="/">
+        <img
+            src="icon.svg"
+            alt="A logo representing the letters SL"
+            class="logo"
+        />
+    </a>
+    
+    <div class="menu-container">
+        <a href="/" class="reset">
+            <h1 class="title">
+                {siteConfig.title}
+            </h1>
+        </a>
+        <div class="menu-list">
+            <a href="/home" >Home</a>
+            <a href="/readings">Reading list</a>
+            <a href="/resume">Resume</a>
+        </div>
+    </div>
+</nav>
+
+<style>
+    nav {
+        display: flex;
+        align-items: center;
+        margin: 3rem 0;
+    }
+
+    .logo { 
+        height: 6rem;
+        margin-right: 0.33rem;
+    }
+
+    .menu-container { 
+        flex-direction: column;
+    }
+
+    .reset {
+        text-decoration: none;
+    }
+
+    .title {
+        color: var(--color-dark-text) ;
+        font-size: 1.75rem;
+        margin-top: 0rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .menu-list > a, .title {
+        padding-left: 1rem;
+    }
+
+    .menu-list > a {
+        font-size: 1rem;
+    }
+
+    .menu-list > a + a {
+        border-left: dashed 1px ;
+    }
+
+</style>

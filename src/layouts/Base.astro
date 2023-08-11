@@ -1,0 +1,24 @@
+---
+import Meta from "@components/Meta";
+import Header from "@components/Header";
+// import Footer from "@components/layout/Footer";
+import { siteConfig } from "src/site.config";
+
+const {
+	title = siteConfig.title, 
+	description = siteConfig.description,
+} = Astro.props;
+---
+
+<html lang={siteConfig.lang}>
+	<head>
+		<Meta title={title} description={description}/>
+	</head>
+	<body>
+		<Header/>
+		<main >
+			<slot />
+		</main>
+		<!-- <Footer /> -->
+	</body>
+</html>
