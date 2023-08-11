@@ -4,8 +4,7 @@ interface SiteConfig {
 	description: string;
 	lang: string;
 	ogLocale: string;
-	themeColorLight: string;
-	themeColorDark: string;
+	themeColor: string;
 }
 
 export const siteConfig: SiteConfig = {
@@ -14,6 +13,5 @@ export const siteConfig: SiteConfig = {
 	description: "A site about me and my interests",
 	lang: "en-US",
 	ogLocale: "en_US",
-	themeColorLight: "#fafafa",
-	themeColorDark: "#1d1f21",
+	themeColor: "#0ac8f5",
 };
