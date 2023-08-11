@@ -1,7 +1,9 @@
+
+/* ===== GLOBAL ===== */
 :root {
     --color-primary: #0AC8F5;
     --color-secondary: #D2F00F;
-    --color-dark-text: #AAABAC;
+    --color-dark-text: #cfcfcf;
     --color-dark-bg: #1D1F21;
 
     --content-max-width: 50rem;
@@ -28,7 +30,7 @@ body {
     max-width: 50rem 
 }
 
-
+/* ===== HEADERS ===== */
 h1 {
     font-size: 2.8rem;
 }
@@ -47,7 +49,7 @@ h4, h5, h6 {
     margin-block-end: 1.33em;
 }
 
-
+/* ===== LINKS ===== */
 a:link {
     color: var(--color-primary)
 }
@@ -56,16 +58,13 @@ a:visited {
     color: var(--color-secondary)
 }
 
-p {
-    text-align: justify;
+a:hover {
+    opacity: 0.8
 }
 
-ul {
-    margin-block-start: .5em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 1em;
+/* ===== TEXT ===== */
+p {
+    text-align: justify;
 }
 
 blockquote {
@@ -75,6 +74,21 @@ blockquote {
     margin-inline-end: 0px;
 }
 
+/* ===== LIST ===== */
+ul {
+    margin-block-start: .5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 1em;
+}
+
+li {
+    margin-block-start: .5em;
+    margin-block-end: 0.5em;
+}
+
+/* ===== TABLE ===== */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -92,6 +106,7 @@ th + th, td + td {
     border-left: solid 1px ;
 }
 
+/* ===== DIVERS ===== */
 img {
     max-width: min(var(--content-max-width) ,100vw - 2* var(--minimum-margin) ) 
 }

@@ -254,8 +254,8 @@ Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
 
 ## Images
 
-![Minion](https://octodex.github.com/images/minion.png)
-![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
+![Pillas of creation: Hubble vs James Webb](https://www.nasa.gov/sites/default/files/thumbnails/image/stsci-01gfnr1kzzp67ffgv8y26kr0vw.png)
+![Profile pick](https://avatars.githubusercontent.com/u/80152117?v=4)
 
 Like links, Images also have a footnote style syntax
 
@@ -263,7 +263,43 @@ Like links, Images also have a footnote style syntax
 
 With a reference later in the document defining the URL location:
 
-[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
+[id]: icon.svg  "The Dojocat"
 
 
-
+<section aria-label="Blog post list" class="mt-16">
+   <h2>Posts</h2>
+   <ul>
+      <li>
+         <time datetime="2023-07-04T00:00:00.000Z">04 Jul 2023</time>
+         <a href="/posts/cover-image/">Example Cover Image</a>
+      </li>
+      <li>
+         <time datetime="2023-02-22T00:00:00.000Z">22 Feb 2023</time>
+         <a href="/posts/markdown-elements/">A post of Markdown elements</a>
+      </li>
+      <li>
+         <time datetime="2023-02-22T00:00:00.000Z">22 Feb 2023</time>
+         <a href="/posts/missing-content/">This post doesn't have any content</a>
+      </li>
+      <li>
+         <time datetime="2023-02-01T00:00:00.000Z">01 Feb 2023</time>
+         <a href="/posts/long-title/">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id</a>
+      </li>
+      <li>
+         <time datetime="2023-01-30T00:00:00.000Z">30 Jan 2023</time>
+         <a href="/posts/unique-tags/">Unique tags validation</a>
+      </li>
+      <li>
+         <time datetime="2023-01-27T00:00:00.000Z">27 Jan 2023</time>
+         <a href="/posts/social-image/">Example Social Image</a>
+      </li>
+      <li>
+         <time datetime="2022-06-12T00:00:00.000Z">12 Jun 2022</time>
+         <a href="/posts/second-post/">My Second Post</a>
+      </li>
+      <li>
+         <time datetime="2022-05-13T00:00:00.000Z">13 May 2022</time>
+         <a href="/posts/hello-world/">Testing testing 123!</a>
+      </li>
+   </ul>
+</section>
