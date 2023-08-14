@@ -24,7 +24,7 @@ export const siteConfig: SiteConfig = {
 	menuLinks: [
 		{name: "Home", url: "/"},
 		{name: "Projects", url: "/projects"},
-		{name: "Reading lists", url: "/readings"},
+		{name: "Reading list", url: "/reading-list"},
 		{name: "Resume", url: "/resume"},
 		{name: "RSS", url: "/rss.xml"},
 
@@ -32,6 +32,6 @@ export const siteConfig: SiteConfig = {
 	socialLinks: [
 		{name: "github", url: "https://github.com/TheBigRoomXXL"},
 		{name: "itch.io", url: "https://tehbigroomxxl.itch.io/"},
-		{name: "email", url: "sebastien@lovergne.dev"},
+		{name: "email", url: "mailto:sebastien@lovergne.dev?Subject=Hello"},
 	],
 };
