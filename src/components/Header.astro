@@ -18,7 +18,9 @@ import { siteConfig } from "src/site.config";
                 </h1>
             </a>
             <div class="horizontal-list">
-                {siteConfig.menuLinks.map(({name, url}) => <a href={url} rel="prefetch">{name}</a>)}
+                {siteConfig.menuLinks.map(({name, url}) =>
+                    <a href={url} rel="prefetch"><wbr/>{name}</a>
+                )}
             </div>
         </div>
     </nav>
@@ -29,6 +31,7 @@ import { siteConfig } from "src/site.config";
 <style>
     nav {
         display: flex;
+        flex-direction: column;
         align-items: center;
         margin: 3rem 0 1rem 0;
     }
@@ -36,23 +39,36 @@ import { siteConfig } from "src/site.config";
     .logo { 
         height: 6rem;
         width: 6rem;
-        margin-right: 0.75rem;
+        margin-right: 1rem;
     }
-
+    
     .reset {
         text-decoration: none;
     }
-
+    
+    
     .title {
         color: var(--color-primary) ;
-        font-size: 1.8rem;
+        font-size: 2rem;
         margin-top: 0rem;
         margin-bottom: 0.5rem;
     }
-
+    
     .horizontal-list > a {
         font-size: 1.1rem;
         color: var(--color-secondary);
     }
+    
+    .title, .horizontal-list {
+        text-align: center;
+    }
 
+    @media(min-width: 500px) {
+        nav {
+            flex-direction: row;
+        }
+        .title, .horizontal-list {
+            text-align: left;
+        }
+    }
 </style>

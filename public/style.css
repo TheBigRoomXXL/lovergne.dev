@@ -140,6 +140,6 @@ img {
 
 }
 .horizontal-list > *:not(:last-child) {
-    border-right: dashed 1px ;
+    border-right: solid 1px ;
     padding-right: 1ch;
 }

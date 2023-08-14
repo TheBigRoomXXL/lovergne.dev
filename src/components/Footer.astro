@@ -7,13 +7,11 @@ import { siteConfig } from "src/site.config";
 <hr>
 <footer>
     <nav class="horizontal-list social">
-        {siteConfig.socialLinks.map(({name, url}) => <a href={url}>{name}</a>)}
+        {siteConfig.socialLinks.map(({name, url}) => <a href={url}><wbr/>{name}</a>)}
     </nav>
 
-    <div class="separator"/>
-    
     <nav class="horizontal-list menu">
-        {siteConfig.menuLinks.map(({name, url}) => <a href={url}>{name}</a>)}
+        {siteConfig.menuLinks.map(({name, url}) => <a href={url}><wbr/>{name}</a>)}
     </nav>
 
 </footer>
@@ -21,7 +19,16 @@ import { siteConfig } from "src/site.config";
 <style>
     footer {
         display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        gap: 1rem;
         margin: 1rem;
+    }
+
+    @media (min-width: 640px) {
+        footer {
+            flex-direction: row;
+        }
     }
 
     nav.social > a {
@@ -31,4 +38,5 @@ import { siteConfig } from "src/site.config";
     nav.menu > a {
         color: var(--color-secondary)
     }
+
 </style>
