@@ -14,11 +14,8 @@
 html {
     color: var(--color-text);
     background-color: var(--color-bg);
-
     font-size: calc((1rem + 0.75vw) * 0.65);
     font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
-    /* line-height: 1.5rem; */
-    /* font-weight: 400; */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -32,23 +29,32 @@ body {
 }
 
 /* ===== HEADERS ===== */
+h1, h2, h3, h4, h5 { 
+    margin: 1.5em 0 .5rem;
+    line-height: 1.2em;
+    clear: both; 
+}
+h1+h2, h2+h3, h3+h4, h4+h5 {  /* non-clashing headings */
+    margin-top: .5em;
+    padding-top: 0;
+}
+
 h1 {
     font-size: 2.8rem;
 }
 
 h2 {
-    font-size: 2.3rem;
+    font-size: 2.2rem;
 }
 
 h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 h4, h5, h6 {
     font-size: 1.4rem;
-    margin-block-start: 1.33em;
-    margin-block-end: 1.33em;
 }
+
 
 /* ===== LINKS ===== */
 a:link {
@@ -64,9 +70,6 @@ a:hover {
 }
 
 /* ===== TEXT ===== */
-p {
-    text-align: justify;
-}
 
 blockquote {
     border-left: solid 1px;
