@@ -1,29 +1,29 @@
 ---
 import { siteConfig } from "src/site.config";
 ---
-
-<nav>
-    <a href="/">
-        <img
-            src="icon.svg"
-            alt="A logo representing the letters SL"
-            class="logo"
-        />
-    </a>
-    
-    <div class="menu-container">
-        <a href="/" class="reset">
-            <h1 class="title">
-                {siteConfig.title}
-            </h1>
+<header>
+    <nav>
+        <a href="/">
+            <img
+                src="icon.svg"
+                alt="A logo representing the letters SL"
+                class="logo"
+            />
         </a>
-        <div class="menu-list">
-            <a href="/" rel="prefetch">Home</a>
-            <a href="/readings" rel="prefetch">Reading list</a>
-            <a href="/resume" rel="prefetch">Resume</a>
+        
+        <div>
+            <a href="/" class="reset">
+                <h1 class="title">
+                    {siteConfig.title}
+                </h1>
+            </a>
+            <div class="horizontal-list">
+                {siteConfig.menuLinks.map(({name, url}) => <a href={url} rel="prefetch">{name}</a>)}
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
+    <hr>
+</header>
 
 
 <style>
@@ -39,10 +39,6 @@ import { siteConfig } from "src/site.config";
         margin-right: 0.75rem;
     }
 
-    .menu-container { 
-        flex-direction: column;
-    }
-
     .reset {
         text-decoration: none;
     }
@@ -54,14 +50,9 @@ import { siteConfig } from "src/site.config";
         margin-bottom: 0.5rem;
     }
 
-    .menu-list > a {
-        color: var(--color-secondary);
+    .horizontal-list > a {
         font-size: 1.1rem;
-    }
-
-    .menu-list > a + a {
-        border-left: dashed 1px ;
-        padding-left: 1ch;
+        color: var(--color-secondary);
     }
 
 </style>
