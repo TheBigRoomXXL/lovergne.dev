@@ -23,3 +23,7 @@ a:link {
 a:visited {
     color: #0366d6; 
 }
+
+.unprintable {
+    display: none;
+}

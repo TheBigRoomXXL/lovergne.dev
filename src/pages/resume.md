@@ -1,6 +1,11 @@
 ---
 layout: ../layouts/Base.astro
 ---
+<div style="float: right; margin:1em 0">
+    <button onclick="print()" class="unprintable">
+        <b>PRINT RESUME AS PDF</b>
+    </button>
+</div>
 
 # Sebastien LOVERGNE
 

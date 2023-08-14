@@ -110,6 +110,20 @@ th + th, td + td {
     border-left: solid 1px ;
 }
 
+/* ===== INPUT ===== */
+
+
+button {
+    color: #3c3c3c;
+    background-color: #FCFCFD;
+    border-radius: 0.2em;
+    border: none;
+    cursor: pointer;
+    padding: 0.5em 1em;
+    font-weight: 400;
+    box-shadow: 0.15em 0.25em #999;
+}
+
 /* ===== DIVERS ===== */
 
 
