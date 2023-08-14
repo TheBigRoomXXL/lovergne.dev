@@ -15,8 +15,8 @@ interface SiteConfig {
 }
 
 export const siteConfig: SiteConfig = {
-	author: "Sebastien LOVERGNE",
-	title: "Sebastien LOVERGNE",
+	author: "Sebastien Lovergne",
+	title: "Sebastien Lovergne",
 	description: "A site about me and my interests",
 	lang: "en-US",
 	ogLocale: "en_US",
