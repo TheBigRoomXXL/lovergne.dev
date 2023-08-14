@@ -110,7 +110,7 @@ Javascript and JQuery
 - Updating an API to provide new statistical analysis features and new sources of data
 
 
-## Personal Project
+## Personal Projects
 
 ### OpenTelemetry instrumentation for Marshmallow (WIP)
 
