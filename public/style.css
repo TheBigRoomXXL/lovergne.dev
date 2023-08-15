@@ -8,6 +8,17 @@
 
     --content-max-width: 50rem;
     --minimum-margin: calc(1rem + 1vw);
+
+    color-scheme: dark light;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --color-text: #575757;
+        --color-bg: #fcfdf4;
+        --color-primary: #2aa0bb;
+        --color-secondary: #96a821;
+    }
 }
 
 
@@ -114,10 +125,10 @@ th + th, td + td {
 
 
 button {
-    color: #3c3c3c;
+    color: var(--color-text);
     background-color: #FCFCFD;
     border-radius: 0.2em;
-    border: none;
+    border: 1px solid var(--color-text);;
     cursor: pointer;
     padding: 0.5em 1em;
     font-weight: 400;
