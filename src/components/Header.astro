@@ -53,6 +53,14 @@ import { siteConfig } from "src/site.config";
         margin-top: 0rem;
         margin-bottom: 0.5rem;
     }
+
+    @media (prefers-color-scheme: light) {
+        /* Primary is darker than I would like in light mode to preserve contrast
+        for accessibility. But because title is big it can be lighten*/
+        .title { 
+            filter: brightness(140%);
+        }
+    }
     
     .horizontal-list > a {
         font-size: 1.1rem;

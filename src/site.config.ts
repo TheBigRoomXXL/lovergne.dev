@@ -22,8 +22,6 @@ export const siteConfig: SiteConfig = {
 	ogLocale: "en_US",
 	themeColor: "#0ac8f5",
 	menuLinks: [
-		{name: "Home", url: "/"},
-		{name: "Projects", url: "/projects"},
 		{name: "Reading list", url: "/reading-list"},
 		{name: "Resume", url: "/resume"},
 		{name: "RSS", url: "/rss.xml"},

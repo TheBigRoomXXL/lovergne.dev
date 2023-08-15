@@ -15,9 +15,9 @@
 @media (prefers-color-scheme: light) {
     :root {
         --color-text: #575757;
-        --color-bg: #fcfdf4;
-        --color-primary: #2aa0bb;
-        --color-secondary: #96a821;
+        --color-bg: #fff;
+        --color-primary: #207D92;
+        --color-secondary: #6A7A06;
     }
 }
 
