@@ -10,12 +10,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@csstools/normalize.css": "^12.0.0",
+    "@csstools/normalize.css": "github:csstools/normalize.css",
     "astro": "^2.10.2"
   },
   "devDependencies": {
-    "@unocss/preset-uno": "^0.55.0",
-    "@unocss/reset": "^0.55.0",
-    "unocss": "^0.55.0"
+    "@unocss/reset": "^0.55.0"
   }
 }
