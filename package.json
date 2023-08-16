@@ -13,8 +13,5 @@
   "dependencies": {
     "@csstools/normalize.css": "github:csstools/normalize.css",
     "astro": "^2.10.2"
-  },
-  "devDependencies": {
-    "@unocss/reset": "^0.55.0"
   }
 }
