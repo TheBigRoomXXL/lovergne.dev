@@ -25,7 +25,12 @@ it doesn't count!).
 
 ## TODO
 
-- Awesome list filtering
+- Awesome list
+  - filtering and sorting
+  - pin
+  - tags
+  - content type
+  - author
 - Projects page
 - RSS Feed
 - Adding some bloody content!
