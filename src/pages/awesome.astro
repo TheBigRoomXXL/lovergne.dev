@@ -1,0 +1,76 @@
+---
+import BaseLayout from "@layouts/Base";
+
+import { getCollection, getEntry } from 'astro:content';
+
+
+const awesomeEntries = await getCollection('awesome');
+
+function extractHostname(url: string):string {
+  var hostname;
+  //find & remove protocol (http, ftp, etc.) and get hostname
+
+  if (url.indexOf("//") > -1) {
+    hostname = url.split('/')[2];
+  } else {
+    hostname = url.split('/')[0];
+  }
+
+  //find & remove port number
+  hostname = hostname.split(':')[0];
+  //find & remove "?"
+  hostname = hostname.split('?')[0];
+
+  return hostname;
+}
+
+---
+
+<BaseLayout meta={{ title: "Awesome", description: "A curation of awesome things" }}>
+
+	<h2>My Awesome list</h2>
+    <p>
+      This is a curated list of things I have discovered on the web and found interesting or
+      thought-provoking, there is also some fun stuff.
+    </p>
+    <ul>
+      {awesomeEntries.map(entry => (
+        <li>
+          <fieldset>
+            <legend>
+              <a href={entry.data.link}>{entry.data.title}</a>
+              {entry.data.published_date ? `(${entry.data.published_date.getFullYear()})` : "" }
+            </legend>
+            <p> 
+              {entry.data.description}
+            </p>
+          </fieldset>
+        </li>
+      ))}
+    </ul>
+
+
+
+</BaseLayout>
+
+<style>
+    ul {
+      padding-inline-start: 0px
+    }
+    li  {
+      margin: 1em 0;
+      list-style-type: none;
+    }
+
+    legend {
+      padding: 0 1ch;
+    }
+
+    fieldset > p {
+      margin-block-start: 0;
+      margin-block-end: 0;
+      font-size: 0.9em;
+    }
+
+</style>
+

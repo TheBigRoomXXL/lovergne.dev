@@ -19,11 +19,13 @@ it doesn't count!).
 - **Light and Fast:** 27.7 kB landing page and score 100% on lighthouse performance.
 - **It's beautiful**, well at least for me and I really my little isometric logo. 
 - **Dark / Light** theme based on `prefers-color-scheme`
-- **SEO and PWA support**: see [Meta.astro](https://github.com/TheBigRoomXXL/my-site/blob/main/src/components/Meta.astro), score 95% on lighthouse (some links are too small).
+- **Sufficient SEO support**: see [Meta.astro](https://github.com/TheBigRoomXXL/my-site/blob/main/src/components/Meta.astro), score 95% on lighthouse (some links are too small).
 - **Print support** with a minimal secondary stylesheet (see [print.css](https://github.com/TheBigRoomXXL/my-site/blob/main/public/print.css))
+- **Awesome list** page generated from data files.
 
 ## TODO
 
-- Reading list page
+- Awesome list filtering
 - Projects page
 - RSS Feed
+- Adding some bloody content!
