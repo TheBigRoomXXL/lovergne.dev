@@ -1,6 +1,6 @@
 # Articles
 
-All the files inside `src/pages` directory are licensed under
+All the files inside `src/content` directory are licensed under
 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The attribution requirement is only met when:
 
 1. The canonical link is directed towards the original article, e.g.
