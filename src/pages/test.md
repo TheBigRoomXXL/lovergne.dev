@@ -254,7 +254,6 @@ Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
 
 ## Images
 
-![Pillas of creation: Hubble vs James Webb](https://www.nasa.gov/sites/default/files/thumbnails/image/stsci-01gfnr1kzzp67ffgv8y26kr0vw.png)
 ![Profile pick](https://avatars.githubusercontent.com/u/80152117?v=4)
 
 Like links, Images also have a footnote style syntax
