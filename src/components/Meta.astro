@@ -20,15 +20,14 @@ const socialImageURL = new URL(ogImage ? ogImage : "/social-card.png", Astro.url
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 <link rel="canonical" href={canonicalURL} />
 
-<!-- Primary Meta Tags -->
-<meta name="title" content={siteTitle} />
-<meta name="description" content={description} />
-<meta name="author" content={siteConfig.author} />
-
 <!-- Style sheet -->
 <link rel="stylesheet" type="text/css" href="/style.css">
 <link rel="stylesheet" type="text/css" href="/print.css" media="print">
 
+<!-- Primary Meta Tags -->
+<meta name="title" content={siteTitle} />
+<meta name="description" content={description} />
+<meta name="author" content={siteConfig.author} />
 
 <!-- Theme Colour -->
 <meta name="theme-color" content={siteConfig.themeColor} />
