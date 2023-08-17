@@ -1,21 +1,27 @@
 ---
 import Meta from "@components/Meta";
+import { siteConfig } from "@site-config";
 ---
 
-    <Meta/>
-    <div style="display: flex; align-items: center; flex-direction: column;">
+    <html lang={siteConfig.lang}>
+        <head>
+            <Meta title={"Page not Found"} description={"Error 404 - Page not found"}/>
+        </head>
+        <body>
+            <div style="display: flex; align-items: center; flex-direction: column;">
 
-        <h1>Error 404</h1>
-        <p>
-            Sorry, it seams you have fallen off the edge of the world...
-        </p>
-        <p>
-            You probably want to go <a href="/">home</a> now.
-        </p>
-        <img src="/error.svg" alt="error icon">
-    </div>
-
-
+                <h1>Error 404</h1>
+                <p>
+                    Sorry, it seams you have fallen off the edge of the world...
+                </p>
+                <p>
+                    You probably want to go <a href="/">home</a> now.
+                </p>
+                <img src="/error.svg" alt="error icon">
+            </div>
+        </body>
+    </html>
+    
 
 <style>
     p {
