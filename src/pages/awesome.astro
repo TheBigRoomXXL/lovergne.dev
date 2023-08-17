@@ -39,10 +39,10 @@ function extractHostname(url: string):string {
       {awesomeEntries.map(entry => (
         <li>
           <fieldset>
-            <legend>
-              <a href={entry.data.link}>{entry.data.title}</a>
+            <legend><a href={entry.data.link}>
+              {entry.data.title}
               {entry.data.published_date ? `(${entry.data.published_date.getFullYear()})` : "" }
-            </legend>
+            </a></legend>
             <p> 
               {entry.data.description}
             </p>
@@ -65,13 +65,13 @@ function extractHostname(url: string):string {
     }
 
     legend {
+      font-size: 1.05em;
       padding: 0 1ch;
     }
 
     fieldset > p {
       margin-block-start: 0;
       margin-block-end: 0;
-      font-size: 0.9em;
     }
 
 </style>
