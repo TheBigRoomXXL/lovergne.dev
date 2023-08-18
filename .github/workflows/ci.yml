@@ -1,20 +1,34 @@
 name: CI
 on: [push]
 jobs:
-  lhci:
-    name: Lighthouse
+  build-test-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Setup
+      - name: setup-repos
+        uses: actions/checkout@v3
+
+      - name: setup-node
         uses: actions/setup-node@v3
         with:
           node-version: 18.x
-      - name: Build
+          cache: npm
+
+      - name: build
         run: |
           npm install
           npm run build
-      - name: Lighthouse
+      
+      - name: test-with-lighthouse
         run: |
           npm install -g @lhci/cli@0.12.x
           lhci autorun --config .github/workflows/lighthouse.json
+        
+      - name: install-ssh-keys
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_SECRET_KEY }}
+          known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
+          config: ${{ secrets.SSH_CONFIG }}
+
+      - name: rsync-over-SSH
+        run: rsync -av -e 'ssh -p 5555' dist/ lovergne.dev:lovergne.dev/
