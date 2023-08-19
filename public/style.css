@@ -125,10 +125,10 @@ th + th, td + td {
 
 
 button {
-    color: var(--color-text);
+    color: #575757;
     background-color: #FCFCFD;
     border-radius: 0.2em;
-    border: 1px solid var(--color-text);;
+    border: 1px solid #575757;
     cursor: pointer;
     padding: 0.5em 1em;
     font-weight: 400;
