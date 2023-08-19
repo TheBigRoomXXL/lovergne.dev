@@ -43,8 +43,8 @@ function extractHostname(url: string):string {
               {entry.data.title}
               {entry.data.published_date ? `(${entry.data.published_date.getFullYear()})` : "" }
             </a></legend>
-            <p> 
-              {entry.data.description}
+            <p>
+              <Fragment set:html={entry.data.description} />
             </p>
           </fieldset>
         </li>
