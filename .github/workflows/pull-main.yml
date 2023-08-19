@@ -1,0 +1,27 @@
+name: build-test
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: setup-repos
+        uses: actions/checkout@v3
+
+      - name: setup-node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+          cache: npm
+
+      - name: build
+        run: |
+          npm install
+          npm run build
+      
+      - name: test-with-lighthouse
+        run: |
+          npm install -g @lhci/cli@0.12.x
+          lhci autorun --config .github/workflows/lighthouse.json

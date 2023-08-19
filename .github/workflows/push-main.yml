@@ -1,5 +1,8 @@
-name: CI
-on: [push]
+name: build-test-deploy
+on:
+  push:
+    branches:
+      - main
 jobs:
   build-test-deploy:
     runs-on: ubuntu-latest
