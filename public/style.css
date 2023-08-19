@@ -5,6 +5,7 @@
     --color-secondary: #D2F00F;
     --color-text: #cfcfcf;
     --color-bg: #1D1F21;
+    --color-grey: #575757;
 
     --content-max-width: 50rem;
     --minimum-margin: calc(1rem + 1vw);
@@ -14,7 +15,7 @@
 
 @media (prefers-color-scheme: light) {
     :root {
-        --color-text: #575757;
+        --color-text: var(--color-grey);
         --color-bg: #fff;
         --color-primary: #207D92;
         --color-secondary: #6A7A06;
@@ -125,10 +126,10 @@ th + th, td + td {
 
 
 button {
-    color: #575757;
+    color: var(--color-grey);
     background-color: #FCFCFD;
     border-radius: 0.2em;
-    border: 1px solid #575757;
+    border: 1px solid var(--color-grey);
     cursor: pointer;
     padding: 0.5em 1em;
     font-weight: 400;
