@@ -1,0 +1,8 @@
+link: "https://web.cs.ucdavis.edu/~rogaway/papers/moral-fn.pdf"
+title: "The Moral Character of Cryptographic Work by P. Rogaway"
+description: "In reaction to the Snowden revelation in 2013, Phillip Rogaway started to reconcider \
+  his role and social responsability as a cryptographer. This paper focus on the discipline of \
+  cryptography but the  first part does an exellent job at explaining that <b>any</b> technican has \
+  a political impact, whether that's on purpose (explicit) or not (implicit)."
+added_date: 2023-08-19
+tags: ["scientific-paper"]

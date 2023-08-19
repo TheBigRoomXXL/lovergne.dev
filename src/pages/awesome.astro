@@ -1,28 +1,12 @@
 ---
 import BaseLayout from "@layouts/Base";
+import Tag from "@components/Tag"
 
-import { getCollection, getEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
 
 
 const awesomeEntries = await getCollection('awesome');
 
-function extractHostname(url: string):string {
-  var hostname;
-  //find & remove protocol (http, ftp, etc.) and get hostname
-
-  if (url.indexOf("//") > -1) {
-    hostname = url.split('/')[2];
-  } else {
-    hostname = url.split('/')[0];
-  }
-
-  //find & remove port number
-  hostname = hostname.split(':')[0];
-  //find & remove "?"
-  hostname = hostname.split('?')[0];
-
-  return hostname;
-}
 
 ---
 
@@ -67,6 +51,10 @@ function extractHostname(url: string):string {
     legend {
       font-size: 1.05em;
       padding: 0 1ch;
+    }
+
+    fieldset {
+      border-radius: .25rem;
     }
 
     fieldset > p {

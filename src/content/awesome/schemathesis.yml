@@ -5,3 +5,4 @@ description: "Schemathesis is an incredible fuzzer for REST and GraphQL API. It 
   inside my dependencies, thanks to it's property-based testing. It also help catch bad documentation \
   with it's response schema validation. I definitly integrate it inside my CI/CD pipeline whenever I can."
 added_date: 2023-08-17
+tags: ["tool"]
