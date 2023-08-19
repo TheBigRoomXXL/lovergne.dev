@@ -4,10 +4,25 @@ import Header from "@components/Header";
 import Footer from "@components/Footer";
 import { siteConfig } from "src/site.config";
 
-const {
+interface Props {
+	title?: string;
+	description?: string;
+	frontmatter?: any;
+}
+
+let {
 	title = siteConfig.title, 
 	description = siteConfig.description,
+	frontmatter
 } = Astro.props;
+
+if (frontmatter?.title != undefined ){
+	title = frontmatter.title
+}
+
+if (frontmatter?.description != undefined ){
+	description = frontmatter.description
+}
 ---
 
 <html lang={siteConfig.lang}>
