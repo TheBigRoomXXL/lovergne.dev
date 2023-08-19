@@ -9,6 +9,7 @@ const awesomeCollection = defineCollection({
     added_date: z.date(),
     published_date: z.date().optional(),
     tags: z.array(z.string()).optional(),
+    pin: z.boolean().optional(),
   }),
 });
 
