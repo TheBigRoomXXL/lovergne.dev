@@ -1,5 +1,8 @@
 ---
 layout: ../layouts/Base.astro
+title: 'Resume'
+description: "My experiences and skills as  Full Stack Developer & DevOps, "
+
 ---
 <div style="float: right; margin:1em 0">
     <button onclick="print()" class="unprintable">
@@ -9,7 +12,7 @@ layout: ../layouts/Base.astro
 
 # Sebastien LOVERGNE
 
-## Developer Full Stack & DevOps
+# Full Stack Developer & DevOps
 
 <img alt="Python" src="https://img.shields.io/badge/Python-blue?logo=python&logoColor=white" height="30" />
 <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-blue?logo=typescript&logoColor=white" height="30" />
