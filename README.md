@@ -17,7 +17,7 @@ it doesn't count!).
 - **It's simple** and has only one dependency.
 - **Fully accessible:** built with semantic HTML and score 100% on lighthouse accessibility
 - **Light and Fast:** 27.7 kB landing page and score 100% on lighthouse performance.
-- **It's beautiful**, well at least for me and I really my little isometric logo. 
+- **It's beautiful**, well for me at least. And I really my little isometric logo. 
 - **Dark / Light** theme based on `prefers-color-scheme`
 - **Sufficient SEO support**: see [Meta.astro](https://github.com/TheBigRoomXXL/my-site/blob/main/src/components/Meta.astro), score 95% on lighthouse (some links are too small).
 - **Print support** with a minimal secondary stylesheet (see [print.css](https://github.com/TheBigRoomXXL/my-site/blob/main/public/print.css))
@@ -26,11 +26,10 @@ it doesn't count!).
 ## TODO
 
 - Awesome list
-  - filtering and sorting
-  - pin
+  - filtering
   - tags
   - content type
-  - author
 - Projects page
 - RSS Feed
+- Site map for SEO
 - Adding some bloody content!

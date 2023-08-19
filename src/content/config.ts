@@ -8,12 +8,12 @@ const awesomeCollection = defineCollection({
     link: z.string(),
     added_date: z.date(),
     published_date: z.date().optional(),
+    author: z.string().optional(),
     tags: z.array(z.string()).optional(),
     pin: z.boolean().optional(),
   }),
 });
 
-// 3. Export a single `collections` object to register your collection(s)
 export const collections = {
   'awesome': awesomeCollection,
 };
