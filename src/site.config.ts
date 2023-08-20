@@ -24,7 +24,7 @@ export const siteConfig: SiteConfig = {
 	menuLinks: [
 		{name: "Awesome list", url: "/awesome"},
 		{name: "Resume", url: "/resume"},
-		{name: "RSS", url: "rss.xml"},
+		{name: "Feed", url: "feed"},
 
 	],
 	socialLinks: [
