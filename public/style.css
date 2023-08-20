@@ -172,7 +172,8 @@ img {
 
 
 *:focus {
-    border: solid 1px white;
+    outline: solid 2px white;
+    outline-offset: 0.25em;
     border-radius: 0.25em;
 }
 
