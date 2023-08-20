@@ -12,11 +12,11 @@ awesomeEntries.sort((o1, o2) => {
   else                                                        return  0;
 });
 
-let hasBeenSliced = false
-if ( limit ) {
-    awesomeEntries = awesomeEntries.slice(0, limit)
-    hasBeenSliced = true
-}
+console.log(limit)
+console.log(awesomeEntries.length )
+const hasBeenSliced = limit < awesomeEntries.length
+awesomeEntries = awesomeEntries.slice(0, limit)
+
 ---
 
 <h2>Recent Activity</h2>
