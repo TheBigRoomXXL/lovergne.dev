@@ -17,7 +17,7 @@ awesomeEntries.sort((o1, o2) => {
 
 	<h2>My Awesome list</h2>
     <p>
-      This is a curated list of things I have discovered on the web and found interesting or
+      This is a curated list of things I have discovered on the web and found useful or
       thought-provoking, there is also some fun stuff.
     </p>
     <p>
@@ -30,7 +30,7 @@ awesomeEntries.sort((o1, o2) => {
     <ul>
       {awesomeEntries.map(entry => (
         <li>
-          <fieldset>
+          <fieldset id={entry.data.title}>
             <legend>
               {entry.data.pin ? "📌" : ""}
               <a href={entry.data.link}>
