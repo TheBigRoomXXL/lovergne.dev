@@ -11,6 +11,9 @@ Then I use Astro for static site generation and there is no other dependency ( w
 is [normalize.css](https://csstools.github.io/normalize.css/11.0.0/normalize.css) but it's so small
 it doesn't count!).
 
+## Acknoledgement
+
+This site was originally inspired by the [cactus theme](https://astro-theme-cactus.netlify.app/) for astro but I decided do my own thing as I wanted less dependencies and tooling. The [Meta](/src/components/Meta.astro) originaly come from there and you can clearly see some similarity in the visual design
 
 ## Features: 
 
