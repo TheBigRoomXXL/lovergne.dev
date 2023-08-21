@@ -1,5 +1,6 @@
 ---
 import { siteConfig } from "src/site.config";
+import "@csstools/normalize.css";
 
 const { title, description, ogImage, articleDate } = Astro.props;
 
@@ -22,11 +23,11 @@ const socialImageURL = new URL(
 
 <!-- Icons / Favicon -->
 <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="apple-touch-icon" href="/icon.svg" />
 <link rel="canonical" href={canonicalURL} />
 
 <!-- Style sheet -->
-<link href="https://unpkg.com/@csstools/normalize.css" rel="stylesheet" />
+<meta name="theme-color" content={siteConfig.themeColor} />
 <link rel="stylesheet" type="text/css" href="/style.css" />
 <link rel="stylesheet" type="text/css" href="/print.css" media="print" />
 
@@ -35,8 +36,19 @@ const socialImageURL = new URL(
 <meta name="description" content={description} />
 <meta name="author" content={siteConfig.author} />
 
-<!-- Theme Colour -->
-<meta name="theme-color" content={siteConfig.themeColor} />
+<!-- Licence -->
+<link
+  rel="license"
+  href="https://github.com/TheBigRoomXXL/lovergne.dev/blob/main/LICENCE.md"
+/>
+
+<!-- RSS auto-discovery -->
+<link
+  rel="alternate"
+  type="application/rss+xml"
+  title={siteConfig.title}
+  href="/rss.xml"
+/>
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content={articleDate ? "article" : "website"} />
@@ -62,11 +74,3 @@ const socialImageURL = new URL(
 <meta property="twitter:url" content={canonicalURL} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
-
-<!-- RSS auto-discovery -->
-<link
-  rel="alternate"
-  type="application/rss+xml"
-  title={siteConfig.title}
-  href="/rss.xml"
-/>
