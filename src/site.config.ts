@@ -1,5 +1,5 @@
 interface Link {
-	name : string;
+	name: string;
 	url: string
 }
 
@@ -22,14 +22,14 @@ export const siteConfig: SiteConfig = {
 	ogLocale: "en_US",
 	themeColor: "#0ac8f5",
 	menuLinks: [
-		{name: "Awesome list", url: "/awesome"},
-		{name: "Resume", url: "/resume"},
-		{name: "Feed", url: "feed"},
+		{ name: "Awesome list", url: "/awesome" },
+		{ name: "Resume", url: "/resume" },
+		{ name: "Feed", url: "feed" },
 
 	],
 	socialLinks: [
-		{name: "github", url: "https://github.com/TheBigRoomXXL"},
-		{name: "itch.io", url: "https://tehbigroomxxl.itch.io/"},
-		{name: "email", url: "mailto:sebastien@lovergne.dev?Subject=Hello"},
+		{ name: "github", url: "https://github.com/TheBigRoomXXL" },
+		{ name: "itch.io", url: "https://tehbigroomxxl.itch.io/" },
+		{ name: "email", url: "mailto:sebastien@lovergne.dev?Subject=Hello" },
 	],
 };

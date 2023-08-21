@@ -1,47 +1,57 @@
-
 ---
 import { siteConfig } from "src/site.config";
 ---
 
-
 <footer>
-    <hr>
-    <div class="container">
-        <nav class="horizontal-list social">
-            {siteConfig.socialLinks.map(({name, url}) => <a href={url}><wbr/>{name}</a>)}
-        </nav>
-    
-        <nav class="horizontal-list menu">
-            {siteConfig.menuLinks.map(({name, url}) => <a href={url}><wbr/>{name}</a>)}
-        </nav>
-    </div>
+  <hr />
+  <div class="container">
+    <nav class="horizontal-list social">
+      {
+        siteConfig.socialLinks.map(({ name, url }) => (
+          <a href={url}>
+            <wbr />
+            {name}
+          </a>
+        ))
+      }
+    </nav>
 
+    <nav class="horizontal-list menu">
+      {
+        siteConfig.menuLinks.map(({ name, url }) => (
+          <a href={url}>
+            <wbr />
+            {name}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
 </footer>
 
 <style>
-    footer {
-        margin-top: 1rem;
-    }
+  footer {
+    margin-top: 1rem;
+  }
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 1em;
+  }
+
+  @media (min-width: 640px) {
     .container {
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: space-between;
-        gap: 1rem;
-        margin: 1em;
+      flex-direction: row;
     }
+  }
 
-    @media (min-width: 640px) {
-        .container {
-            flex-direction: row;
-        }
-    }
+  nav.social > a {
+    color: var(--color-primary);
+  }
 
-    nav.social > a {
-        color: var(--color-primary)
-    }
-
-    nav.menu > a {
-        color: var(--color-secondary)
-    }
-
+  nav.menu > a {
+    color: var(--color-secondary);
+  }
 </style>

@@ -1,51 +1,51 @@
 ---
-import { siteConfig } from "src/site.config";
+import { getCollection } from "astro:content";
 
-import { getCollection } from 'astro:content';
+const { limit } = Astro.props;
 
-const { limit } = Astro.props
-
-let awesomeEntries = await getCollection('awesome');
+let awesomeEntries = await getCollection("awesome");
 awesomeEntries.sort((o1, o2) => {
-  if(o1.data.added_date > o2.data.added_date)  return  -1;
-  else if (o1.data.added_date < o2.data.added_date)           return 1;
-  else                                                        return  0;
+  if (o1.data.added_date > o2.data.added_date) return -1;
+  else if (o1.data.added_date < o2.data.added_date) return 1;
+  else return 0;
 });
 
-console.log(limit)
-console.log(awesomeEntries.length )
-const hasBeenSliced = limit < awesomeEntries.length
-awesomeEntries = awesomeEntries.slice(0, limit)
-
+console.log(limit);
+console.log(awesomeEntries.length);
+const hasBeenSliced = limit < awesomeEntries.length;
+awesomeEntries = awesomeEntries.slice(0, limit);
 ---
 
-<h2>Recent Activity</h2>
+<h2>Recent Activities</h2>
 <ol>
-    {awesomeEntries.map(entry => (
-        <li>
-            <time datetime={ entry.data.added_date.toISOString() }>
-                { entry.data.added_date.toLocaleDateString('default', {day: "2-digit"}) }
-                { entry.data.added_date.toLocaleDateString('default', {month: 'short'}) }
-                { entry.data.added_date.getFullYear()}
-            </time>
-            <a href={ `/awesome#${entry.data.title}` }>
-                {entry.data.title}
-            </a>
-        </li> 
-      ))}
+  {
+    awesomeEntries.map((entry) => (
       <li>
-          {  hasBeenSliced ? <a href="/feed">Older activity</a> : ""  }
+        <time datetime={entry.data.added_date.toISOString()}>
+          {entry.data.added_date.toLocaleDateString("default", {
+            day: "2-digit",
+          })}
+          {entry.data.added_date.toLocaleDateString("default", {
+            month: "short",
+          })}
+          {entry.data.added_date.getFullYear()}
+        </time>
+        <a href={`/awesome#${entry.data.title}`}>{entry.data.title}</a>
       </li>
+    ))
+  }
+  <li>
+    {hasBeenSliced ? <a href="/feed">Older activities</a> : ""}
+  </li>
 </ol>
 
-
 <style>
-    ol {
-        list-style-type: none;
-    }
+  ol {
+    list-style-type: none;
+  }
 
-    time {
-        font-weight: bold;
-        opacity: 0.85;
-    }
+  time {
+    font-weight: bold;
+    opacity: 0.85;
+  }
 </style>

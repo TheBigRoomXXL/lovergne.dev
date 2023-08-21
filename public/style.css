@@ -1,4 +1,5 @@
 /* ===== GLOBAL ===== */
+
 :root {
     --color-primary: #0AC8F5;
     --color-secondary: #D2F00F;
@@ -27,7 +28,8 @@ html {
     background-color: var(--color-bg);
     line-height: 1.5em;
     font-size: min(calc((1rem + 0.7vw) * 0.7), 18px);
-    font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+        Liberation Mono, Courier New, monospace;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -41,12 +43,21 @@ body {
 }
 
 /* ===== HEADERS ===== */
-h1, h2, h3, h4, h5 { 
+h1,
+h2,
+h3,
+h4,
+h5 {
     margin: 1.5em 0 .5rem;
     line-height: 1.2em;
-    clear: both; 
+    clear: both;
 }
-h1+h2, h2+h3, h3+h4, h4+h5 {  /* non-clashing headings */
+
+h1+h2,
+h2+h3,
+h3+h4,
+h4+h5 {
+    /* non-clashing headings */
     margin-top: .5em;
     padding-top: 0;
 }
@@ -63,7 +74,9 @@ h3 {
     font-size: 1.8rem;
 }
 
-h4, h5, h6 {
+h4,
+h5,
+h6 {
     font-size: 1.4rem;
 }
 
@@ -91,8 +104,8 @@ blockquote {
 }
 
 fieldset {
-  border: 2px solid var(--color-grey);
-  border-radius: .25rem;
+    border: 2px solid var(--color-grey);
+    border-radius: .25rem;
 }
 
 legend {
@@ -102,10 +115,8 @@ legend {
 
 p {
     /* Dislexia friendly paragraph
-    https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html
-    https://www.bdadyslexia.org.uk/advice/employers/creating-a-dyslexia-friendly-workplace/dyslexia-friendly-style-guide
-    */
-    font-family:  Calibri, 'Trebuchet MS', 'Lucida Sans', Arial, sans-serif;
+    https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html*/
+    font-family: Calibri, 'Trebuchet MS', 'Lucida Sans', Arial, sans-serif;
     letter-spacing: .10em;
     word-spacing: .16em;
 }
@@ -129,7 +140,8 @@ table {
     width: 100%;
     border-collapse: collapse;
 }
-th { 
+
+th {
     padding: 0.125rem;
     border-bottom: solid 1px;
 }
@@ -138,8 +150,9 @@ td {
     padding: 0.5rem;
 }
 
-th + th, td + td {
-    border-left: solid 1px ;
+th+th,
+td+td {
+    border-left: solid 1px;
 }
 
 /* ===== INPUT ===== */
@@ -167,12 +180,12 @@ hr {
 }
 
 img {
-    max-width: min(var(--content-max-width) ,100vw - 2* var(--minimum-margin) ) 
+    max-width: min(var(--content-max-width), 100vw - 2* var(--minimum-margin))
 }
 
 
 *:focus {
-    outline: solid 2px ;
+    outline: solid 2px;
     outline-offset: 0.25em;
     border-radius: 0.25em;
 }
@@ -190,11 +203,16 @@ img {
     flex-grow: 10;
 }
 
-.horizontal-list > *:not(:first-child) {
+.horizontal-list>* {
+    display: inline-flex;
+}
+
+.horizontal-list>*:not(:first-child) {
     padding-left: 1ch;
 
 }
-.horizontal-list > *:not(:last-child) {
-    border-right: solid 1px ;
+
+.horizontal-list>*:not(:last-child) {
+    border-right: solid 1px;
     padding-right: 1ch;
 }
