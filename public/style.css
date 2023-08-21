@@ -26,7 +26,7 @@ html {
     color: var(--color-text);
     background-color: var(--color-bg);
     line-height: 1.5em;
-    font-size: min(calc((1rem + 0.7vw) * 0.7), 18px);
+    font-size: min(calc((1rem + 0.7vw) * 0.7), 16px);
     font-family: ui-monospace, "SFMono-Regular", "Menlo", "Monaco", 'Consolas',
         "Liberation Mono", "Courier New", "monospace";
     -webkit-font-smoothing: antialiased;
