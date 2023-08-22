@@ -31,8 +31,8 @@ This site was originally inspired by the [cactus theme](https://astro-theme-cact
 - Awesome list
   - filtering
   - tags
-  - content type
-- Projects page
-- RSS Feed
-- Site map for SEO
+  - media type
+- Blog page
+- Site map
 - Adding some bloody content!
+- CMS maybe
