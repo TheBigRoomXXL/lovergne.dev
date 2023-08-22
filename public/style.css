@@ -23,12 +23,17 @@
 }
 
 html {
+    /* Accessible Text */
+    /* https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html */
+    /* https://www.bdadyslexia.org.uk/advice/employers/creating-a-dyslexia-
+    friendly-workplace/dyslexia-friendly-style-guide */
     color: var(--color-text);
     background-color: var(--color-bg);
+    font-family: Calibri, 'Trebuchet MS', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: .12em;
+    word-spacing: .16em;
     line-height: 1.5em;
     font-size: min(calc((1rem + 0.7vw) * 0.7), 16px);
-    font-family: ui-monospace, "SFMono-Regular", "Menlo", "Monaco", 'Consolas',
-        "Liberation Mono", "Courier New", "monospace";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -50,6 +55,9 @@ h5 {
     margin: 1.5em 0 .5rem;
     line-height: 1.2em;
     clear: both;
+    /* letter-spacing: .08em; */
+    font-family: ui-monospace, "SFMono-Regular", "Menlo", "Monaco", 'Consolas',
+    "Liberation Mono", "Courier New", "monospace";
 }
 
 h1+h2,
@@ -110,14 +118,6 @@ fieldset {
 legend {
     font-size: 1.05em;
     padding: 0 1ch;
-}
-
-p {
-    /* Dislexia friendly paragraph
-    https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html*/
-    font-family: Calibri, 'Trebuchet MS', 'Lucida Sans', Arial, sans-serif;
-    letter-spacing: .12em;
-    word-spacing: .16em;
 }
 
 /* ===== LIST ===== */

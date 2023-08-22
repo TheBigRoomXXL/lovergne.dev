@@ -13,7 +13,7 @@ it doesn't count!).
 
 ## Acknoledgement
 
-This site was originally inspired by the [cactus theme](https://astro-theme-cactus.netlify.app/) for astro but I decided do my own thing as I wanted less dependencies and tooling. The [Meta](/src/components/Meta.astro) originaly come from there and you can clearly see some similarity in the visual design
+This site was originally inspired by the [cactus theme](https://astro-theme-cactus.netlify.app/) for astro but I decided do my own thing as I wanted less dependencies and tooling. The [Meta](/src/components/Meta.astro) component originaly come from there and you can clearly see some similarity in the visual design.
 
 ## Features: 
 
