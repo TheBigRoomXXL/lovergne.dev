@@ -16,11 +16,10 @@ description: "My experiences and skills as  Full Stack Developer & DevOps, "
 
 > Technical Skills
 
-<div>
+<div style="height:114px;">
 <img alt="Python" src="https://img.shields.io/badge/Python-3C77A8?logo=python&logoColor=white" height="30" />
 <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-377CC8?logo=typescript&logoColor=white" height="30" />
 <img alt="Go" src="https://img.shields.io/badge/Go-08AFD8?logo=go&logoColor=white" height="30" />
-<img alt="SQL" src="https://img.shields.io/badge/SQL-grey?logo=sql&logoColor=white" height="30" />
 <img alt="VueJS" src="https://img.shields.io/badge/VueJS-36996d?logo=vuedotjs&logoColor=white" height="30" />
 <img alt="Flask" src="https://img.shields.io/badge/Flask-grey?logo=flask&logoColor=white" height="30" />
 <img alt="Astro" src="https://img.shields.io/badge/Astro-purple?logo=astro&logoColor=white" height="30" />
