@@ -17,14 +17,23 @@ This site was originally inspired by the [cactus theme](https://astro-theme-cact
 
 ## Features: 
 
+- **Fully accessible:** built with semantic HTML and accessibility in mind
+- **Light and Fast:** 24.16kB landing page.
 - **It's simple** and has only one dependency.
-- **Fully accessible:** built with semantic HTML and score 100% on lighthouse accessibility
-- **Light and Fast:** 27.7 kB landing page and score 100% on lighthouse performance.
 - **It's beautiful**, well for me at least. And I really my little isometric logo. 
 - **Dark / Light** theme based on `prefers-color-scheme`
-- **Sufficient SEO support**: see [Meta.astro](https://github.com/TheBigRoomXXL/my-site/blob/main/src/components/Meta.astro), score 95% on lighthouse (some links are too small).
-- **Print support** with a minimal secondary stylesheet (see [print.css](https://github.com/TheBigRoomXXL/my-site/blob/main/public/print.css))
+- **Sufficient SEO support**: see [Meta.astro](https://github.com/TheBigRoomXXL/my-site/blob/main/src/components/Meta.astro), (some links are too small for lighthouse i must admit).
+- **Print support** with a minimal secondary stylesheet (see [print.css](https://github.com/TheBigRoomXXL/my-site/blob/main/public/print.css)). I don't know if anybody else care about that but I like it.
 - **Awesome list** page generated from data files.
+- **RSS** support
+
+## Lighthouse Score
+
+<p align="center">
+  <a href="https://pagespeed.web.dev/analysis/https-lovergne-dev/jml08tnarx?form_factor=mobile">
+    <img width="710" alt="Lighthouse Score" src="lighthouse.svg">
+  <a>
+</p>
 
 ## TODO
 
