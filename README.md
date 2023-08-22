@@ -1,6 +1,6 @@
 # My Personal website
 
-Check it out at [lovergne.dev](lovergne.dev)
+Check it out at [lovergne.dev](https://lovergne.dev)
 
 This website is a place where I can experiment and be creative. I mostly publish links to
 external resources that I have found interesting or thought-provoking (and some fun stuff), think
