@@ -12,7 +12,7 @@ description: "My experiences and skills as  Full Stack Developer & DevOps, "
 
 # Sebastien LOVERGNE
 
-# Full Stack Developer & DevOps
+##  Full Stack Developer & DevOps
 
 <img alt="Python" src="https://img.shields.io/badge/Python-blue?logo=python&logoColor=white" height="30" />
 <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-blue?logo=typescript&logoColor=white" height="30" />
@@ -134,14 +134,14 @@ I have currently **4 published games**. check them out on [itch.io](https://tehb
 Game dev is how I descovered programing. For me, game creation is about creativity and experimentation. I have worked with many differente engine: RPG Maker, Game maker studio, Unity, Processing and most recently Godot. I do everything myself except music: game and level design, code, graphics, animation, sound effect. 
 
 
-## Associatives Experiences
+## Volunteer Experiences
 
 **2021-2023:** Member of the supervisory board at [ARIANE](https://physique-ingenierie.unistra.fr/scolarite-vie-etudiante/amicale-des-etudiants-ariane)  
 **2021:** Organizer of debate workshops ["Big Review"](https://wiki.theshifters.org/index.php?title=Big_Review) chez les Shifters  
 **2020:** Treasurer of the [Robert Schuman Argentorata](http://www.rsa-strasbourg.eu/)  
 **2019 – 2022:** Trainer at [AFGES](https://afges.org/)  
 **2016 – 2019:** Member of the Board of Directors at [AFGES](https://afges.org/)  
-**2017 – 2019:** Member of the Board of Directors at [AFNEUS](https://afneus.org/)  
+**2017 – 2019:** Member of the Board of Directors at [AFNEUS](https://fr.wikipedia.org/wiki/Association_f%C3%A9d%C3%A9rative_nationale_des_%C3%A9tudiants_universitaires_scientifiques)  
 **2018 – 2019:** President at [ARIANE](https://physique-ingenierie.unistra.fr/scolarite-vie-etudiante/amicale-des-etudiants-ariane)  
 **2017 – 2018:** Secretary General at [ARIANE](https://physique-ingenierie.unistra.fr/scolarite-vie-etudiante/amicale-des-etudiants-ariane)  
 
