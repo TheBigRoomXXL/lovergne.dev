@@ -30,6 +30,6 @@ export const siteConfig: SiteConfig = {
 	socialLinks: [
 		{ name: "github", url: "https://github.com/TheBigRoomXXL" },
 		{ name: "itch.io", url: "https://tehbigroomxxl.itch.io/" },
-		{ name: "email", url: "mailto:sebastien@lovergne.dev?Subject=Hello" },
+		{ name: "email", url: "mailto:seb.lovergne+site@gmail.com?Subject=Hello" },
 	],
 };
