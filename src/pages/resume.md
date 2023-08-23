@@ -16,23 +16,23 @@ description: "My experiences and skills as  Full Stack Developer & DevOps, "
 
 > Technical Skills
 
-<div style="height:114px;">
-<img alt="Python" src="https://img.shields.io/badge/Python-3C77A8?logo=python&logoColor=white" height="30" />
-<img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-377CC8?logo=typescript&logoColor=white" height="30" />
-<img alt="Go" src="https://img.shields.io/badge/Go-08AFD8?logo=go&logoColor=white" height="30" />
-<img alt="VueJS" src="https://img.shields.io/badge/VueJS-36996d?logo=vuedotjs&logoColor=white" height="30" />
-<img alt="Flask" src="https://img.shields.io/badge/Flask-grey?logo=flask&logoColor=white" height="30" />
-<img alt="Astro" src="https://img.shields.io/badge/Astro-purple?logo=astro&logoColor=white" height="30" />
-<img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-2F6792?logo=postgresql&logoColor=white" height="30" />
-<img alt="SQLite" src="https://img.shields.io/badge/SQLite-blue?logo=sqlite&logoColor=white" height="30" />
-<img alt="MongoDB" src="https://img.shields.io/badge/MongoDB-086D50?logo=mongodb&logoColor=white" height="30" />
-<img alt="Docker" src="https://img.shields.io/badge/Docker-dodgerblue?logo=docker&logoColor=white" height="30" />
-<img alt="Gitlab CI" src="https://img.shields.io/badge/Gitlab--CI-E34930?logo=gitlab&logoColor=white" height="30" />
-<img alt="OpenTelemetry" src="https://img.shields.io/badge/OpenTelemetry-darkslateblue?logo=opentelemetry&logoColor=white" height="30" />
-<img alt="GCP" src="https://img.shields.io/badge/GCP-dodgerblue?logo=googlecloud&logoColor=white" height="30" />
-<img alt="Debian" src="https://img.shields.io/badge/Debian-D70A53?logo=debian&logoColor=white" height="30" />
-<img alt="Fedora" src="https://img.shields.io/badge/Fedora-012761?logo=fedora&logoColor=white" height="30" />
-<img alt="Alpine" src="https://img.shields.io/badge/Alpine-08364C?logo=alpinelinux&logoColor=white" height="30" />
+<div id="badges">
+<img alt="Python" src="https://img.shields.io/badge/Python-3C77A8?logo=python&logoColor=white" height="30" width="100.5" />
+<img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-377CC8?logo=typescript&logoColor=white" height="30" width="130.5"/>
+<img alt="Go" src="https://img.shields.io/badge/Go-08AFD8?logo=go&logoColor=white" height="30" width="64.5" />
+<img alt="VueJS" src="https://img.shields.io/badge/VueJS-36996d?logo=vuedotjs&logoColor=white" height="30" width="91.5" />
+<img alt="Flask" src="https://img.shields.io/badge/Flask-grey?logo=flask&logoColor=white" height="30" width="85.5"/>
+<img alt="Astro" src="https://img.shields.io/badge/Astro-purple?logo=astro&logoColor=white" height="30" width="85.5"/>
+<img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-2F6792?logo=postgresql&logoColor=white" height="30" width="136.5"/>
+<img alt="SQLite" src="https://img.shields.io/badge/SQLite-blue?logo=sqlite&logoColor=white" height="30" width="97.5"/>
+<img alt="MongoDB" src="https://img.shields.io/badge/MongoDB-086D50?logo=mongodb&logoColor=white" height="30" width="121.5"/>
+<img alt="Docker" src="https://img.shields.io/badge/Docker-dodgerblue?logo=docker&logoColor=white" height="30" width="100.5" />
+<img alt="Gitlab CI" src="https://img.shields.io/badge/Gitlab--CI-E34930?logo=gitlab&logoColor=white" height="30" width="115.5" />
+<img alt="OpenTelemetry" src="https://img.shields.io/badge/OpenTelemetry-darkslateblue?logo=opentelemetry&logoColor=white" height="30" width="169.5"/>
+<img alt="GCP" src="https://img.shields.io/badge/GCP-dodgerblue?logo=googlecloud&logoColor=white" height="30" width="76.5"/>
+<img alt="Debian" src="https://img.shields.io/badge/Debian-D70A53?logo=debian&logoColor=white" height="30" width="100.5"/>
+<img alt="Fedora" src="https://img.shields.io/badge/Fedora-012761?logo=fedora&logoColor=white" height="30" width="97.5"/>
+<img alt="Alpine" src="https://img.shields.io/badge/Alpine-08364C?logo=alpinelinux&logoColor=white" height="30" width="91.5"/>
 </div>
 
 ## Professional Career
