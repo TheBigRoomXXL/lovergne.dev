@@ -5,7 +5,9 @@
     --color-secondary: #D2F00F;
     --color-text: #cfcfcf;
     --color-bg: #1D1F21;
-    --color-grey: #575757;
+    --color-grey-lighter: #999;
+    --color-grey: #777;
+    --color-grey-darker: #444;
 
     --content-max-width: 50rem;
     --minimum-margin: calc(1rem + 1vw);
@@ -15,8 +17,8 @@
 
 @media (prefers-color-scheme: light) {
     :root {
-        --color-text: var(--color-grey);
-        --color-bg: #fff;
+        --color-text: var(--color-grey-darker);
+        --color-bg: white;
         --color-primary: #207D92;
         --color-secondary: #6A7A06;
     }
@@ -34,8 +36,6 @@ html {
     word-spacing: .16em;
     line-height: 1.5em;
     font-size: min(calc((1rem + 0.7vw) * 0.7), 16px);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -57,7 +57,7 @@ h5 {
     clear: both;
     /* letter-spacing: .08em; */
     font-family: ui-monospace, "SFMono-Regular", "Menlo", "Monaco", 'Consolas',
-    "Liberation Mono", "Courier New", "monospace";
+        "Liberation Mono", "Courier New", "monospace";
 }
 
 h1+h2,
@@ -116,8 +116,25 @@ fieldset {
 }
 
 legend {
-    font-size: 1.05em;
+    font-family: monospace, courier;
     padding: 0 1ch;
+}
+
+code {
+    font-family: "Monospace Code", monospace, courier;
+    font-size: 0.85em;
+    background-color: #eee;
+    border-radius: 3px;
+    border: 1px solid #b4b4b4;
+    box-shadow:
+        0 1px 1px rgba(0, 0, 0, 0.2),
+        0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
+    color: var(--color-grey-darker);
+    display: inline-block;
+    font-weight: 700;
+    line-height: 1.1em;
+    padding: 0.2em 0.1em;
+
 }
 
 /* ===== LIST ===== */
@@ -158,7 +175,7 @@ td+td {
 
 
 button {
-    color: var(--color-grey);
+    color: var(--color-grey-darker);
     background-color: #FCFCFD;
     border-radius: 0.2em;
     border: 1px solid var(--color-grey);
@@ -180,6 +197,12 @@ hr {
 
 img {
     max-width: min(var(--content-max-width), 100vw - 2* var(--minimum-margin))
+}
+
+fieldset>img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 

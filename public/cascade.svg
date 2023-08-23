@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   viewBox="0 0 545.6999969482422 303.20000000000005"
+   width="545.6999969482422"
+   height="303.20000000000005"
+   id="svg17"
+   sodipodi:docname="cascade.svg"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview17"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="2.6550131"
+     inkscape:cx="272.88001"
+     inkscape:cy="151.60001"
+     inkscape:window-width="2560"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg17" />
+  <!-- svg-source:excalidraw -->
+  <defs
+     id="defs1">
+    <style
+       class="style-fonts"
+       id="style1">&#10;      @font-face {&#10;        font-family: &quot;Virgil&quot;;&#10;        src: url(&quot;https://excalidraw.com/Virgil.woff2&quot;);&#10;      }&#10;      @font-face {&#10;        font-family: &quot;Cascadia&quot;;&#10;        src: url(&quot;https://excalidraw.com/Cascadia.woff2&quot;);&#10;      }&#10;    </style>
+  </defs>
+  <g
+     transform="translate(0,12.68066)"
+     id="g1">
+    <text
+       x="0"
+       y="0"
+       font-family="Cascadia, 'Segoe UI Emoji'"
+       font-size="36px"
+       fill="#808080"
+       text-anchor="start"
+       style="white-space:pre"
+       direction="ltr"
+       dominant-baseline="text-before-edge"
+       id="text1">Author</text>
+  </g>
+  <g
+     transform="translate(219.34823,13)"
+     id="g2">
+    <text
+       x="0"
+       y="0"
+       font-family="Cascadia, 'Segoe UI Emoji'"
+       font-size="36px"
+       fill="#808080"
+       text-anchor="start"
+       style="white-space:pre"
+       direction="ltr"
+       dominant-baseline="text-before-edge"
+       id="text2">User</text>
+  </g>
+  <g
+     transform="translate(370.79493,15.730217)"
+     id="g3">
+    <text
+       x="0"
+       y="0"
+       font-family="Cascadia, 'Segoe UI Emoji'"
+       font-size="36px"
+       fill="#808080"
+       text-anchor="start"
+       style="white-space:pre"
+       direction="ltr"
+       dominant-baseline="text-before-edge"
+       id="text3">Browser</text>
+  </g>
+  <g
+     transform="translate(183.04691,141.01262)"
+     id="g4">
+    <text
+       x="0"
+       y="0"
+       font-family="Cascadia, 'Segoe UI Emoji'"
+       font-size="36px"
+       fill="#808080"
+       text-anchor="start"
+       style="white-space:pre"
+       direction="ltr"
+       dominant-baseline="text-before-edge"
+       id="text4">Cascade</text>
+  </g>
+  <g
+     transform="translate(205.21329,250.69739)"
+     id="g5">
+    <text
+       x="0"
+       y="0"
+       font-family="Cascadia, 'Segoe UI Emoji'"
+       font-size="36px"
+       fill="#808080"
+       text-anchor="start"
+       style="white-space:pre"
+       direction="ltr"
+       dominant-baseline="text-before-edge"
+       id="text5">Style</text>
+  </g>
+  <g
+     stroke-linecap="round"
+     id="g8">
+    <g
+       transform="translate(53.955955485831396 68.60000000000002) rotate(0 61.02202225708436 43.57005576031827)"
+       id="g6">
+      <path
+         d="M0 0 C6.51 9, 18.7 39.48, 39.04 54 C59.38 68.52, 108.21 81.62, 122.04 87.14 M0 0 C6.51 9, 18.7 39.48, 39.04 54 C59.38 68.52, 108.21 81.62, 122.04 87.14"
+         stroke="grey"
+         stroke-width="2"
+         fill="none"
+         id="path5" />
+    </g>
+    <g
+       transform="translate(53.955955485831396 68.60000000000002) rotate(0 61.02202225708436 43.57005576031827)"
+       id="g7">
+      <path
+         d="M122.04 87.14 L107.13 88.77 L111.21 76.77 L122.04 87.14"
+         stroke="none"
+         stroke-width="0"
+         fill="grey"
+         fill-rule="evenodd"
+         id="path6" />
+      <path
+         d="M122.04 87.14 C117.69 87.62, 113.33 88.1, 107.13 88.77 M122.04 87.14 C117.14 87.68, 112.25 88.21, 107.13 88.77 M107.13 88.77 C108.47 84.83, 109.81 80.89, 111.21 76.77 M107.13 88.77 C108 86.21, 108.88 83.64, 111.21 76.77 M111.21 76.77 C114.52 79.94, 117.83 83.11, 122.04 87.14 M111.21 76.77 C114.51 79.93, 117.82 83.1, 122.04 87.14 M122.04 87.14 C122.04 87.14, 122.04 87.14, 122.04 87.14 M122.04 87.14 C122.04 87.14, 122.04 87.14, 122.04 87.14"
+         stroke="grey"
+         stroke-width="2"
+         fill="none"
+         id="path7" />
+    </g>
+  </g>
+  <mask
+     id="mask8" />
+  <g
+     stroke-linecap="round"
+     id="g11">
+    <g
+       transform="translate(448.6926666350771 68.10000000000002) rotate(0 -50.59633331753855 46.16149153990585)"
+       id="g9">
+      <path
+         d="M0 0 C-5.53 8.83, -16.33 37.61, -33.19 53 C-50.06 68.39, -89.86 85.77, -101.19 92.32 M0 0 C-5.53 8.83, -16.33 37.61, -33.19 53 C-50.06 68.39, -89.86 85.77, -101.19 92.32"
+         stroke="grey"
+         stroke-width="2"
+         fill="none"
+         id="path8" />
+    </g>
+    <g
+       transform="translate(448.6926666350771 68.10000000000002) rotate(0 -50.59633331753855 46.16149153990585)"
+       id="g10">
+      <path
+         d="M-101.19 92.32 L-92 80.47 L-86.2 91.75 L-101.19 92.32"
+         stroke="none"
+         stroke-width="0"
+         fill="grey"
+         fill-rule="evenodd"
+         id="path9" />
+      <path
+         d="M-101.19 92.32 C-99.27 89.84, -97.34 87.36, -92 80.47 M-101.19 92.32 C-98.66 89.06, -96.12 85.79, -92 80.47 M-92 80.47 C-90.84 82.73, -89.68 84.99, -86.2 91.75 M-92 80.47 C-90.33 83.72, -88.66 86.98, -86.2 91.75 M-86.2 91.75 C-90.36 91.91, -94.51 92.07, -101.19 92.32 M-86.2 91.75 C-91.13 91.94, -96.06 92.13, -101.19 92.32 M-101.19 92.32 C-101.19 92.32, -101.19 92.32, -101.19 92.32 M-101.19 92.32 C-101.19 92.32, -101.19 92.32, -101.19 92.32"
+         stroke="grey"
+         stroke-width="2"
+         fill="none"
+         id="path10" />
+    </g>
+  </g>
+  <mask
+     id="mask11" />
+  <g
+     stroke-linecap="round"
+     id="g14">
+    <g
+       transform="translate(259.63022947432864 66.60000000000002) rotate(0 0.010632085631101518 33.5)"
+       id="g12">
+      <path
+         d="M0 0 C0 11.17, 0.02 55.83, 0.02 67 M0 0 C0 11.17, 0.02 55.83, 0.02 67"
+         stroke="grey"
+         stroke-width="2"
+         fill="none"
+         id="path11" />
+    </g>
+    <g
+       transform="translate(259.63022947432864 66.60000000000002) rotate(0 0.010632085631101518 33.5)"
+       id="g13">
+      <path
+         d="M0.02 67 L-6.32 53.41 L6.36 53.4 L0.02 67"
+         stroke="none"
+         stroke-width="0"
+         fill="grey"
+         fill-rule="evenodd"
+         id="path12" />
+      <path
+         d="M0.02 67 C-2.09 62.48, -4.2 57.96, -6.32 53.41 M0.02 67 C-1.82 63.06, -3.66 59.12, -6.32 53.41 M-6.32 53.41 C-2.66 53.41, 1.01 53.41, 6.36 53.4 M-6.32 53.41 C-3.44 53.41, -0.55 53.41, 6.36 53.4 M6.36 53.4 C4.22 58, 2.07 62.59, 0.02 67 M6.36 53.4 C4.78 56.78, 3.21 60.15, 0.02 67 M0.02 67 C0.02 67, 0.02 67, 0.02 67 M0.02 67 C0.02 67, 0.02 67, 0.02 67"
+         stroke="grey"
+         stroke-width="2"
+         fill="none"
+         id="path13" />
+    </g>
+  </g>
+  <mask
+     id="mask14" />
+  <g
+     stroke-linecap="round"
+     id="g17">
+    <g
+       transform="translate(259.43493,185.6)"
+       id="g15">
+      <path
+         d="M 0,0 C -0.16,10.5 -0.78,52.5 -0.93,63 M 0,0 c -0.16,10.5 -0.78,52.5 -0.93,63"
+         stroke="#808080"
+         stroke-width="2"
+         fill="none"
+         id="path14" />
+    </g>
+    <g
+       transform="translate(259.43493,185.6)"
+       id="g16">
+      <path
+         d="M -0.93,63 -7.07,49.31 5.61,49.5 -0.93,63"
+         stroke="none"
+         stroke-width="0"
+         fill="#808080"
+         fill-rule="evenodd"
+         id="path15" />
+      <path
+         d="M -0.93,63 C -3.31,57.71 -5.68,52.41 -7.07,49.31 M -0.93,63 C -2.69,59.09 -4.44,55.19 -7.07,49.31 m 0,0 c 4.38,0.07 8.77,0.13 12.68,0.19 M -7.07,49.31 c 4.98,0.08 9.96,0.15 12.68,0.19 m 0,0 C 4.07,52.67 2.54,55.84 -0.93,63 M 5.61,49.5 C 3.33,54.2 1.05,58.91 -0.93,63 m 0,0 c 0,0 0,0 0,0 m 0,0 c 0,0 0,0 0,0"
+         stroke="#808080"
+         stroke-width="2"
+         fill="none"
+         id="path16" />
+    </g>
+  </g>
+  <mask
+     id="mask17" />
+</svg>
