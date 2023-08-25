@@ -44,7 +44,7 @@ description: "My experiences and skills as  Full Stack Developer & DevOps, "
 
 #### Achievements
 
-- Maintaining the existing systems and creating two new applications
+- Developing and maintaining REST APIs and SPAs for data collection and remote management of IOT devices. 
 
 - Co-building systems architecture with thematic such as IoT, low data 
 consumption (satellite connection), data synchronisation, and real time visualisation
@@ -76,6 +76,8 @@ visualize the software's architecture
 
 - Experimenting with public cloud solution to replace the existing infrastructure in
 order to improve security and maintainability
+
+- Trainer of the fundamentals of python and DevOps practice.
 
 
 ### Data Analyst
