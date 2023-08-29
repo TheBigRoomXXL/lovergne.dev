@@ -5,12 +5,12 @@ All the files inside `src/content` directory are licensed under
 
 1. The canonical link is directed towards the original article, e.g.
    `<link rel="canonical" href="https://lovergne.dev/awesome/>`
-2. The following message is displayed above and below the article:
+2. The following message or equivalent is displayed:
    `This article has been originally published on <a href="https://lovergne.dev/">Sebastien Lovergne's website</a>.`
 
 # Logos
 
-The files `public/icon.svg` and `public/error.svg`  are copyrighted to Sebastien Lovergne. All rights reserved.
+The files `public/icon.svg` and `public/error.svg` are copyrighted to Sebastien Lovergne. All rights reserved.
 
 # Other files
 

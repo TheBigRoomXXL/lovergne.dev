@@ -1,11 +1,11 @@
 ---
-import { siteConfig } from "src/site.config";
+import { siteConfig } from "@site-config";
 import "@csstools/normalize.css";
 
 const { title, description, ogImage, articleDate } = Astro.props;
 
 const titleSeparator = "•";
-const siteTitle = `${title} ${titleSeparator} ${siteConfig.title}`;
+const pageTitle = `${title} ${titleSeparator} ${siteConfig.title}`;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const socialImageURL = new URL(
   ogImage ? ogImage : "/social-card.png",
@@ -13,18 +13,18 @@ const socialImageURL = new URL(
 ).href;
 ---
 
+<!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta
   name="viewport"
   content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
 />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<title>{siteTitle}</title>
+<link rel="canonical" href={canonicalURL} />
 
 <!-- Icons / Favicon -->
 <link rel="icon" href="/icon.svg" type="image/svg+xml" />
 <link rel="apple-touch-icon" href="/icon.svg" />
-<link rel="canonical" href={canonicalURL} />
 
 <!-- Style sheet -->
 <meta name="theme-color" content={siteConfig.themeColor} />
@@ -32,7 +32,8 @@ const socialImageURL = new URL(
 <link rel="stylesheet" type="text/css" href="/print.css" media="print" />
 
 <!-- Primary Meta Tags -->
-<meta name="title" content={siteTitle} />
+<title>{pageTitle}</title>
+<meta name="title" content={pageTitle} />
 <meta name="description" content={description} />
 <meta name="author" content={siteConfig.author} />
 

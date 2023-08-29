@@ -27,6 +27,7 @@ description: "My experiences and skills as  Full Stack Developer & DevOps, "
 <img alt="SQLite" src="https://img.shields.io/badge/SQLite-blue?logo=sqlite&logoColor=white" height="30" width="97.5"/>
 <img alt="MongoDB" src="https://img.shields.io/badge/MongoDB-086D50?logo=mongodb&logoColor=white" height="30" width="121.5"/>
 <img alt="Docker" src="https://img.shields.io/badge/Docker-dodgerblue?logo=docker&logoColor=white" height="30" width="100.5" />
+<img alt="RabbitMQ" src="https://img.shields.io/badge/RabbitMQ-F76300?logo=rabbitmq&logoColor=white" height="30"/>
 <img alt="Gitlab CI" src="https://img.shields.io/badge/Gitlab--CI-E34930?logo=gitlab&logoColor=white" height="30" width="115.5" />
 <img alt="OpenTelemetry" src="https://img.shields.io/badge/OpenTelemetry-darkslateblue?logo=opentelemetry&logoColor=white" height="30" width="169.5"/>
 <img alt="GCP" src="https://img.shields.io/badge/GCP-dodgerblue?logo=googlecloud&logoColor=white" height="30" width="76.5"/>
