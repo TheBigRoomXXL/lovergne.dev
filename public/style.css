@@ -211,7 +211,7 @@ img {
     max-width: min(var(--content-max-width), 100vw - 2* var(--minimum-margin))
 }
 
-fieldset>img {
+fieldset>*>img {
     display: block;
     margin-left: auto;
     margin-right: auto;
