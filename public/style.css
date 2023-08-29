@@ -115,6 +115,18 @@ fieldset {
     border-radius: .25rem;
 }
 
+fieldset>p {
+    text-align: justify;
+}
+
+fieldset>p:first-of-type {
+    margin-block-start: 0;
+}
+
+fieldset>p:last-of-type {
+    margin-block-end: 0;
+}
+
 legend {
     font-family: monospace, courier;
     padding: 0 1ch;

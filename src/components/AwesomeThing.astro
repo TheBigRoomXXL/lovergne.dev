@@ -1,0 +1,25 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+    thing: CollectionEntry<"awesome">;
+}
+const { thing } = Astro.props;
+const { Content } = await thing.render();
+---
+
+<fieldset id={thing.data.title}>
+    <legend>
+        {thing.data.pin ? "📌" : ""}
+        <a href={thing.data.link}>
+            {thing.data.title}
+            {thing.data.author ? `by ${thing.data.author}` : ""}
+            {
+                thing.data.published_date
+                    ? `(${thing.data.published_date.getFullYear()})`
+                    : ""
+            }
+        </a>
+    </legend>
+    <Content />
+</fieldset>
