@@ -19,6 +19,7 @@ description: "My experiences and skills as  Full Stack Developer & DevOps, "
 <div id="badges">
 <img alt="Python" src="https://img.shields.io/badge/Python-3C77A8?logo=python&logoColor=white" height="30" width="100.5" />
 <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-377CC8?logo=typescript&logoColor=white" height="30" width="130.5"/>
+<img alt="C#" src="https://img.shields.io/badge/C%23-690081?logo=csharp&logoColor=white" height="30"/>
 <img alt="Go" src="https://img.shields.io/badge/Go-08AFD8?logo=go&logoColor=white" height="30" width="64.5" />
 <img alt="VueJS" src="https://img.shields.io/badge/VueJS-36996d?logo=vuedotjs&logoColor=white" height="30" width="91.5" />
 <img alt="Flask" src="https://img.shields.io/badge/Flask-grey?logo=flask&logoColor=white" height="30" width="85.5"/>
