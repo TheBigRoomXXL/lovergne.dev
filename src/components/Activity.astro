@@ -22,11 +22,11 @@ awesomeEntries = awesomeEntries.slice(0, limit);
         <time datetime={entry.data.added_date.toISOString()}>
           {entry.data.added_date.toLocaleDateString("default", {
             day: "2-digit",
-          })}
+          })}{" "}
           {entry.data.added_date.toLocaleDateString("default", {
             month: "short",
-          })}
-          {entry.data.added_date.getFullYear()}
+          })}{" "}
+          {entry.data.added_date.getFullYear()}{" "}
         </time>
         <a href={`/awesome#${entry.data.title}`}>{entry.data.title}</a>
       </li>

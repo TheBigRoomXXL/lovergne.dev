@@ -59,6 +59,14 @@ import { siteConfig } from "src/site.config";
     margin: 0;
   }
 
+  @media (prefers-color-scheme: light) {
+    /* primary is darker than I would like in light mode to preserve contrast
+        for accessibility. But because title is big it can be lighten*/
+    .title {
+      filter: brightness(140%);
+    }
+  }
+
   .title,
   .horizontal-list {
     text-align: center;
@@ -66,16 +74,7 @@ import { siteConfig } from "src/site.config";
 
   .horizontal-list > a {
     font-size: 1.25rem;
-    padding: 0.25em 0;
     color: var(--color-secondary);
-  }
-
-  @media (prefers-color-scheme: light) {
-    /* primary is darker than I would like in light mode to preserve contrast
-        for accessibility. But because title is big it can be lighten*/
-    .title {
-      filter: brightness(140%);
-    }
   }
 
   @media (min-width: 500px) {

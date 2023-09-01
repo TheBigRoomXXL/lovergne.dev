@@ -11,7 +11,7 @@ function getContent(entry: CollectionEntry<'awesome'>): string {
 }
 
 
-export function get(context: APIContext) {
+export function GET(context: APIContext) {
   return rss({
     title: siteConfig.title,
     description: siteConfig.description,

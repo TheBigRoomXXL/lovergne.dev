@@ -3,16 +3,16 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev --host=0.0.0.0",
-    "start": "astro dev --host=0.0.0.0",
+    "dev": "astro dev --host=0.0.0.0 --port 3000",
+    "start": "astro dev --host=0.0.0.0 --port 3000",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
     "sync": "astro sync"
   },
   "dependencies": {
-    "astro": "^2.10.2",
-    "@astrojs/rss": "^2.4.4",
-    "@csstools/normalize.css": "github:csstools/normalize.css"
+    "@astrojs/rss": "^3.0.0",
+    "@csstools/normalize.css": "github:csstools/normalize.css",
+    "astro": "^3.0.6"
   }
 }
