@@ -1,14 +1,10 @@
 import rss from '@astrojs/rss';
 import { siteConfig } from '@site-config';
 import type { APIContext } from 'astro';
-import { CollectionEntry, getCollection } from 'astro:content';
+import { getCollection } from 'astro:content';
 
 const awesome = await getCollection('awesome');
 
-function getContent(entry: CollectionEntry<'awesome'>): string {
-  return `${entry.data.description} 
-    <br><a href="${entry.data.link}">${entry.data.link}</a>`
-}
 
 
 export function GET(context: APIContext) {
@@ -19,7 +15,7 @@ export function GET(context: APIContext) {
     items: awesome.map((entry) => ({
       title: entry.data.title,
       pubDate: entry.data.added_date,
-      content: getContent(entry),
+      content: entry.body + `<br><a href="${entry.data.link}">${entry.data.link}</a>`,
       link: `${context.site}awesome#${entry.data.title}`,
     })),
     customData: `<language>${siteConfig.lang}</language>`,
