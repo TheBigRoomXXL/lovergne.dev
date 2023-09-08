@@ -8,7 +8,7 @@ const { thing } = Astro.props;
 const { Content } = await thing.render();
 ---
 
-<fieldset id={thing.data.title}>
+<fieldset id={thing.slug}>
     <legend>
         {thing.data.pin ? "📌" : ""}
         <a href={thing.data.link}>

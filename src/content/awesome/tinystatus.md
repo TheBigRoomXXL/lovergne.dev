@@ -1,6 +1,6 @@
 ---
 link: https://github.com/bderenzo/tinystatus/
-title: "tinystatus: A lovingly simple monitoring tool."
+title: "Tinystatus: A lovingly simple monitoring tool."
 added_date: 2023-09-08
 tags: ["tool"]
 ---

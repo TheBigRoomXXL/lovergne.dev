@@ -28,14 +28,14 @@ awesomeEntries = awesomeEntries.slice(0, limit);
           })}{" "}
           {entry.data.added_date.getFullYear()}{" "}
         </time>
-        <a href={`/awesome#${entry.data.title}`}>{entry.data.title}</a>
+        <a href={`/awesome#${entry.slug}`}>{entry.data.title}</a>
       </li>
     ))
   }
   <li>
     {
       hasBeenSliced ? (
-        <a href={`/awesome#${awesomeEntries[limit - 1].data.title}`}>
+        <a href={`/awesome#${awesomeEntries[limit - 1].slug}`}>
           Older activities
         </a>
       ) : (
@@ -48,6 +48,12 @@ awesomeEntries = awesomeEntries.slice(0, limit);
 <style>
   ol {
     list-style-type: none;
+  }
+
+  @media (max-width: 400px) {
+    ol {
+      padding-left: 1em;
+    }
   }
 
   time {
