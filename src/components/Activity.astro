@@ -33,7 +33,15 @@ awesomeEntries = awesomeEntries.slice(0, limit);
     ))
   }
   <li>
-    {hasBeenSliced ? <a href="/feed">Older activities</a> : ""}
+    {
+      hasBeenSliced ? (
+        <a href={`/awesome#${awesomeEntries[limit - 1].data.title}`}>
+          Older activities
+        </a>
+      ) : (
+        ""
+      )
+    }
   </li>
 </ol>
 
