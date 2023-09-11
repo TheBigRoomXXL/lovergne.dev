@@ -16,7 +16,7 @@ export function GET(context: APIContext) {
       title: entry.data.title,
       pubDate: entry.data.added_date,
       content: entry.body + `<br><a href="${entry.data.link}">${entry.data.link}</a>`,
-      link: `${context.site}awesome#${entry.data.title}`,
+      link: `${context.site}awesome#${entry.slug}`,
     })),
     customData: `<language>${siteConfig.lang}</language>`,
   });
