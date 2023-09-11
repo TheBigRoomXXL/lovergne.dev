@@ -3,10 +3,10 @@ link: https://www.youtube.com/watch?v=aHUtMbJw8iA&t=906s
 title: Why is CSS so Weird?
 added_date: 2023-08-23
 ---
-Because the web has been build with a set of value at it''s core
+Because the web has been build with a set of value at it's core
 : <strong> the web is open, it's for everyone and everything</strong>. By
 accepting those value we must, at the same time, accept that we loose some
-degree of control, we don''t choose who will look at our website and on what
+degree of control, we don't choose who will look at our website and on what
 devices. That lake of control means we must build websites for an infinite
 canvas with unknown constraints and capabilities. But designing for the
 unknown is hard, for that, we need flexibility, and this is where CSS come in.
@@ -32,9 +32,9 @@ in many similar places to achieve consistency, but this is also another big
 pitfall of CSS as a style might impact elements it was never meant to.
 
 Overall some might think that we made a bad tradeoff with CSS by loosing too
-much control, but I don''t think so. As John Allsopp said, <cite>"Control[...]
+much control, but I don't think so. As John Allsopp said, <cite>"Control[...]
 is a limitation of the printed page"</cite>,  when a book is produce and sold
 only the editor can make it accessible, and he fails to do it most of the time
-whether it''s diagrams with bad contrast or the absence of braille editions
+whether it's diagrams with bad contrast or the absence of braille editions
 or other things. But with the browser and CSS  the user has the last word,
-he can make it feet it''s need, whatever it is.'
+he can make it feet it's need, whatever it is.'
