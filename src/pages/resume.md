@@ -80,7 +80,7 @@ visualize the software's architecture
 - Experimenting with public cloud solution to replace the existing infrastructure in
 order to improve security and maintainability
 
-- Trainer of the fundamentals of python and DevOps practice.
+- Trainer on the subjects of Python fundamentals and DevOps practice.
 
 
 ### Data Analyst
