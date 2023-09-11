@@ -4,7 +4,7 @@ title: Why is CSS so Weird?
 added_date: 2023-08-23
 ---
 Because the web has been build with a set of value at it''s core
-: <strong> the web is open, it''s for everyone and everything</strong>. By
+: <strong> the web is open, it's for everyone and everything</strong>. By
 accepting those value we must, at the same time, accept that we loose some
 degree of control, we don''t choose who will look at our website and on what
 devices. That lake of control means we must build websites for an infinite
