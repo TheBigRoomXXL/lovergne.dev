@@ -154,7 +154,7 @@ Game dev is how I descovered programing. For me, game creation is about creativi
 
 ## Volunteer Experiences
 
-**2021-2023:** Member of the supervisory board at [ARIANE](https://physique-ingenierie.unistra.fr/scolarite-vie-etudiante/amicale-des-etudiants-ariane)  
+**2021-today:** Member of the supervisory board at [ARIANE](https://physique-ingenierie.unistra.fr/scolarite-vie-etudiante/amicale-des-etudiants-ariane)  
 **2021:** Organizer of debate workshops ["Big Review"](https://wiki.theshifters.org/index.php?title=Big_Review) chez les Shifters  
 **2020:** Treasurer of the [Robert Schuman Argentorata](http://www.rsa-strasbourg.eu/)  
 **2019 – 2022:** Trainer at [AFGES](https://afges.org/)  
