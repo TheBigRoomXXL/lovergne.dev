@@ -1,0 +1,33 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
+
+import BaseLayout from "@layouts/Base";
+import AwesomeThing from "@components/AwesomeThing";
+
+export async function getStaticPaths() {
+    const things = await getCollection("awesome");
+    return things.map((thing) => ({
+        params: { slug: thing.slug },
+        props: thing,
+    }));
+}
+
+type Props = CollectionEntry<"awesome">;
+const thing = Astro.props;
+const { Content } = await thing.render();
+---
+
+<BaseLayout title="Awesome" description="A curation of awesome things">
+    <h2>
+        {thing.data.title}
+        {thing.data.author ? `by ${thing.data.author}` : ""}
+        {
+            thing.data.published_date
+                ? `(${thing.data.published_date.getFullYear()})`
+                : ""
+        }
+    </h2>
+    <a href={thing.data.link}>{thing.data.link}</a>
+    <Content />
+</BaseLayout>
