@@ -13,6 +13,6 @@
   "dependencies": {
     "@astrojs/rss": "^3.0.0",
     "@csstools/normalize.css": "github:csstools/normalize.css",
-    "astro": "^3.0.6"
+    "astro": "^3.5.5"
   }
 }
