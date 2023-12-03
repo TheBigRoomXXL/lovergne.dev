@@ -11,19 +11,16 @@ Then I use Astro for static site generation and there is no other dependency ( w
 is [normalize.css](https://csstools.github.io/normalize.css/11.0.0/normalize.css) but it's so small
 it doesn't count!).
 
-## Acknoledgement
-
-This site was originally inspired by the [cactus theme](https://astro-theme-cactus.netlify.app/) for astro but I decided do my own thing as I wanted less dependencies and tooling. The [Meta](/src/components/Meta.astro) component originaly come from there and you can clearly see some similarity in the visual design.
 
 ## Features: 
 
 - **Fully accessible:** built with semantic HTML and accessibility in mind
 - **Light and Fast:** 24.16kB landing page.
-- **It's simple** and has only one dependency.
+- **It's simple** and has minimal runtime dependency.
 - **It's beautiful**, well for me at least. And I really my little isometric logo. 
 - **Dark / Light** theme based on `prefers-color-scheme`
-- **Sufficient SEO support**: see [Meta.astro](https://github.com/TheBigRoomXXL/my-site/blob/main/src/components/Meta.astro), (some links are too small for lighthouse i must admit).
-- **Print support** with a minimal secondary stylesheet (see [print.css](https://github.com/TheBigRoomXXL/my-site/blob/main/public/print.css)). I don't know if anybody else care about that but I like it.
+- **Sufficient SEO support**: see [Meta.astro](https://github.com/TheBigRoomXXL/my-site/blob/main/src/components/Meta.astro)
+- **Print support** with a minimal secondary stylesheet (see [print.css](https://github.com/TheBigRoomXXL/my-site/blob/main/public/print.css)). I don't think anybody else care about that but I like it.
 - **Awesome list** page generated from data files.
 - **RSS** support
 
@@ -35,13 +32,7 @@ This site was originally inspired by the [cactus theme](https://astro-theme-cact
   <a>
 </p>
 
-## TODO
 
-- Awesome list
-  - filtering
-  - tags
-  - media type
-- Blog page
-- Site map
-- Adding some bloody content!
-- CMS maybe
+## Acknowledgement
+
+This site was originally inspired by the [cactus theme](https://astro-theme-cactus.netlify.app/) for astro but I decided do my own thing as I wanted less dependencies and tooling. The [Meta](/src/components/Meta.astro) component originaly come from there and you can clearly see some similarity in the visual design.
