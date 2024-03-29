@@ -1,6 +1,6 @@
 ---
 link: https://wizardzines.com/comics/
-title: wizard zines
+title: Wizard Zines
 tags: []
 added_date: 2024-03-29
 ---

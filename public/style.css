@@ -102,6 +102,9 @@ a:hover {
 }
 
 /* ===== TEXT ===== */
+p {
+    text-align: justify;
+}
 
 blockquote {
     border-left: solid 1px;
@@ -115,9 +118,6 @@ fieldset {
     border-radius: .25rem;
 }
 
-fieldset>p {
-    text-align: justify;
-}
 
 fieldset>p:first-of-type {
     margin-block-start: 0;
