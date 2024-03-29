@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import { shortenLink } from "./utils";
 
 interface Props {
     thing: CollectionEntry<"awesome">;
@@ -22,7 +23,7 @@ const { Content } = await thing.render();
             }
         </strong>
         <a href={thing.data.link} target="_blank"
-            >{new URL(thing.data.link).hostname.replace("www.", "")}</a
+            >{shortenLink(thing.data.link)}</a
         >
         <!-- ) -->
     </legend>

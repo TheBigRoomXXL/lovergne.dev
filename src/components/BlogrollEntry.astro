@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import { shortenLink } from "./utils";
 
 interface Props {
     blog: CollectionEntry<"blogroll">;
@@ -15,7 +16,7 @@ const { Content } = await blog.render();
             {blog.data.title}</strong
         >
         <a href={blog.data.link} target="_blank"
-            >{new URL(blog.data.link).hostname.replace("www.", "")}</a
+            >{shortenLink(blog.data.link)}</a
         >
     </legend>
     <Content />
