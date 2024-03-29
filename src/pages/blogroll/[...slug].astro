@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
+import { shortenLink } from "src/components/utils";
 
 import BaseLayout from "@layouts/Base";
 
@@ -22,7 +23,7 @@ const { Content } = await blog.render();
         {blog.data.title}
     </h2>
     <a href={blog.data.link}>
-        {new URL(blog.data.link).hostname.replace("www.", "")}
+        {shortenLink(blog.data.link)}
     </a>
     <Content />
 </BaseLayout>

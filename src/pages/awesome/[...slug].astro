@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
+import { shortenLink } from "src/components/utils";
 
 import BaseLayout from "@layouts/Base";
 
@@ -28,7 +29,7 @@ const { Content } = await thing.render();
         }
     </h2>
     <a href={thing.data.link}>
-        {new URL(thing.data.link).hostname.replace("www.", "")}
+        {shortenLink(thing.data.link)}
     </a>
     <Content />
 </BaseLayout>
