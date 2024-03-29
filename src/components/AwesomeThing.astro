@@ -20,9 +20,9 @@ const { Content } = await thing.render();
                     : ""
             }
         </strong>
-        (<a href={thing.data.link} target="_blank">
-            {new URL(thing.data.link).hostname.replace("www.", "")}
-        </a>)
+        (<a href={thing.data.link} target="_blank"
+            >{new URL(thing.data.link).hostname.replace("www.", "")}</a
+        >)
     </legend>
     <Content />
 </fieldset>
