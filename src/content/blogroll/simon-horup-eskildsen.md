@@ -2,6 +2,7 @@
 link: https://sirupsen.com/
 title: Simon Hørup Eskildsen
 tags: ["database"]
+added_date: 2024-03-29
 ---
 
 A lot o very advance discucions on scaling relational database. Most of it I will

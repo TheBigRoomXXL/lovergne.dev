@@ -23,7 +23,7 @@ export const siteConfig: SiteConfig = {
 	themeColor: "#0ac8f5",
 	menuLinks: [
 		{ name: "Awesome", url: "/awesome" },
-		{ name: "Resume", url: "/resume" },
+		{ name: "Blogroll", url: "/blogroll" },
 		{ name: "RSS", url: "/rss.xml" },
 
 	],

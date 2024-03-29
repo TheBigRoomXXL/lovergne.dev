@@ -2,6 +2,8 @@
 link: https://joshcollinsworth.com/
 title: Josh Collinsworth
 tags: ["frontend"]
+added_date: 2024-03-29
+pin: true
 ---
 
 This site is just a fantastic example of web design: it's fast, aesthetically 

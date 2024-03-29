@@ -2,6 +2,7 @@
 link: https://www.petemillspaugh.com/
 title: Pete Millspaugh
 tags: []
+added_date: 2024-03-29
 ---
 
 Another example of great website design, what a beautiful landscape! Just try 

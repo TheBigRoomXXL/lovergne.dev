@@ -1,0 +1,20 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+    blog: CollectionEntry<"blogroll">;
+}
+const { blog } = Astro.props;
+const { Content } = await blog.render();
+---
+
+<fieldset id={blog.slug}>
+    <legend>
+        {blog.data.pin ? "📌" : ""}
+        <strong>{blog.data.title}</strong>
+        (<a href={blog.data.link} target="_blank">
+            {new URL(blog.data.link).hostname}
+        </a>)
+    </legend>
+    <Content />
+</fieldset>

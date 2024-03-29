@@ -15,9 +15,11 @@ There is a lot of interesting things inside it but here are my main takeaway:
 - They built the simulation and testing framework **before** starting to build
 the actual database. This really highlights the importance of extensive testing
 capabilities if you want to achieve consistency and robustness in complex
-systems.
+systems. I find the idea of a simulation to continuously test and find bug in 
+a system trully amazing and I hope I will have the chance to do something similar
+one day. 
 -  FoundationDB offers a minimal and carefully chosen feature set and instead
-really on a layered architecture to enable other developer to implement there
+realy on a layered architecture to enable other developer to implement there
 own feature and data-model. This approch has seen a lot of success as
 FoundationDB has been used as a literal foundation for other paradigm of
 distributed databases: semi-relational databases, document and object stores,

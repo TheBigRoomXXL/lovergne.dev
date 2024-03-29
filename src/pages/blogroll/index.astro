@@ -1,0 +1,55 @@
+---
+import BaseLayout from "@layouts/Base";
+import BlogrollEntry from "@components/BlogrollEntry";
+import { getCollection } from "astro:content";
+
+const blogroll = await getCollection("blogroll");
+
+// Stolen from https://stackoverflow.com/questions/2450954/
+function shuffle(array: Array<any>) {
+  let currentIndex = array.length;
+
+  while (currentIndex != 0) {
+    let randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex],
+      array[currentIndex],
+    ];
+  }
+}
+
+shuffle(blogroll);
+---
+
+<BaseLayout title="Blogroll" description="Blogs I really like">
+  <h2>Blogroll</h2>
+  <p>
+    This is a list of blog I like and regularly read. Most of theme are
+    technical blog about progamming.
+  </p>
+  <p>
+    The list is sorted by randomly, expect for my favorites wich are pinned.
+  </p>
+  <ul>
+    {
+      blogroll.map((blog) => (
+        <li>
+          {" "}
+          <BlogrollEntry blog={blog} />{" "}
+        </li>
+      ))
+    }
+  </ul>
+</BaseLayout>
+
+<style>
+  ul {
+    padding-inline-start: 0px;
+  }
+  li {
+    margin: 3em 0;
+    list-style-type: none;
+  }
+</style>

@@ -1,5 +1,8 @@
 import { z, defineCollection } from 'astro:content';
 
+
+// published_date is used to publish the original publishing date of the awesome
+// thing, not the date on my site. 
 const awesomeCollection = defineCollection({
   schema: z.object({
     title: z.string(),
@@ -17,6 +20,7 @@ const blogrollCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     link: z.string(),
+    added_date: z.date(),
     tags: z.array(z.string()).optional(),
     pin: z.boolean().optional(),
   }),
