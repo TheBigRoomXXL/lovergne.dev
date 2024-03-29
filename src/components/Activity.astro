@@ -30,7 +30,7 @@ activities.sort((o1, o2) => {
           })}{" "}
           {entry.data.added_date.getFullYear()}{" "}
         </time>
-        <a href={`/awesome#${entry.slug}`}>{entry.data.title}</a>
+        <a href={`/${entry.collection}#${entry.slug}`}>{entry.data.title}</a>
       </li>
     ))
   }
