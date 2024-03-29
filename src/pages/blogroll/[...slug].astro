@@ -1,0 +1,28 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
+
+import BaseLayout from "@layouts/Base";
+
+export async function getStaticPaths() {
+    const blogroll = await getCollection("blogroll");
+    return blogroll.map((blog) => ({
+        params: { slug: blog.slug },
+        props: blog,
+    }));
+}
+
+type Props = CollectionEntry<"awesome">;
+const blog = Astro.props;
+const { Content } = await blog.render();
+---
+
+<BaseLayout title="Blogroll" description="Blogs I really like">
+    <h2>
+        {blog.data.title}
+    </h2>
+    <a href={blog.data.link}>
+        {new URL(blog.data.link).hostname.replace("www.", "")}
+    </a>
+    <Content />
+</BaseLayout>

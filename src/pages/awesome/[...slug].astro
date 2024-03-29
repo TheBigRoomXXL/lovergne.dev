@@ -3,7 +3,6 @@ import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
 
 import BaseLayout from "@layouts/Base";
-import AwesomeThing from "@components/AwesomeThing";
 
 export async function getStaticPaths() {
     const things = await getCollection("awesome");
@@ -28,6 +27,8 @@ const { Content } = await thing.render();
                 : ""
         }
     </h2>
-    <a href={thing.data.link}>{thing.data.link}</a>
+    <a href={thing.data.link}>
+        {new URL(thing.data.link).hostname.replace("www.", "")}
+    </a>
     <Content />
 </BaseLayout>
