@@ -1,7 +1,6 @@
 ---
 link: https://web.cs.ucdavis.edu/~rogaway/papers/moral-fn.pdf
 title: The Moral Character of Cryptographic Work
-author: P. Rogaway
 added_date: 2023-08-19
 published_date: 2015-12-01
 tags: ["scientific-paper", "philosophy"]

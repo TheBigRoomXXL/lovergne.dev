@@ -10,11 +10,13 @@ const { Content } = await blog.render();
 
 <fieldset id={blog.slug}>
     <legend>
-        {blog.data.pin ? "📌" : ""}
-        <strong>{blog.data.title}</strong>
-        (<a href={blog.data.link} target="_blank"
+        <strong>
+            {blog.data.pin ? "📌 " : ""}
+            {blog.data.title}</strong
+        >
+        <a href={blog.data.link} target="_blank"
             >{new URL(blog.data.link).hostname.replace("www.", "")}</a
-        >)
+        >
     </legend>
     <Content />
 </fieldset>

@@ -1,10 +1,13 @@
 ---
 link: https://www.foundationdb.org/files/fdb-paper.pdf
-title: "FoundationDB: A Distributed Unbundled Transactional Key Value Store"
+title: "FoundationDB, the white paper"
 added_date: 2023-08-29
 published_date: 2021-06-18
 tags: ["scientific-paper"]
 ---
+Full title: FoundationDB: A Distributed Unbundled Transactional Key
+Value Store
+
 FoundationDB is a distributed transactional key value store created in 2009 wich 
 guarantee ACID transactions at scale.
 
