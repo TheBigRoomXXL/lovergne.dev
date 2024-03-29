@@ -18,7 +18,7 @@
 @media (prefers-color-scheme: light) {
     :root {
         --color-text: var(--color-grey-darker);
-        --color-bg: white;
+        --color-bg: rgb(255, 253, 250);
         --color-primary: #207D92;
         --color-secondary: #6A7A06;
     }
