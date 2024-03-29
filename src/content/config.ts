@@ -12,6 +12,17 @@ const awesomeCollection = defineCollection({
   }),
 });
 
+
+const blogrollCollection = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    link: z.string(),
+    tags: z.array(z.string()).optional(),
+    pin: z.boolean().optional(),
+  }),
+});
+
 export const collections = {
   'awesome': awesomeCollection,
+  'blogroll': blogrollCollection,
 };
