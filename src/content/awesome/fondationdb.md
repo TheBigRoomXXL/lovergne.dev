@@ -1,6 +1,6 @@
 ---
 link: https://www.foundationdb.org/files/fdb-paper.pdf
-title: "FoundationDB, the white paper"
+title: "FoundationDB: the white paper"
 added_date: 2023-08-29
 published_date: 2021-06-18
 tags: ["scientific-paper"]

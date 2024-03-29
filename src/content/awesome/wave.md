@@ -1,6 +1,6 @@
 ---
 link: https://wave.webaim.org/extension/
-title: WAVE - Web Accessibility Evaluation Tools
+title: "WAVE: Web Accessibility Evaluation Tools"
 added_date: 2023-08-22
 tags: ["tool"]
 ---

@@ -1,6 +1,6 @@
 ---
 link: https://github.com/rakyll/hey
-title: Hey - a tiny program that sends some load to a web application
+title: "Hey: tiny program that sends some load to a web application"
 added_date: 2023-12-13
 tags: ["tool"]
 ---
