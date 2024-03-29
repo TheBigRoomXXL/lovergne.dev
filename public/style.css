@@ -136,7 +136,14 @@ legend>* {
     display: inline-block;
     padding: 1ch 1.5ch;
     border-right: 2px solid var(--color-grey);
-    opacity: 0.85;
+
+}
+
+/* Avoit contract issue in ligh mode */
+@media (prefers-color-scheme: light) {
+    mark {
+        opacity: 0.85;
+    }
 }
 
 legend>*:last-child {
@@ -160,10 +167,12 @@ code {
 }
 
 mark {
-    background-color: yellow;
+    background-color: var(--color-primary);
     color: var(--color-bg);
     padding: 0 0.25ch;
 }
+
+
 
 /* ===== LIST ===== */
 ul {
