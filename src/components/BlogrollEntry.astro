@@ -13,7 +13,7 @@ const { Content } = await blog.render();
         {blog.data.pin ? "📌" : ""}
         <strong>{blog.data.title}</strong>
         (<a href={blog.data.link} target="_blank">
-            {new URL(blog.data.link).hostname}
+            {new URL(blog.data.link).hostname.replace("www.", "")}
         </a>)
     </legend>
     <Content />
