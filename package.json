@@ -11,9 +11,9 @@
     "sync": "astro sync"
   },
   "dependencies": {
+    "astro": "^3.5.5",
     "@astrojs/rss": "^3.0.0",
     "@astrojs/sitemap": "^3.1.2",
-    "@csstools/normalize.css": "github:csstools/normalize.css",
-    "astro": "^3.5.5"
+    "@csstools/normalize.css": "github:csstools/normalize.css"
   }
 }
