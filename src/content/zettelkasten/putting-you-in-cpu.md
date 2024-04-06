@@ -2,7 +2,7 @@
 link: https://cpu.land/
 title: Putting the “You” in CPU
 added_date: 2024-03-30
-tags: []
+tags: ["learning-ressource"]
 pin: true
 ---
 

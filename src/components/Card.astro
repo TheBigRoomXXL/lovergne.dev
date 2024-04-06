@@ -3,7 +3,7 @@ import type { CollectionEntry } from "astro:content";
 import { shortenLink } from "./utils";
 
 interface Props {
-    thing: CollectionEntry<"awesome">;
+    thing: CollectionEntry<"zettelkasten">;
 }
 const { thing } = Astro.props;
 const { Content } = await thing.render();

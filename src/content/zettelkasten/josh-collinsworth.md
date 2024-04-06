@@ -1,7 +1,7 @@
 ---
 link: https://joshcollinsworth.com/
 title: Josh Collinsworth
-tags: ["frontend"]
+tags: ["css", "blog"]
 added_date: 2024-03-29
 pin: true
 ---

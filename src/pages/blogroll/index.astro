@@ -1,16 +1,16 @@
 ---
 import BaseLayout from "@layouts/Base";
-import BlogrollEntry from "@components/BlogrollEntry";
+import Card from "@components/Card";
 import { getCollection } from "astro:content";
 
-const blogroll = await getCollection("blogroll");
-
-// Pseudo random sort expect for pin
-blogroll.sort((b1, b2) => {
-  if (b2.data.pin) return 1;
-  if (b1.data.pin) return -1;
-  else return Math.random() >= 0.5 ? -1 : 1;
-});
+let blogroll = await getCollection("zettelkasten");
+blogroll = blogroll
+  .filter((n) => n.data.tags.includes("blog"))
+  .sort((b1, b2) => {
+    if (b2.data.pin) return 1;
+    if (b1.data.pin) return -1;
+    else return Math.random() >= 0.5 ? -1 : 1;
+  });
 ---
 
 <BaseLayout title="Blogroll" description="Blogs I really like">
@@ -25,7 +25,7 @@ blogroll.sort((b1, b2) => {
       blogroll.map((blog) => (
         <li>
           {" "}
-          <BlogrollEntry blog={blog} />{" "}
+          <Card thing={blog} />{" "}
         </li>
       ))
     }

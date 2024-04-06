@@ -2,6 +2,7 @@
 link: https://www.cssbed.com/
 title: CSS Bed
 added_date: 2023-08-20
+tags: ["css"]
 ---
 CSS Bed is a collection of classless CSS theme, it let you test
 each of them by effortlessly changing the stylesheet of the site. I am a big
