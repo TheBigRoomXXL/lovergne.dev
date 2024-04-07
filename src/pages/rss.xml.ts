@@ -3,7 +3,7 @@ import { siteConfig } from '@site-config';
 import type { APIContext } from 'astro';
 import { getCollection } from 'astro:content';
 
-const awesome = await getCollection('awesome');
+const notes = await getCollection('zettelkasten');
 
 
 
@@ -12,7 +12,7 @@ export function GET(context: APIContext) {
     title: siteConfig.title,
     description: siteConfig.description,
     site: context.site!,
-    items: awesome.map((entry) => ({
+    items: notes.map((entry) => ({
       title: entry.data.title,
       pubDate: entry.data.added_date,
       content: entry.body + `<br><a href="${entry.data.link}">${entry.data.link}</a>`,
