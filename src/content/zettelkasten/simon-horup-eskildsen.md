@@ -5,7 +5,7 @@ tags: ["database", "blog"]
 added_date: 2024-03-29
 ---
 
-A lot o very advance discucions on scaling relational database. Most of it I will
+A lot of very advance discucions on scaling relational database. Most of it I will
 probably never need to apply but none the less interesting. I recommand reading
 [Careful Trading Complexity for 'Improvements'](https://sirupsen.com/trading-complexity)
 about the *perceived* trade-off of complexity for scalability and reliability.
