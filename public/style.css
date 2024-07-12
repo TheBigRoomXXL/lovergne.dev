@@ -170,17 +170,20 @@ legend>*:last-child {
 code {
     font-family: "Monospace Code", monospace, courier;
     font-size: 0.85em;
-    background-color: #eee;
+    background-color: var(--color-grey-darker);
     border-radius: 3px;
-    border: 1px solid #b4b4b4;
-    box-shadow:
-        0 1px 1px rgba(0, 0, 0, 0.2),
-        0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
-    color: var(--color-grey-darker);
+    border: 1px solid #666666;
+
     display: inline-block;
     line-height: 1.1em;
-    padding: 0.2em 0.1em;
+    padding: 0.2em 0.2em;
+}
 
+
+@media (prefers-color-scheme: light) {
+    code {
+        background-color: rgb(240, 240, 240);
+    }
 }
 
 mark {
