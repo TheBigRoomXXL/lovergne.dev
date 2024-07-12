@@ -192,6 +192,12 @@ mark {
     padding: 0 0.25ch;
 }
 
+/* In light primary need some more peps */
+@media (prefers-color-scheme: light) {
+    mark {
+        filter: brightness(140%);
+    }
+}
 
 
 /* ===== LIST ===== */
