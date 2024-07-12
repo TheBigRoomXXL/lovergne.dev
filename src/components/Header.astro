@@ -64,10 +64,19 @@ import { siteConfig } from "src/site.config";
   }
 
   @media (prefers-color-scheme: light) {
+    /* In light mode the primary and secondary colors don't stand out as much
+    so we increase the weight of the font. */
+
     /* primary is darker than I would like in light mode to preserve contrast
-        for accessibility. But because title is big it can be lighten*/
-    .title {
-      filter: brightness(140%);
+      for accessibility. But because title is big it can be lighten*/
+    .title,
+    .horizontal-list {
+      filter: brightness(150%);
+      font-weight: 600;
+    }
+
+    .horizontal-list > a {
+      border-right-width: 2px;
     }
   }
 
