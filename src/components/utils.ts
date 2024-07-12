@@ -10,5 +10,14 @@ function shortenLink(link: string): string {
     return result
 }
 
+function randomUinqueIntegers(n: number, min: number, max: number): number[] {
+    const uniques = new Set<number>()
+    while (uniques.size != n) {
+        uniques.add(Math.floor(Math.random() * (max - min + 1) + min))
+    }
+    return Array.from(uniques)
+}
 
-export { shortenLink }
+
+
+export { shortenLink, randomUinqueIntegers }
