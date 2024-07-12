@@ -1,8 +1,6 @@
 ---
 import { getCollection } from "astro:content";
 
-const { limit } = Astro.props;
-
 let notes = await getCollection("zettelkasten");
 
 notes.sort((n1, n2) => {
