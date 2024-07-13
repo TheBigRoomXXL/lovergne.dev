@@ -1,4 +1,4 @@
-import { paragraph, bold } from "./formatter"
+import { paragraph, bold, italic } from "./formatter"
 
 // Fuck you typescript
 type Node = {
@@ -72,9 +72,24 @@ function strongRenderer(node: Parent | Literal, width: number): string {
     // return "*" + result + "*"
 }
 
+function emphasisRenderer(node: Parent | Literal, width: number): string {
+    if (isLiteral(node)) {
+        throw new Error("emphasis must NOT be litteral");
+    }
+
+    let result = ""
+    node.children.forEach((child) => {
+        const renderer = renderers[child.type] || defaultNodeRenderer
+        result += renderer(child, width)
+    })
+    return italic(result)
+}
+
+
 const renderers: Record<string, Renderer> = {
     "paragraph": paragraphRenderer,
     "inlineCode": inlineCodeRenderer,
     "strong": strongRenderer,
+    "emphasis": emphasisRenderer,
 }
 

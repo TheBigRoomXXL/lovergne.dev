@@ -4,7 +4,6 @@ export const TXT_WIDTH = 90
 export const PUNCTUATION = [".", ",", ":", ";", "?", "!", "‽", "<", ">", "-", "¡", "¿"]
 
 
-
 export function h1(text: string): string {
     let result = "═".repeat(TXT_WIDTH) + "\n"
     result += center(text)
@@ -42,6 +41,21 @@ function boldChar(char: string) {
     return String.fromCodePoint(char.codePointAt(0) + diff);
 }
 
+export function italic(text: string): string {
+    return text.replace(/[A-Za-z]/g, italicChar);
+}
+
+function italicChar(char: string) {
+    let diff
+    if (/[A-Z]/.test(char)) { // @ts-ignore
+        diff = "𝘈".codePointAt(0) - "A".codePointAt(0);
+    }
+    else { // @ts-ignore
+
+        diff = "𝘢".codePointAt(0) - "a".codePointAt(0);
+    } // @ts-ignore
+    return String.fromCodePoint(char.codePointAt(0) + diff);
+}
 
 
 export function paragraph(text: string, width: number = TXT_WIDTH) {
