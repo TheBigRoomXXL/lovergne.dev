@@ -4,7 +4,6 @@ title: Restic
 added_date: 2024-03-30
 tags: ["tool"]
 ---
-
 Restic is the tool you **should** use for your backups. 
 - You can always find what you need in a restic backup because it uses incremental snapshots (like git).
 - It's safe, because your data is always encrypted.

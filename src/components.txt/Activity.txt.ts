@@ -1,5 +1,5 @@
 import { getCollection } from "astro:content";
-import { h2, TXT_WIDTH } from "./renderer"
+import { h2, TXT_WIDTH } from "./formatter"
 import { formatDate } from "src/components/utils";
 
 

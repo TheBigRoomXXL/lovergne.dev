@@ -5,16 +5,16 @@ added_date: 2023-08-23
 tags: ["css"]
 ---
 Because the web has been build with a set of value at it's core
-: <strong> the web is open, it's for everyone and everything</strong>. By
-accepting those value we must, at the same time, accept that we loose some
+: **the web is open, it's for everyone and everything**. By
+accepting those value we must, at the same time, accept that we loose some 
 degree of control, we don't choose who will look at our website and on what
 devices. That lake of control means we must build websites for an infinite
 canvas with unknown constraints and capabilities. But designing for the
 unknown is hard, for that, we need flexibility, and this is where CSS come in.
 
-The <b>Cascade</b> in Cascading Style Sheets is the process of assembling
+The **Cascade** in Cascading Style Sheets is the process of assembling
 styles from different inputs. You gain from that process the capability
-to merge <b>intent</b> from different sources: the Author, the Browser and
+to merge **intent** from different sources: the Author, the Browser and
 remarkably, the User.
 
 <img

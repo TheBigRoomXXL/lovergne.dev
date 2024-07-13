@@ -1,4 +1,4 @@
-import { randomUinqueIntegers } from "src/components/utils"
+import { randomUinqueIntegers, getGraphemeLength } from "src/components/utils"
 
 export const TXT_WIDTH = 90
 export const PUNCTUATION = [".", ",", ":", ";", "?", "!", "‽", "<", ">", "-", "¡", "¿"]
@@ -19,10 +19,33 @@ export function h2(text: string): string {
     return result
 }
 
+export function h3(text: string): string {
+    let result = "-".repeat(text.length + 2) + "\n"
+    result += " " + text + " \n"
+    result += "-".repeat(text.length + 2) + "\n\n"
+    return result
+}
+
+export function bold(text: string): string {
+    return text.replace(/[A-Za-z]/g, boldChar);
+}
+
+function boldChar(char: string) {
+    let diff;
+    if (/[A-Z]/.test(char)) { // @ts-ignore
+        diff = "𝗔".codePointAt(0) - "A".codePointAt(0);
+    }
+    else { // @ts-ignore
+
+        diff = "𝗮".codePointAt(0) - "a".codePointAt(0);
+    } // @ts-ignore
+    return String.fromCodePoint(char.codePointAt(0) + diff);
+}
 
 
-export function paragraph(text: string) {
-    return justifify(text) + "\n"
+
+export function paragraph(text: string, width: number = TXT_WIDTH) {
+    return justifify(text, width) + "\n"
 }
 
 
@@ -30,16 +53,18 @@ export function center(text: string, width: number = TXT_WIDTH) {
     let result = ""
     // Split by whitespaces except for non-breaking space
     const words = text.split(/\s(?!\u00A0)+/);
+
     let counter = 0
     let line: string[] = []
 
     for (let i = 0; i < words.length; i++) {
         const word = words[i]
+        const wordlength = getGraphemeLength(word)
 
         // End of line not reached
-        if (counter + word.length <= width) {
+        if (counter + wordlength <= width) {
             line.push(word + " ",)
-            counter += word.length + 1
+            counter += wordlength + 1
             continue
         }
 
@@ -55,7 +80,7 @@ export function center(text: string, width: number = TXT_WIDTH) {
 
         // 3. start next line
         line = [word + " "]
-        counter = word.length + 1
+        counter = wordlength + 1
     }
 
     // Format the last line
@@ -72,8 +97,10 @@ export function center(text: string, width: number = TXT_WIDTH) {
   */
 function justifify(text: string, width: number = TXT_WIDTH): string {
     let result = ""
+
     // Split by whitespaces except for non-breaking space
     const words = text.split(/\s+(?!\u00A0)/);
+
     let counter = 0
     let line: string[] = []
 
@@ -81,11 +108,12 @@ function justifify(text: string, width: number = TXT_WIDTH): string {
     // Then we justify, add to the result, reset the vars and start a new line
     for (let i = 0; i < words.length; i++) {
         const word = words[i]
+        const wordlength = getGraphemeLength(word)
 
         // End of line not reached
-        if (counter + word.length <= width) {
+        if (counter + wordlength <= width) {
             line.push(word + " ",)
-            counter += word.length + 1
+            counter += wordlength + 1
             continue
         }
 
@@ -125,7 +153,7 @@ function justifify(text: string, width: number = TXT_WIDTH): string {
         // 5. start a new line
         result += line.join("") + "\n"
         line = [word + " "]
-        counter = word.length + 1
+        counter = wordlength + 1
     }
 
     // Add the last line

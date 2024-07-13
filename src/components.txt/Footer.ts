@@ -1,4 +1,4 @@
-import { center } from "./renderer"
+import { center } from "./formatter"
 
 export function Footer(): string {
     let result = "\n".repeat(13)

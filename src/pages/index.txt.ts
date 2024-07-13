@@ -1,4 +1,4 @@
-import { h1, paragraph } from "src/components.txt/renderer"
+import { h1, paragraph } from "src/components.txt/formatter"
 import { Header } from "src/components.txt/Header.txt"
 import { Footer } from "src/components.txt/Footer";
 import { Activity } from "src/components.txt/Activity.txt";

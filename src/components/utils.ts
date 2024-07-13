@@ -1,6 +1,6 @@
 
 
-function shortenLink(link: string): string {
+export function shortenLink(link: string): string {
     const url = new URL(link)
     let result = url.hostname.replace("www.", "").toLowerCase()
     if (result === "github.com") {
@@ -10,7 +10,7 @@ function shortenLink(link: string): string {
     return result
 }
 
-function randomUinqueIntegers(n: number, min: number, max: number): number[] {
+export function randomUinqueIntegers(n: number, min: number, max: number): number[] {
     const uniques = new Set<number>()
     while (uniques.size != n) {
         uniques.add(Math.floor(Math.random() * (max - min + 1) + min))
@@ -18,7 +18,7 @@ function randomUinqueIntegers(n: number, min: number, max: number): number[] {
     return Array.from(uniques)
 }
 
-function formatDate(date: Date) {
+export function formatDate(date: Date) {
     return date.toLocaleDateString("default", {
         day: "2-digit",
     }) + " " + date.toLocaleDateString("default", {
@@ -26,4 +26,13 @@ function formatDate(date: Date) {
     }) + " " + date.getFullYear()
 }
 
-export { shortenLink, randomUinqueIntegers, formatDate }
+export function getGraphemeLength(text: string) {
+    // String.length return the number of UTF-16 block, not the visual size
+    // of the word. Grapheme is can count the "visual size" with any weird
+    // univode input. 
+    // This is needed because we use the mathematical formating for rich text.
+
+    const segmenter = new Intl.Segmenter('en', { granularity: 'grapheme' });
+    return [...segmenter.segment(text)].length
+}
+
