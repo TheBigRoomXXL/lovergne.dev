@@ -18,6 +18,12 @@ function randomUinqueIntegers(n: number, min: number, max: number): number[] {
     return Array.from(uniques)
 }
 
+function formatDate(date: Date) {
+    return date.toLocaleDateString("default", {
+        day: "2-digit",
+    }) + " " + date.toLocaleDateString("default", {
+        month: "short",
+    }) + " " + date.getFullYear()
+}
 
-
-export { shortenLink, randomUinqueIntegers }
+export { shortenLink, randomUinqueIntegers, formatDate }

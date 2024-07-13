@@ -1,30 +1,69 @@
 import { randomUinqueIntegers } from "src/components/utils"
 
-const TXT_WIDTH = 80
-const PUNCTUATION = [".", ",", ":", ";", "?", "!", "‽", "<", ">", "-", "¡", "¿"]
+export const TXT_WIDTH = 90
+export const PUNCTUATION = [".", ",", ":", ";", "?", "!", "‽", "<", ">", "-", "¡", "¿"]
 
 
 
 export function h1(text: string): string {
     let result = "═".repeat(TXT_WIDTH) + "\n"
-
-    const paddingLeft = Math.floor((TXT_WIDTH - text.length) / 2)
-    result += " ".repeat(paddingLeft) + text + "\n"
+    result += center(text)
     result += "═".repeat(TXT_WIDTH) + "\n\n"
     return result
 }
 
 export function h2(text: string): string {
     let result = "─".repeat(text.length + 2) + "\n"
-
     result += " " + text + " \n"
     result += "─".repeat(text.length + 2) + "\n\n"
     return result
 }
 
 
+
 export function paragraph(text: string) {
     return justifify(text) + "\n"
+}
+
+
+export function center(text: string, width: number = TXT_WIDTH) {
+    let result = ""
+    // Split by whitespaces except for non-breaking space
+    const words = text.split(/\s(?!\u00A0)+/);
+    let counter = 0
+    let line: string[] = []
+
+    for (let i = 0; i < words.length; i++) {
+        const word = words[i]
+
+        // End of line not reached
+        if (counter + word.length <= width) {
+            line.push(word + " ",)
+            counter += word.length + 1
+            continue
+        }
+
+        // End of line overflow
+
+        // 1. First remove the unwanted space at the end
+        line[line.length - 1] = line[line.length - 1].slice(0, -1)
+        counter--
+
+        // 2. calculate and add padding (padding smaller on the left if odd )
+        const paddingLeft = Math.floor((width - counter) / 2)
+        result += " ".repeat(paddingLeft) + line.join("") + "\n"
+
+        // 3. start next line
+        line = [word + " "]
+        counter = word.length + 1
+    }
+
+    // Format the last line
+    line[line.length - 1] = line[line.length - 1].slice(0, -1)
+    counter--
+    const paddingLeft = Math.floor((width - counter) / 2)
+    result += " ".repeat(paddingLeft) + line.join("") + "\n"
+    return result
 }
 
 /**
@@ -33,7 +72,8 @@ export function paragraph(text: string) {
   */
 function justifify(text: string, width: number = TXT_WIDTH): string {
     let result = ""
-    const words = text.split(/\s+/);
+    // Split by whitespaces except for non-breaking space
+    const words = text.split(/\s+(?!\u00A0)/);
     let counter = 0
     let line: string[] = []
 
@@ -82,6 +122,7 @@ function justifify(text: string, width: number = TXT_WIDTH): string {
             m -= Math.min(n, m)
         }
 
+        // 5. start a new line
         result += line.join("") + "\n"
         line = [word + " "]
         counter = word.length + 1

@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-
+import { formatDate } from "./utils";
 let notes = await getCollection("zettelkasten");
 
 notes.sort((n1, n2) => {
@@ -16,13 +16,7 @@ notes.sort((n1, n2) => {
     notes.map((entry) => (
       <li>
         <time datetime={entry.data.added_date.toISOString()}>
-          {entry.data.added_date.toLocaleDateString("default", {
-            day: "2-digit",
-          })}{" "}
-          {entry.data.added_date.toLocaleDateString("default", {
-            month: "short",
-          })}{" "}
-          {entry.data.added_date.getFullYear()}{" "}
+          {formatDate(entry.data.added_date)}{" "}
         </time>
         <a href={`/archive/${entry.slug}`}>{entry.data.title}</a>
       </li>

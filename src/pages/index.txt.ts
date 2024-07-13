@@ -1,5 +1,7 @@
-import { h1, h2, paragraph } from "src/component.txt/renderer"
-import { Header } from "src/component.txt/Header.txt"
+import { h1, paragraph } from "src/components.txt/renderer"
+import { Header } from "src/components.txt/Header.txt"
+import { Footer } from "src/components.txt/Footer";
+import { Activity } from "src/components.txt/Activity.txt";
 import { getCollection } from "astro:content";
 
 let notes = await getCollection("zettelkasten");
@@ -23,7 +25,8 @@ export async function GET() {
         projects in the future.`) +
         paragraph(`You can find me as @TheBigRoomXXL on github and itch.io
         or contacts me by mail at seb.lovergne@gmail.com`) +
-        h2("Recent Activities")
+        Activity() +
+        Footer()
     )
 }
 
