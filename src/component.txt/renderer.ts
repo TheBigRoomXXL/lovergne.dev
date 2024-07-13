@@ -3,23 +3,28 @@ import { randomUinqueIntegers } from "src/components/utils"
 const TXT_WIDTH = 80
 const PUNCTUATION = [".", ",", ":", ";", "?", "!", "‽", "<", ">", "-", "¡", "¿"]
 
-const header = String.raw`  _____ _ 
- / ____| |           Sebastien LOVERGNE
-| (___ | |
- \___ \| |           /awesome.txt
- ____) | |____       /blogroll.txt
-|_____/|______|      /rss.xml
 
 
-`
-
-function h1(text: string): string {
+export function h1(text: string): string {
     let result = "═".repeat(TXT_WIDTH) + "\n"
 
     const paddingLeft = Math.floor((TXT_WIDTH - text.length) / 2)
     result += " ".repeat(paddingLeft) + text + "\n"
     result += "═".repeat(TXT_WIDTH) + "\n\n"
     return result
+}
+
+export function h2(text: string): string {
+    let result = "─".repeat(text.length + 2) + "\n"
+
+    result += " " + text + " \n"
+    result += "─".repeat(text.length + 2) + "\n\n"
+    return result
+}
+
+
+export function paragraph(text: string) {
+    return justifify(text) + "\n"
 }
 
 /**
@@ -87,4 +92,3 @@ function justifify(text: string, width: number = TXT_WIDTH): string {
 
     return result
 }
-export { header, h1, justifify }
