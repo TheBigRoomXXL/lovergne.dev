@@ -62,6 +62,25 @@ export function paragraph(text: string, width: number = TXT_WIDTH) {
     return justifify(text, width) + "\n"
 }
 
+export function image(img: string, alt: string, width: number = TXT_WIDTH) {
+    // We assume the image is a rectangular maxtrice of char delimited with \n 
+
+    // Sometime I forget \n at the end of file
+    if (!img.endsWith("\n")) {
+        img += "\n"
+    }
+
+    let result = ""
+    const lines = img.split("\n")
+    const imgWidth = lines[0].length
+    const paddingLeft = Math.floor((width - imgWidth) / 2)
+    for (let i = 0; i < lines.length; i++) {
+        result += " ".repeat(paddingLeft) + lines[i] + "\n"
+    }
+    result += center(`"${alt}"`, width) + "\n"
+    return result
+}
+
 
 export function center(text: string, width: number = TXT_WIDTH) {
     let result = ""

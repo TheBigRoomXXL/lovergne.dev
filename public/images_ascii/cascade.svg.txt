@@ -1,0 +1,10 @@
+                              
+ AUTHOR     BROWSER      USER  
+   │           │           │   
+   │           │           │   
+   │           ▼           │   
+   └──────► CASCADE ◄──────┘   
+               │              
+               ▼              
+             STYLE            
+                              

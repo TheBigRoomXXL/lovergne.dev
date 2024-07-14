@@ -17,8 +17,7 @@ styles from different inputs. You gain from that process the capability
 to merge **intent** from different sources: the Author, the Browser and
 remarkably, the User.
 
-
-![Author Browser and User consolidate into one style throught cascade](/cascade.svg)
+![Author, browser, and user styles consolidate into one style throught cascade](/cascade.svg)
 
 It also allows us to fail gracefully by cascading upward wich is good for
 resilence and backward compatibility.
