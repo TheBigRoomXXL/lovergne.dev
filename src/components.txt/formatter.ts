@@ -1,8 +1,9 @@
 import { randomUinqueIntegers, getGraphemeLength } from "src/components/utils"
 
 export const TXT_WIDTH = 90
-export const PUNCTUATION = [".", ",", ":", ";", "?", "!", "‽", "<", ">", "-", "¡", "¿"]
 
+const PUNCTUATION = [".", ",", ":", ";", "?", "!", "‽", "<", ">", "-", "¡", "¿"]
+const SPLITER = /\s+/
 
 export function h1(text: string): string {
     let result = "═".repeat(TXT_WIDTH) + "\n"
@@ -76,7 +77,7 @@ export function listItem(prefix: string, content: string, width: number = TXT_WI
 }
 
 export function link(text: string, url: string): string {
-    return `[${text}]<${url}>`
+    return `[${text}]\u200B<${url}>`
 }
 
 export function image(img: string, alt: string, width: number = TXT_WIDTH) {
@@ -101,15 +102,15 @@ export function image(img: string, alt: string, width: number = TXT_WIDTH) {
 
 export function center(text: string, width: number = TXT_WIDTH) {
     let result = ""
-    // Split by whitespaces except for non-breaking space
-    const words = text.split(/\s(?!\u00A0)+/);
+    // Split by whitespaces
+    const words = text.split(SPLITER);
 
     let counter = 0
     let line: string[] = []
 
     for (let i = 0; i < words.length; i++) {
-        const word = words[i]
-        const wordlength = getGraphemeLength(word)
+        let word = words[i]
+        let wordlength = getGraphemeLength(word)
 
         // End of line not reached
         if (counter + wordlength <= width) {
@@ -119,6 +120,22 @@ export function center(text: string, width: number = TXT_WIDTH) {
         }
 
         // End of line overflow
+
+        // 0. Check if word contain a zero width space.
+        //    If so, we can try to split it and try insert the first word
+        const splitedWord = word.split("\u200B")
+        if (splitedWord.length > 1) {
+            const firstWordLenght = getGraphemeLength(splitedWord[0])
+            if (counter + firstWordLenght <= width) {
+                // If it fit, insert it
+                line.push(splitedWord[0] + " ")
+                counter += firstWordLenght + 1
+
+                // Then start a new line with the second word
+                word = splitedWord[1]
+                wordlength = getGraphemeLength(splitedWord[1])
+            }
+        }
 
         // 1. First remove the unwanted space at the end
         line[line.length - 1] = line[line.length - 1].slice(0, -1)
@@ -148,8 +165,8 @@ export function center(text: string, width: number = TXT_WIDTH) {
 function justifify(text: string, width: number = TXT_WIDTH): string {
     let result = ""
 
-    // Split by whitespaces except for non-breaking space
-    const words = text.split(/\s+(?!\u00A0)/);
+    // Split by whitespaces
+    const words = text.split(SPLITER);
 
     let counter = 0
     let line: string[] = []
@@ -157,8 +174,8 @@ function justifify(text: string, width: number = TXT_WIDTH): string {
     // We accumulate the words and spaces until we have enough for a line
     // Then we justify, add to the result, reset the vars and start a new line
     for (let i = 0; i < words.length; i++) {
-        const word = words[i]
-        const wordlength = getGraphemeLength(word)
+        let word = words[i]
+        let wordlength = getGraphemeLength(word)
 
         // End of line not reached
         if (counter + wordlength <= width) {
@@ -168,6 +185,22 @@ function justifify(text: string, width: number = TXT_WIDTH): string {
         }
 
         // End of line overflow
+
+        // 0. Check if word contain a zero width space.
+        //    If so, we can try to split it and try insert the first word
+        const splitedWord = word.split("\u200B")
+        if (splitedWord.length > 1) {
+            const firstWordLenght = getGraphemeLength(splitedWord[0])
+            if (counter + firstWordLenght <= width) {
+                // If it fit, insert it
+                line.push(splitedWord[0] + " ")
+                counter += firstWordLenght + 1
+
+                // Then start a new line with the second word
+                word = splitedWord[1]
+                wordlength = getGraphemeLength(splitedWord[1])
+            }
+        }
 
         // 1. First remove the unwanted space at the end
         line[line.length - 1] = line[line.length - 1].slice(0, -1)
