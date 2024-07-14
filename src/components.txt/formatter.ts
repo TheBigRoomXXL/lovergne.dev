@@ -62,6 +62,10 @@ export function paragraph(text: string, width: number = TXT_WIDTH) {
     return justifify(text, width) + "\n"
 }
 
+export function link(text: string, url: string): string {
+    return `[${text}]<${url}>`
+}
+
 export function image(img: string, alt: string, width: number = TXT_WIDTH) {
     // We assume the image is a rectangular maxtrice of char delimited with \n 
 

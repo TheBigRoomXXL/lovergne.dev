@@ -1,4 +1,4 @@
-import { paragraph, bold, italic, center, image, TXT_WIDTH } from "./formatter"
+import { paragraph, bold, link, italic, center, image, TXT_WIDTH } from "./formatter"
 import { fromMarkdown } from 'mdast-util-from-markdown'
 
 // Fuck you typescript
@@ -16,6 +16,10 @@ type Literal = Node & {
     value: string
 }
 
+type Link = Parent & {
+    url: string
+}
+
 type Image = {
     type: "image";
     url: string;
@@ -27,6 +31,7 @@ type Renderer = (n: Parent | Literal, width: number) => string
 
 export function renderMarkdownToPlainTxt(markdown: string): string {
     const masm = fromMarkdown(markdown) // Parse the mk into a tree
+    // return JSON.stringify(masm, null, 2)
     return defaultNodeRenderer(masm as Parent, TXT_WIDTH)
 }
 
@@ -136,7 +141,14 @@ function htmlRenderer(node: Parent | Literal, width: number): string {
 }
 
 function linkRenderer(node: Parent | Literal, width: number): string {
-    return ""
+    const linkNode = node as Link
+    let text = ""
+    linkNode.children.forEach((child) => {
+        const renderer = renderers[child.type] || defaultNodeRenderer
+        text += renderer(child, width)
+    })
+    return link(text, linkNode.url)
+
 }
 
 const renderers: Record<string, Renderer> = {
@@ -146,5 +158,6 @@ const renderers: Record<string, Renderer> = {
     "emphasis": emphasisRenderer,
     "image": imageRenderer,
     "html": htmlRenderer,
+    "link": linkRenderer,
 }
 
