@@ -31,13 +31,13 @@ type List = Parent & {
     start: number
 }
 
-type Renderer = (n: Parent | Literal, width: number) => string
+type Renderer = (n: Parent | Literal) => string
 
 
 export function renderMarkdownToPlainTxt(markdown: string): string {
     const masm = fromMarkdown(markdown) // Parse the mk into a tree
     // return JSON.stringify(masm, null, 2)
-    return defaultNodeRenderer(masm as Parent, TXT_WIDTH)
+    return defaultNodeRenderer(masm as Parent)
 }
 
 
@@ -49,7 +49,7 @@ function isLiteral(node: Parent | Literal): node is Literal {
 }
 
 
-function defaultNodeRenderer(node: Parent | Literal, width: number): string {
+function defaultNodeRenderer(node: Parent | Literal): string {
     // Base case: we return the value
     if (isLiteral(node)) {
         return node.value
@@ -59,13 +59,13 @@ function defaultNodeRenderer(node: Parent | Literal, width: number): string {
     let result = ""
     node.children.forEach((child) => {
         const renderer = renderers[child.type] || defaultNodeRenderer
-        result += renderer(child, width)
+        result += renderer(child)
     })
     return result
 
 }
 
-function paragraphRenderer(node: Parent | Literal, width: number): string {
+function paragraphRenderer(node: Parent | Literal): string {
     if (isLiteral(node)) {
         throw new Error("paragraph must not be litteral");
     }
@@ -76,16 +76,16 @@ function paragraphRenderer(node: Parent | Literal, width: number): string {
     node.children.forEach((child) => {
         if (child.type == "image") justify = false
         const renderer = renderers[child.type] || defaultNodeRenderer
-        result += renderer(child, width)
+        result += renderer(child)
     })
     if (!justify) {
         return result
     }
-    return paragraph(result, width)
+    return paragraph(result)
 }
 
 
-function inlineCodeRenderer(node: Parent | Literal, width: number): string {
+function inlineCodeRenderer(node: Parent | Literal): string {
     if (!isLiteral(node)) {
         throw new Error("inlineCode must be litteral.");
     }
@@ -93,20 +93,20 @@ function inlineCodeRenderer(node: Parent | Literal, width: number): string {
     return "`" + node.value + "`"
 }
 
-function strongRenderer(node: Parent | Literal, width: number): string {
+function strongRenderer(node: Parent | Literal): string {
     if (isLiteral(node)) {
         throw new Error("strong must NOT be litteral");
     }
     let result = ""
     node.children.forEach((child) => {
         const renderer = renderers[child.type] || defaultNodeRenderer
-        result += renderer(child, width)
+        result += renderer(child)
     })
     return bold(result)
     // return "*" + result + "*"
 }
 
-function emphasisRenderer(node: Parent | Literal, width: number): string {
+function emphasisRenderer(node: Parent | Literal): string {
     if (isLiteral(node)) {
         throw new Error("emphasis must NOT be litteral");
     }
@@ -114,12 +114,12 @@ function emphasisRenderer(node: Parent | Literal, width: number): string {
     let result = ""
     node.children.forEach((child) => {
         const renderer = renderers[child.type] || defaultNodeRenderer
-        result += renderer(child, width)
+        result += renderer(child)
     })
     return italic(result)
 }
 
-function imageRenderer(node: Parent | Literal, width: number): string {
+function imageRenderer(node: Parent | Literal): string {
     const img = node as unknown as Image
     const imgs_ascii = import.meta.glob(
         "/public/images_ascii/*.txt", { query: '?raw', eager: true }
@@ -130,7 +130,7 @@ function imageRenderer(node: Parent | Literal, width: number): string {
             if (!img_ascii.endsWith("\n")) {
                 img_ascii += "\n"
             }
-            return image(img_ascii, img.alt, width)
+            return image(img_ascii, img.alt)
         }
     }
 
@@ -141,43 +141,44 @@ function imageRenderer(node: Parent | Literal, width: number): string {
 }
 
 
-function htmlRenderer(node: Parent | Literal, width: number): string {
+function htmlRenderer(node: Parent | Literal): string {
     return ""
 }
 
-function linkRenderer(node: Parent | Literal, width: number): string {
+function linkRenderer(node: Parent | Literal): string {
     const linkNode = node as Link
     let text = ""
     linkNode.children.forEach((child) => {
         const renderer = renderers[child.type] || defaultNodeRenderer
-        text += renderer(child, width)
+        text += renderer(child)
     })
     return link(text, linkNode.url)
 }
 
-function listRenderer(node: Parent | Literal, width: number): string {
+function listRenderer(node: Parent | Literal): string {
     const list = node as List
     if (list.ordered === true) {
-        return orderedListRenderer(list, width)
+        return orderedListRenderer(list)
     }
 
     const prefix = "  • "
     let result = ""
     list.children.forEach((child) => {
         const renderer = renderers[child.type] || defaultNodeRenderer
-        const content = renderer(child, width)
-        result += listItem(prefix, content, width)
+        const content = renderer(child)
+        result += listItem(prefix, content)
     })
     return result + "\n"
 }
 
-function orderedListRenderer(list: List, width: number): string {
+function orderedListRenderer(list: List): string {
     let result = ""
     for (let i = list.start; i < list.start + list.children.length; i++) {
+        const prefix = ` ${i}. `
         const child = list.children[i - list.start]
         const renderer = renderers[child.type] || defaultNodeRenderer
-        const content = renderer(child, width)
-        result += listItem(` ${i}. `, content, width)
+        const content = renderer(child)
+        result += listItem(prefix, content)
     }
     return result
 }
