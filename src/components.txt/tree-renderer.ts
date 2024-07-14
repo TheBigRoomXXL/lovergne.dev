@@ -1,4 +1,5 @@
-import { paragraph, bold, italic, center, image } from "./formatter"
+import { paragraph, bold, italic, center, image, TXT_WIDTH } from "./formatter"
+import { fromMarkdown } from 'mdast-util-from-markdown'
 
 // Fuck you typescript
 // I couldn't get mdast type definition to work properly so I roll my own
@@ -23,6 +24,13 @@ type Image = {
 
 type Renderer = (n: Parent | Literal, width: number) => string
 
+
+export function renderMarkdownToPlainTxt(markdown: string): string {
+    const masm = fromMarkdown(markdown) // Parse the mk into a tree
+    return defaultNodeRenderer(masm as Parent, TXT_WIDTH)
+}
+
+
 /**
  * This is a type guard to go around typecript stupidity
  */
@@ -31,7 +39,7 @@ function isLiteral(node: Parent | Literal): node is Literal {
 }
 
 
-export function defaultNodeRenderer(node: Parent | Literal, width: number): string {
+function defaultNodeRenderer(node: Parent | Literal, width: number): string {
     // Base case: we return the value
     if (isLiteral(node)) {
         return node.value
@@ -124,6 +132,10 @@ function imageRenderer(node: Parent | Literal, width: number): string {
 
 
 function htmlRenderer(node: Parent | Literal, width: number): string {
+    return ""
+}
+
+function linkRenderer(node: Parent | Literal, width: number): string {
     return ""
 }
 
