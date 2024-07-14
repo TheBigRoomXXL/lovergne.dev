@@ -62,6 +62,19 @@ export function paragraph(text: string, width: number = TXT_WIDTH) {
     return justifify(text, width) + "\n"
 }
 
+export function listItem(prefix: string, content: string, width: number = TXT_WIDTH): string {
+    const padding = " ".repeat(prefix.length)
+    const contentWidth = width - prefix.length
+    const text = justifify(content, contentWidth)
+
+    const lines = text.split("\n")
+    let result = prefix + lines[0] + "\n"
+    for (let i = 1; i < lines.length; i++) {
+        result += padding + lines[i] + "\n"
+    }
+    return result
+}
+
 export function link(text: string, url: string): string {
     return `[${text}]<${url}>`
 }

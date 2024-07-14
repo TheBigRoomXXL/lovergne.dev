@@ -1,4 +1,4 @@
-import { paragraph, bold, link, italic, center, image, TXT_WIDTH } from "./formatter"
+import { paragraph, bold, link, italic, center, image, TXT_WIDTH, listItem } from "./formatter"
 import { fromMarkdown } from 'mdast-util-from-markdown'
 
 // Fuck you typescript
@@ -16,14 +16,19 @@ type Literal = Node & {
     value: string
 }
 
-type Link = Parent & {
-    url: string
-}
-
 type Image = {
     type: "image";
     url: string;
     alt: string
+}
+
+type Link = Parent & {
+    url: string
+}
+
+type List = Parent & {
+    ordered?: boolean
+    start: number
 }
 
 type Renderer = (n: Parent | Literal, width: number) => string
@@ -148,7 +153,33 @@ function linkRenderer(node: Parent | Literal, width: number): string {
         text += renderer(child, width)
     })
     return link(text, linkNode.url)
+}
 
+function listRenderer(node: Parent | Literal, width: number): string {
+    const list = node as List
+    if (list.ordered === true) {
+        return orderedListRenderer(list, width)
+    }
+
+    const prefix = "  • "
+    let result = ""
+    list.children.forEach((child) => {
+        const renderer = renderers[child.type] || defaultNodeRenderer
+        const content = renderer(child, width)
+        result += listItem(prefix, content, width)
+    })
+    return result + "\n"
+}
+
+function orderedListRenderer(list: List, width: number): string {
+    let result = ""
+    for (let i = list.start; i < list.start + list.children.length; i++) {
+        const child = list.children[i - list.start]
+        const renderer = renderers[child.type] || defaultNodeRenderer
+        const content = renderer(child, width)
+        result += listItem(` ${i}. `, content, width)
+    }
+    return result
 }
 
 const renderers: Record<string, Renderer> = {
@@ -159,5 +190,6 @@ const renderers: Record<string, Renderer> = {
     "image": imageRenderer,
     "html": htmlRenderer,
     "link": linkRenderer,
+    "list": listRenderer
 }
 
