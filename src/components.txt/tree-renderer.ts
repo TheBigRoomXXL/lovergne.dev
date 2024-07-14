@@ -122,11 +122,17 @@ function imageRenderer(node: Parent | Literal, width: number): string {
     return result + "\n"
 }
 
+
+function htmlRenderer(node: Parent | Literal, width: number): string {
+    return ""
+}
+
 const renderers: Record<string, Renderer> = {
     "paragraph": paragraphRenderer,
     "inlineCode": inlineCodeRenderer,
     "strong": strongRenderer,
     "emphasis": emphasisRenderer,
     "image": imageRenderer,
+    "html": htmlRenderer,
 }
 
