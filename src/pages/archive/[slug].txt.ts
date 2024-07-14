@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro';
-import { TXT_WIDTH, h1 } from "src/components.txt/formatter"
+import { h1, paragraph } from "src/components.txt/formatter"
 import { Header } from "src/components.txt/Header.txt"
 import { Footer } from "src/components.txt/Footer";
 import { getCollection } from "astro:content";
@@ -34,6 +34,7 @@ export const GET: APIRoute = ({ props }) => {
         title += ` (${props.data.published_date.getFullYear()})`
     }
     result += h1(title)
+    result += paragraph("This page is about : " + props.data.link)
 
     result += renderMarkdownToPlainTxt(props.body)
 
