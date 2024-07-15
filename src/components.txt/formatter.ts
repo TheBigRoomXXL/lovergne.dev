@@ -1,3 +1,4 @@
+import { levels } from "node_modules/astro/dist/core/logger/core"
 import { randomUinqueIntegers, getGraphemeLength } from "src/components/utils"
 
 export const TXT_WIDTH = 90
@@ -241,6 +242,29 @@ function justifify(text: string, width: number = TXT_WIDTH): string {
 
     // Add the last line
     result += line.join("") + "\n"
+
+    return result
+}
+
+
+export function fieldset(title: string, content: string, width: number = TXT_WIDTH): string {
+    const titleWidth = Math.min(width - 4, getGraphemeLength(title))
+    let result = ` ┌${"─".repeat(titleWidth + 2)}┐\n`
+
+    if (titleWidth != getGraphemeLength(title)) {
+        throw new Error("Not implemented fucker");
+    }
+
+    result += `┌┤ ${title} ├${"─".repeat(width - titleWidth - 6)}┐\n`
+    result += `│└${"─".repeat(titleWidth + 2)}┘${" ".repeat(width - 6 - titleWidth)}│\n`
+
+    const lines = content.split("\n")
+    for (let i = 0; i < lines.length; i++) {
+        const paddingRight = Math.max(0, width - 3 - getGraphemeLength(lines[i]))
+        result += `│ ${lines[i]}${" ".repeat(paddingRight)}│\n`
+    }
+
+    result += `└${"─".repeat(width - 2)}┘\n`
 
     return result
 }

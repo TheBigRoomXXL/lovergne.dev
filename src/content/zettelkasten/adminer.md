@@ -5,7 +5,7 @@ added_date: 2023-08-20
 tags: ["tool", "database"]
 ---
 
-Minimalist, fast, single-file, UI for RDBMS. **phpMyAdmin but way
+Minimalist, fast, single-file, UI for RDBMS. **phpmyadmin but way
 better**. I love there interface, it's very clear and readable. Adminer is
 simple but also fully featured. It is customizable and extendable throught
 themes and plugins. It also integrate very well with docker and help access

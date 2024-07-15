@@ -34,10 +34,10 @@ type List = Parent & {
 type Renderer = (n: Parent | Literal, width: number) => string
 
 
-export function renderMarkdownToPlainTxt(markdown: string): string {
+export function renderMarkdownToPlainTxt(markdown: string, width: number): string {
     const masm = fromMarkdown(markdown) // Parse the mk into a tree
     // return JSON.stringify(masm, null, 2)
-    return defaultNodeRenderer(masm as Parent, TXT_WIDTH)
+    return defaultNodeRenderer(masm as Parent, width)
 }
 
 

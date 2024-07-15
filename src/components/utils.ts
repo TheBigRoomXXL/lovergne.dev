@@ -26,13 +26,17 @@ export function formatDate(date: Date) {
     }) + " " + date.getFullYear()
 }
 
+/** The supidest amd least optimized function  I have ever written */
 export function getGraphemeLength(text: string) {
-    // String.length return the number of UTF-16 block, not the visual size
-    // of the word. Grapheme is can count the "visual size" with any weird
-    // univode input. 
-    // This is needed because we use the mathematical formating for rich text.
+    // Despite it's name this function does not count grapheme
+    // Inded mathematical characters are not monospace so we are fuck 
 
-    const segmenter = new Intl.Segmenter('en', { granularity: 'grapheme' });
-    return [...segmenter.segment(text)].length
+    // We need to normalized the weird character we use for formating
+    // Regular expression to the Unicode mathematical characters
+    const regex = /[\u{1D400}-\u{1D7FF}]/gu;
+
+    text = text.replace(regex, "a")
+    text = text.replace("\u200B", " ")
+
+    return text.length
 }
-
