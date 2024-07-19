@@ -1,5 +1,9 @@
 ---
 import { siteConfig } from "src/site.config";
+let currentPath = Astro.url.pathname;
+if (currentPath === "/") {
+  currentPath = "/index";
+}
 ---
 
 <footer>
@@ -14,6 +18,10 @@ import { siteConfig } from "src/site.config";
           </a>
         ))
       }
+    </nav>
+
+    <nav class="ascii">
+      <a href=`${currentPath}.txt`>Hey, want some ASCII?</a>
     </nav>
 
     <nav class="horizontal-list menu">
@@ -53,5 +61,11 @@ import { siteConfig } from "src/site.config";
 
   nav.menu > a {
     color: var(--color-secondary);
+  }
+
+  .ascii {
+    font-family: "Courier New", Courier, monospace;
+    /*I have no fuckeing clue why other <a> are aligned bottom and this one top*/
+    padding-top: 1em;
   }
 </style>

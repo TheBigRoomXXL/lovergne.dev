@@ -18,7 +18,7 @@ notes = notes
 
 
 const cards = notes.reduce((acc, note) => {
-    return acc + Card(note)
+    return acc + Card(note) + "\n"
 }, "")
 
 export async function GET() {
