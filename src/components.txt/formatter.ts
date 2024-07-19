@@ -249,14 +249,14 @@ function justifify(text: string, width: number = TXT_WIDTH): string {
 
 export function fieldset(title: string, content: string, width: number = TXT_WIDTH): string {
     const titleWidth = Math.min(width - 4, getGraphemeLength(title))
-    let result = ` ┌${"─".repeat(titleWidth + 2)}┐\n`
+    let result = `  ┌${"─".repeat(titleWidth + 2)}┐\n`
 
     if (titleWidth != getGraphemeLength(title)) {
         throw new Error("Not implemented fucker");
     }
 
-    result += `┌┤ ${title} ├${"─".repeat(width - titleWidth - 6)}┐\n`
-    result += `│└${"─".repeat(titleWidth + 2)}┘${" ".repeat(width - 6 - titleWidth)}│\n`
+    result += `┌─┤ ${title} ├${"─".repeat(width - titleWidth - 7)}┐\n`
+    result += `│ └${"─".repeat(titleWidth + 2)}┘${" ".repeat(width - 7 - titleWidth)}│\n`
 
     const lines = content.split("\n")
     for (let i = 0; i < lines.length; i++) {
@@ -264,7 +264,7 @@ export function fieldset(title: string, content: string, width: number = TXT_WID
         result += `│ ${lines[i]}${" ".repeat(paddingRight)}│\n`
     }
 
-    result += `└${"─".repeat(width - 2)}┘\n`
+    result += `└${"─".repeat(width - 2)}┘\n\n`
 
     return result
 }
