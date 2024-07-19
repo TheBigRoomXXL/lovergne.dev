@@ -25,18 +25,3 @@ export function formatDate(date: Date) {
         month: "short",
     }) + " " + date.getFullYear()
 }
-
-/** The supidest amd least optimized function  I have ever written */
-export function getGraphemeLength(text: string) {
-    // Despite it's name this function does not count grapheme
-    // Inded mathematical characters are not monospace so we are fuck 
-
-    // We need to normalized the weird character we use for formating
-    // Regular expression to the Unicode mathematical characters
-    const regex = /[\u{1D400}-\u{1D7FF}]/gu;
-
-    text = text.replace(regex, "a")
-    text = text.replace("\u200B", " ")
-
-    return text.length
-}

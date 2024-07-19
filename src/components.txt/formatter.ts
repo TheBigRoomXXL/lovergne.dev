@@ -1,4 +1,4 @@
-import { randomUinqueIntegers, getGraphemeLength } from "src/components/utils"
+import { randomUinqueIntegers } from "src/components/utils"
 
 export const TXT_WIDTH = 85
 
@@ -110,7 +110,7 @@ export function center(text: string, width: number = TXT_WIDTH) {
 
     for (let i = 0; i < words.length; i++) {
         let word = words[i]
-        let wordlength = getGraphemeLength(word)
+        let wordlength = word.length
 
         // End of line not reached
         if (counter + wordlength <= width) {
@@ -125,7 +125,7 @@ export function center(text: string, width: number = TXT_WIDTH) {
         //    If so, we can try to split it and try insert the first word
         const splitedWord = word.split("\u200B")
         if (splitedWord.length > 1) {
-            const firstWordLenght = getGraphemeLength(splitedWord[0])
+            const firstWordLenght = splitedWord[0].length
             if (counter + firstWordLenght <= width) {
                 // If it fit, insert it
                 line.push(splitedWord[0] + " ")
@@ -133,7 +133,7 @@ export function center(text: string, width: number = TXT_WIDTH) {
 
                 // Then start a new line with the second word
                 word = splitedWord[1]
-                wordlength = getGraphemeLength(splitedWord[1])
+                wordlength = splitedWord[1].length
             }
         }
 
@@ -175,7 +175,7 @@ function justifify(text: string, width: number = TXT_WIDTH): string {
     // Then we justify, add to the result, reset the vars and start a new line
     for (let i = 0; i < words.length; i++) {
         let word = words[i]
-        let wordlength = getGraphemeLength(word)
+        let wordlength = word.length
 
         // End of line not reached
         if (counter + wordlength <= width) {
@@ -190,7 +190,7 @@ function justifify(text: string, width: number = TXT_WIDTH): string {
         //    If so, we can try to split it and try insert the first word
         const splitedWord = word.split("\u200B")
         if (splitedWord.length > 1) {
-            const firstWordLenght = getGraphemeLength(splitedWord[0])
+            const firstWordLenght = splitedWord[0].length
             if (counter + firstWordLenght <= width) {
                 // If it fit, insert it
                 line.push(splitedWord[0] + " ")
@@ -198,7 +198,7 @@ function justifify(text: string, width: number = TXT_WIDTH): string {
 
                 // Then start a new line with the second word
                 word = splitedWord[1]
-                wordlength = getGraphemeLength(splitedWord[1])
+                wordlength = splitedWord[1].length
             }
         }
 
@@ -247,20 +247,19 @@ function justifify(text: string, width: number = TXT_WIDTH): string {
 
 
 export function fieldset(title: string, content: string, width: number = TXT_WIDTH): string {
-    const titleWidth = Math.min(width - 7, getGraphemeLength(title))
+    const titleWidth = Math.min(width - 7, title.length)
     let result = `  ┌${"─".repeat(titleWidth + 2)}┐\n`
 
-    if (titleWidth != getGraphemeLength(title)) {
+    if (titleWidth != title.length) {
         throw new Error("Not implemented fucker");
     }
 
     result += `┌─┤ ${title} ├${"─".repeat(width - titleWidth - 7)}┐\n`
     result += `│ └${"─".repeat(titleWidth + 2)}┘${" ".repeat(width - 7 - titleWidth)}│\n`
-    // result += `│${" ".repeat(width - 2)}│\n`
 
     const lines = content.split("\n")
     for (let i = 0; i < lines.length - 1; i++) {
-        const paddingRight = Math.max(0, width - 5 - getGraphemeLength(lines[i]))
+        const paddingRight = Math.max(0, width - 5 - lines[i].length)
         result += `│  ${lines[i]}${" ".repeat(paddingRight)} │\n`
     }
 
