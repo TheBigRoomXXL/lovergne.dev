@@ -185,8 +185,6 @@ function orderedListRenderer(list: List, width: number): string {
 const renderers: Record<string, Renderer> = {
     "paragraph": paragraphRenderer,
     "inlineCode": inlineCodeRenderer,
-    "strong": strongRenderer,
-    "emphasis": emphasisRenderer,
     "image": imageRenderer,
     "html": htmlRenderer,
     "link": linkRenderer,
