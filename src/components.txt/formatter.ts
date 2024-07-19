@@ -1,4 +1,3 @@
-import { levels } from "node_modules/astro/dist/core/logger/core"
 import { randomUinqueIntegers, getGraphemeLength } from "src/components/utils"
 
 export const TXT_WIDTH = 90
