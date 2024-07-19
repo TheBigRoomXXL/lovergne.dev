@@ -1,6 +1,6 @@
 import { randomUinqueIntegers, getGraphemeLength } from "src/components/utils"
 
-export const TXT_WIDTH = 90
+export const TXT_WIDTH = 85
 
 const PUNCTUATION = [".", ",", ":", ";", "?", "!", "‽", "<", ">", "-", "¡", "¿"]
 const SPLITER = /\s+/
@@ -247,7 +247,7 @@ function justifify(text: string, width: number = TXT_WIDTH): string {
 
 
 export function fieldset(title: string, content: string, width: number = TXT_WIDTH): string {
-    const titleWidth = Math.min(width - 4, getGraphemeLength(title))
+    const titleWidth = Math.min(width - 7, getGraphemeLength(title))
     let result = `  ┌${"─".repeat(titleWidth + 2)}┐\n`
 
     if (titleWidth != getGraphemeLength(title)) {
