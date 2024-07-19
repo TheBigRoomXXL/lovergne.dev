@@ -18,7 +18,7 @@ export function Card(note: CollectionEntry<"zettelkasten">): string {
         title += ` (${note.data.published_date.getFullYear()})`
     }
 
-    const content = renderMarkdownToPlainTxt(note.body, TXT_WIDTH - 4)
+    const content = renderMarkdownToPlainTxt(note.body, TXT_WIDTH - 6)
 
     return fieldset(title, content)
 }

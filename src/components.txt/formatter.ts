@@ -256,11 +256,12 @@ export function fieldset(title: string, content: string, width: number = TXT_WID
 
     result += `┌─┤ ${title} ├${"─".repeat(width - titleWidth - 7)}┐\n`
     result += `│ └${"─".repeat(titleWidth + 2)}┘${" ".repeat(width - 7 - titleWidth)}│\n`
+    // result += `│${" ".repeat(width - 2)}│\n`
 
     const lines = content.split("\n")
-    for (let i = 0; i < lines.length; i++) {
-        const paddingRight = Math.max(0, width - 3 - getGraphemeLength(lines[i]))
-        result += `│ ${lines[i]}${" ".repeat(paddingRight)}│\n`
+    for (let i = 0; i < lines.length - 1; i++) {
+        const paddingRight = Math.max(0, width - 5 - getGraphemeLength(lines[i]))
+        result += `│  ${lines[i]}${" ".repeat(paddingRight)} │\n`
     }
 
     result += `└${"─".repeat(width - 2)}┘\n\n`
