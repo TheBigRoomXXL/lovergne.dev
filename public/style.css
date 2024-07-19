@@ -251,6 +251,15 @@ button {
 /* ===== DIVERS ===== */
 
 
+img {
+    max-width: min(var(--content-max-width), 100vw - 2* var(--minimum-margin))
+}
+
+p:has(img:only-child) {
+    text-align: center;
+}
+
+
 hr {
     border: 0;
     height: 1px;
@@ -258,15 +267,6 @@ hr {
     width: 100%;
 }
 
-img {
-    max-width: min(var(--content-max-width), 100vw - 2* var(--minimum-margin))
-}
-
-fieldset>*>img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 
 *:focus {
