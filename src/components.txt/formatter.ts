@@ -175,7 +175,7 @@ function justifify(text: string, width: number = TXT_WIDTH): string {
     // Then we justify, add to the result, reset the vars and start a new line
     for (let i = 0; i < words.length; i++) {
         let word = words[i]
-        let wordlength = word.length
+        let wordlength = word.replaceAll("\u200B", "").length
 
         // End of line not reached
         if (counter + wordlength <= width) {
