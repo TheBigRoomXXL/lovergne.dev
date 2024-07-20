@@ -103,8 +103,9 @@ export function listOrdered(items: string[], start: number = 1): string {
     return result + "\n"
 }
 
-export function link(text: string, url: string): string {
-    return `[${text}]\u200B<${url}>`
+export function link(text: string, url: string, footerNotes: string[]): string {
+    footerNotes.push(url)
+    return `${text}[${footerNotes.length}]`
 }
 
 export function image(img: string, alt: string, width: number = TXT_WIDTH) {

@@ -47,7 +47,13 @@ export function renderMarkdownToPlainTxt(markdown: string, context: Partial<Cont
         ...context
     }
     const masm = fromMarkdown(markdown) // Parse the mk into a tree
-    return defaultNodeRenderer(masm as Parent, c)
+
+    let content = defaultNodeRenderer(masm as Parent, c)
+
+    for (let i = 0; i < c.footerNotes.length; i++) {
+        content += `[${i + 1}] ${c.footerNotes[i]}\n`
+    }
+    return content
 }
 
 
@@ -103,6 +109,7 @@ function inlineCodeRenderer(node: Parent | Literal, c: Context): string {
     return "`" + node.value + "`"
 }
 
+// Disabled because it breack monospace fonts
 function strongRenderer(node: Parent | Literal, c: Context): string {
     if (isLiteral(node)) {
         throw new Error("strong must NOT be litteral");
@@ -116,6 +123,7 @@ function strongRenderer(node: Parent | Literal, c: Context): string {
     // return "*" + result + "*"
 }
 
+// Disabled because it breack monospace fonts
 function emphasisRenderer(node: Parent | Literal, c: Context): string {
     if (isLiteral(node)) {
         throw new Error("emphasis must NOT be litteral");
@@ -162,7 +170,7 @@ function linkRenderer(node: Parent | Literal, c: Context): string {
         const renderer = renderers[child.type] || defaultNodeRenderer
         text += renderer(child, c)
     })
-    return link(text, linkNode.url)
+    return link(text, linkNode.url, c.footerNotes)
 }
 
 function listRenderer(node: Parent | Literal, c: Context): string {
