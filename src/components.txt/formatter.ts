@@ -63,17 +63,44 @@ export function paragraph(text: string, width: number = TXT_WIDTH) {
     return justifify(text, width) + "\n"
 }
 
-export function listItem(prefix: string, content: string, width: number = TXT_WIDTH): string {
-    const padding = " ".repeat(prefix.length)
-    const contentWidth = width - prefix.length
-    const text = justifify(content, contentWidth)
+export function listUnordered(items: string[]): string {
+    let result = ""
+    for (let i = 0; i < items.length; i++) {
+        const lines = items[i].split("\n")
+        for (let j = 0; j < lines.length; j++) {
+            if (lines[j] == "") {
+                continue
+            }
+            if (j == 0) {
+                result += "  • " + lines[j] + "\n"
+            } else {
+                result += "    " + lines[j] + "\n"
+            }
+        }
+        result += "\n"
 
-    const lines = text.split("\n")
-    let result = prefix + lines[0] + "\n"
-    for (let i = 1; i < lines.length; i++) {
-        result += padding + lines[i] + "\n"
     }
-    return result
+    return result + "\n"
+}
+
+export function listOrdered(items: string[], start: number = 1): string {
+    let result = ""
+    for (let i = 0; i < items.length; i++) {
+        const lines = items[i].split("\n")
+        for (let j = 0; j < lines.length; j++) {
+            if (lines[j] == "") {
+                continue
+            }
+            if (j == 0) {
+                result += ` ${start + i}. ` + lines[j] + "\n"
+            } else {
+                result += "    " + lines[j] + "\n"
+            }
+
+        }
+        result += "\n"
+    }
+    return result + "\n"
 }
 
 export function link(text: string, url: string): string {

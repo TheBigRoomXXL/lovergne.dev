@@ -1,4 +1,7 @@
-import { paragraph, bold, link, italic, center, image, TXT_WIDTH, listItem } from "./formatter"
+import {
+    paragraph, bold, link, italic, center, image, TXT_WIDTH,
+    listOrdered, listUnordered
+} from "./formatter"
 import { fromMarkdown } from 'mdast-util-from-markdown'
 
 // Fuck you typescript
@@ -164,30 +167,21 @@ function linkRenderer(node: Parent | Literal, c: Context): string {
 
 function listRenderer(node: Parent | Literal, c: Context): string {
     const list = node as List
-    if (list.ordered === true) {
-        return orderedListRenderer(list, c)
-    }
 
-    const prefix = "  • "
-    let result = ""
+    let items: string[] = []
+    c.width -= 4
     list.children.forEach((child) => {
         const renderer = renderers[child.type] || defaultNodeRenderer
-        const content = renderer(child, c)
-        result += listItem(prefix, content, c.width)
+        items.push(renderer(child, c))
     })
-    return result + "\n"
+    c.width += 4
+
+    if (list.ordered === true) {
+        return listOrdered(items, list.start)
+    }
+    return listUnordered(items)
 }
 
-function orderedListRenderer(list: List, c: Context): string {
-    let result = ""
-    for (let i = list.start; i < list.start + list.children.length; i++) {
-        const child = list.children[i - list.start]
-        const renderer = renderers[child.type] || defaultNodeRenderer
-        const content = renderer(child, c)
-        result += listItem(` ${i}. `, content, c.width)
-    }
-    return result
-}
 
 const renderers: Record<string, Renderer> = {
     "paragraph": paragraphRenderer,
