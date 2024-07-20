@@ -259,8 +259,8 @@ export function fieldset(title: string, content: string, width: number = TXT_WID
 
     const lines = content.split("\n")
     for (let i = 0; i < lines.length - 1; i++) {
-        const paddingRight = Math.max(0, width - 5 - lines[i].length)
-        result += `│  ${lines[i]}${" ".repeat(paddingRight)} │\n`
+        const paddingRight = Math.max(2, width - 4 - lines[i].length)
+        result += `│  ${lines[i]}${" ".repeat(paddingRight)}│\n`
     }
 
     result += `└${"─".repeat(width - 2)}┘\n\n`
