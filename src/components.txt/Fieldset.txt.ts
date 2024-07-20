@@ -16,7 +16,12 @@ export function Fieldset(title: string, content: string, width: number = TXT_WID
     for (let i = 0; i < lines.length - 1; i++) {
         const paddingRight = Math.max(2, width - 4 - lines[i].length)
         result += `│  ${lines[i]}${" ".repeat(paddingRight)}│\n`
+
+        if (i == lines.length - 2 && lines[i] != "") {
+            result += `│${" ".repeat(width - 2)}│\n`
+        }
     }
+
 
     result += `└${"─".repeat(width - 2)}┘\n\n`
 
