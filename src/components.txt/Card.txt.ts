@@ -1,4 +1,5 @@
-import { TXT_WIDTH, fieldset } from "./formatter"
+import { TXT_WIDTH } from "./formatter"
+import { Fieldset } from "./Fieldset.txt";
 import { renderMarkdownToPlainTxt } from "./tree-renderer";
 import type { CollectionEntry } from "astro:content";
 
@@ -20,5 +21,5 @@ export function Card(note: CollectionEntry<"zettelkasten">): string {
 
     const content = renderMarkdownToPlainTxt(note.body, TXT_WIDTH - 6)
 
-    return fieldset(title, content)
+    return Fieldset(title, content)
 }
