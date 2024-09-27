@@ -1,5 +1,5 @@
 {
-  "name": "my-site",
+  "name": "lovergne.dev",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -11,8 +11,8 @@
     "sync": "astro sync"
   },
   "dependencies": {
-    "astro": "^3.5.5",
-    "@astrojs/rss": "^3.0.0",
+    "astro": "^4.15.9",
+    "@astrojs/rss": "^4.0.7",
     "@astrojs/sitemap": "^3.1.2",
     "@csstools/normalize.css": "github:csstools/normalize.css"
   }
