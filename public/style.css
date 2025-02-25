@@ -252,8 +252,10 @@ button {
 
 
 img {
-    max-width: min(var(--content-max-width), 100vw - 2* var(--minimum-margin))
+    max-width: min(var(--content-max-width), 80vw)
 }
+
+
 
 p:has(img:only-child) {
     text-align: center;
