@@ -6,9 +6,9 @@ const PUNCTUATION = [".", ",", ":", ";", "?", "!", "‽", "<", ">", "-", "¡", "
 const SPLITER = /\s+/
 
 export function h1(text: string): string {
-    let result = "═".repeat(TXT_WIDTH) + "\n"
+    let result = "=".repeat(TXT_WIDTH) + "\n"
     result += center(text)
-    result += "═".repeat(TXT_WIDTH) + "\n\n"
+    result += "=".repeat(TXT_WIDTH) + "\n\n"
     return result
 }
 
