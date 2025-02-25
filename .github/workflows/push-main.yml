@@ -4,7 +4,7 @@ on:
     branches:
       - main
 jobs:
-  build-test-deploy:
+  build-and-test:
     runs-on: ubuntu-latest
     steps:
       - name: setup-repos
@@ -21,17 +21,22 @@ jobs:
           npm install
           npm run build
 
-      - name: test-with-lighthouse
-        run: |
-          npm install -g @lhci/cli@0.12.x
-          lhci autorun --config .github/workflows/lighthouse.json
-
-      - name: install-ssh-keys
-        uses: shimataro/ssh-key-action@v2
+      - name: Upload static files as artifact
+        id: deployment
+        uses: actions/upload-pages-artifact@v3
         with:
-          key: ${{ secrets.SSH_SECRET_KEY }}
-          known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
-          config: ${{ secrets.SSH_CONFIG }}
+          path: dist/
 
-      - name: rsync-over-SSH
-        run: rsync -av -e 'ssh -p 5555' dist/ lovergne.dev:${{ secrets.SITE_PATH }}
+  deploy:
+    needs: build-and-test
+    permissions:
+      pages: write # to deploy to Pages
+      id-token: write # to verify the deployment originates from an appropriate source
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

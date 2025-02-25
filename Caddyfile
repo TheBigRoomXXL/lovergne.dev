@@ -1,0 +1,11 @@
+
+ lovergne.dev.localhost {
+
+	root * /home/sebastien/repos/lovergne.dev/dist/
+    file_server
+
+	handle_errors {
+		rewrite * /404.html
+		file_server
+	}
+}
