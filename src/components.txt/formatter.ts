@@ -1,6 +1,6 @@
 import { randomUinqueIntegers } from "src/components/utils"
 
-export const TXT_WIDTH = 55
+export const TXT_WIDTH = 75
 
 const PUNCTUATION = [".", ",", ":", ";", "?", "!", "‽", "<", ">", "-", "¡", "¿"]
 const SPLITER = /\s+/
