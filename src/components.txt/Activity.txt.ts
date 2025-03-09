@@ -16,8 +16,6 @@ notes.sort((n1, n2) => {
 
 export function Activity(): string {
     let result = h2("Recent Activities")
-    result += "To read an article go to https://lovergne.dev/archive/<SLUG>.txt\n\n"
-
     const titleSize = TXT_WIDTH - 13
 
     notes.forEach((note) => {
@@ -28,7 +26,7 @@ export function Activity(): string {
         }
         result += title + "\n"
 
-        result += `  ↳ https://lovergne.dev/archive/${note.slug}\n\n`
+        result += ` ↳ https://lovergne.dev/archive/${note.slug}\n\n`
     })
 
 
