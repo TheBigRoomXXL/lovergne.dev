@@ -1,6 +1,6 @@
 import { randomUinqueIntegers } from "src/components/utils"
 
-export const TXT_WIDTH = 85
+export const TXT_WIDTH = 55
 
 const PUNCTUATION = [".", ",", ":", ";", "?", "!", "‽", "<", ">", "-", "¡", "¿"]
 const SPLITER = /\s+/
@@ -190,7 +190,7 @@ export function center(text: string, width: number = TXT_WIDTH) {
   * Justification algorithm adapted from:
   * https://www.rose-hulman.edu/class/csse/csse221/200910/Projects/Markov/justification.html
   */
-function justifify(text: string, width: number = TXT_WIDTH): string {
+export function justifify(text: string, width: number = TXT_WIDTH): string {
     let result = ""
 
     // Split by whitespaces
