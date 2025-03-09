@@ -7,7 +7,6 @@ import { getCollection } from "astro:content";
 
 import { renderMarkdownToPlainTxt } from 'src/components.txt/tree-renderer';
 
-let notes = await getCollection("zettelkasten");
 
 export async function getStaticPaths() {
     const notes = await getCollection("zettelkasten");
@@ -48,8 +47,6 @@ export const GET: APIRoute<Props> = ({ props }) => {
     result += paragraph("This page is about : " + note.data.link)
 
     result += renderMarkdownToPlainTxt(note.body, {})
-
-
 
     const left = props.previous ? `<< ${props.previous.slug}` : ""
     const right = props.next ? `${props.next.slug} >>` : ""
