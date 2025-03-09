@@ -12,6 +12,7 @@ const Tag = z.enum([
   "css",
   "philosophy",
   "ai",
+  "distributed",
   "database",
   "learning-ressource"
 ])

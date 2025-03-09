@@ -4,7 +4,7 @@ title: "FoundationDB: A Distributed Unbundled Transactional Key
 Value Store"
 added_date: 2023-08-29
 published_date: 2021-06-18
-tags: ["paper", "database"]
+tags: ["paper", "database", "distributed"]
 ---
 
 FoundationDB is a distributed transactional key value store created in 2009 wich 
