@@ -1,9 +1,8 @@
 ---
 link: https://lovergne.dev/
 title: My Personal Site
-tags: ["project", "test"]
+tags: ["project"]
 added_date: 2023-07-08
-published_date: 2023-07-08
 ---
 
 *Repository: [github.com/theBigRoomXXL/lovergne.dev](https://github.com/theBigRoomXXL/lovergne.dev)*
