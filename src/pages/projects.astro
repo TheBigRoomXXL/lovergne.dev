@@ -6,8 +6,7 @@ import { getCollection } from "astro:content";
 
 let notes = await getCollection("zettelkasten");
 notes = notes
-  .filter((n) => !n.data.tags.includes("blog"))
-  .filter((n) => !n.data.tags.includes("project"))
+  .filter((n) => n.data.tags.includes("project"))
   .sort((n1, n2) => {
     if (n2.data.pin) return 1;
     if (n1.data.pin) return -1;
@@ -17,19 +16,12 @@ notes = notes
   });
 ---
 
-<BaseLayout title="Awesome" description="A curated list of awesome things">
-  <h2>My list of <mark>awesome</mark> things</h2>
+<BaseLayout title="Awesome" description="Some of my personal projects">
+  <h2>Some of the things I made</h2>
   <p>
-    This is a curated list of things I have discovered on the web and found
-    useful or thought-provoking, there is also some fun stuff.
-  </p>
-  <p>
-    Potential subjects include, but are not limited to, programming,
-    engineering, technology, and woodworking.
-  </p>
-  <p>
-    The list is sorted by date of addition (latest first), expect for my
-    favorites wich are pinned.
+    This is a list of some of the <b>personal</b> projects I worked on. Not everything
+    is here, but I try to keep it updated. Work-In-Progress are not included here,
+    it's only finished and maintenance-only projects.
   </p>
   <ul>
     {

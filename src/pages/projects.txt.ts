@@ -7,8 +7,7 @@ import { getCollection } from "astro:content";
 let notes = await getCollection("zettelkasten");
 
 notes = notes
-    .filter((n) => !n.data.tags.includes("blog"))
-    .filter((n) => !n.data.tags.includes("project"))
+    .filter((n) => n.data.tags.includes("project"))
     .sort((n1, n2) => {
         if (n2.data.pin) return 1;
         if (n1.data.pin) return -1;
@@ -25,13 +24,10 @@ const cards = notes.reduce((acc, note) => {
 export async function GET() {
     return new Response(
         Header() +
-        h1("My list of " + bold("Awesome") + " things") +
-        paragraph(`This is a curated list of things I have discovered on the web and found
-        useful or thought-provoking, there is also some fun stuff.`) +
-        paragraph(`Potential subjects include, but are not limited to, programming,
-        engineering, technology, and woodworking.`) +
-        paragraph(`The list is sorted by date of addition (latest first), expect for my
-        favorites wich are pinned.`) +
+        h1("Some of the things I made") +
+        paragraph(`This is a list of some of the personal projects I worked on. Not everything
+        is here, but I try to keep it updated. Work-In-Progress are not included here,
+        it's only finished and maintenance-only projects.`) +
         cards +
         Footer()
     )
