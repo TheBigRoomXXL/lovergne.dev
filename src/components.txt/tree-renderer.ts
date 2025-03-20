@@ -73,6 +73,10 @@ function defaultNodeRenderer(node: Parent | Literal, c: Context): string {
 
     // Recursive case, get value from children
     let result = ""
+    if (node.children === undefined) {
+        return result
+    }
+
     node.children.forEach((child) => {
         const renderer = renderers[child.type] || defaultNodeRenderer
         result += renderer(child, c)
