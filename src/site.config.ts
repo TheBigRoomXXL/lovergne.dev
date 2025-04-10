@@ -25,12 +25,12 @@ export const siteConfig: SiteConfig = {
 		{ name: "Projects", url: "/projects" },
 		{ name: "Awesome", url: "/awesome" },
 		{ name: "Blogroll", url: "/blogroll" },
-		{ name: "RSS", url: "/rss.xml" },
 
 	],
 	socialLinks: [
 		{ name: "github", url: "https://github.com/TheBigRoomXXL" },
 		{ name: "itch.io", url: "https://tehbigroomxxl.itch.io/" },
 		{ name: "email", url: "mailto:seb.lovergne+site@gmail.com?Subject=Hello" },
+		{ name: "RSS", url: "/rss.xml" },
 	],
 };
