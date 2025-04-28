@@ -2,7 +2,7 @@
 link: https://www.adminer.org
 title: Adminer
 added_date: 2023-08-20
-tags: ["tool", "database"]
+tags: ["awesome","tool", "database"]
 ---
 
 Minimalist, fast, single-file, UI for RDBMS. **phpmyadmin but way

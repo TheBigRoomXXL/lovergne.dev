@@ -2,7 +2,7 @@
 link: https://wave.webaim.org/extension/
 title: "WAVE: Web Accessibility Evaluation Tools"
 added_date: 2023-08-22
-tags: ["tool"]
+tags: ["awesome","tool"]
 ---
 A collection of tools to test website accessibility. There
 browser extension is great and give an instanious and detailed

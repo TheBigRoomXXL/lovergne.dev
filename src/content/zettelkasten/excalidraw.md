@@ -2,7 +2,7 @@
 link: https://excalidraw.com/
 title: Excalidraw
 added_date: 2024-03-30
-tags: ["tool"]
+tags: ["awesome","tool"]
 ---
 
 

@@ -2,7 +2,7 @@
 link: https://knowingmachines.org/models-all-the-way
 title: "Models All the Way Down"
 added_date: 2025-03-09
-tags: ["ai", "philosophy", "article"]
+tags: ["awesome","ai", "philosophy", "article"]
 ---
 
 "Models All the Way Down" by [Knowing Machines](https://knowingmachines.org/about) is a detailed investigation

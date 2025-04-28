@@ -2,7 +2,7 @@
 link: https://github.com/WebSVG/voronoi
 title: Voronoi generator
 added_date: 2023-08-17
-tags: ["tool"]
+tags: ["awesome","tool"]
 ---
 This is an online and open-source tool for parametric voronoi
 generation. Voronoi is a diagram derived from a mathematical equasion that

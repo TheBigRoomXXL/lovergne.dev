@@ -3,7 +3,7 @@ link: https://ferd.ca/a-distributed-systems-reading-list.html
 title: A Distributed Systems Reading List
 author: Fred Hebert
 added_date: 2024-04-02
-tags: ["learning-ressource", "distributed"]
+tags: ["awesome","learning-ressource", "distributed"]
 ---
 
 Distributed systems are everywhere now, if you are working on a web application now, chances are it is distributed or someone will ask you to make it distributed at some point. Probably most systems should not be distributed, as it adds an incredible amount of complexity, but the promises of fault tolerance and scalability are hard to ignore, we are only human after all, and we have a hard time not imagining the grass is greener elsewhere. Also, sometimes systems actually **need** to be distributed to meet some constraints. 

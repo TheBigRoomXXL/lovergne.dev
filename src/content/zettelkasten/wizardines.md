@@ -1,7 +1,7 @@
 ---
 link: https://wizardzines.com/comics/
 title: Wizard Zines
-tags: []
+tags: ["awesome", "learning-ressource"]
 added_date: 2024-03-29
 ---
 

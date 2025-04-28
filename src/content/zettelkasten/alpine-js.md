@@ -2,7 +2,7 @@
 link: https://alpinejs.dev/
 title: Alpines.js
 added_date: 2023-08-20
-tags: ["tool"]
+tags: ["awesome","tool"]
 ---
 Make the web simple again! Alpine.js provide DOM reactivity and
 two-way data binding thought a lightweight framework. It's build on top of

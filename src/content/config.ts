@@ -1,6 +1,8 @@
 import { z, defineCollection } from 'astro:content';
 
 const Tag = z.enum([
+  "project",
+  "awesome",
   "blogroll",
   "article",
   "paper",
@@ -15,7 +17,6 @@ const Tag = z.enum([
   "distributed",
   "database",
   "learning-ressource",
-  "project",
 ])
 // 
 

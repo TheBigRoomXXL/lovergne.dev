@@ -2,7 +2,7 @@
 link: https://github.com/bderenzo/tinystatus/
 title: "Tinystatus: a lovingly simple monitoring tool."
 added_date: 2023-09-08
-tags: ["tool"]
+tags: ["awesome","tool"]
 ---
 Sometimes, you have a basic website or a small application, and all you need is a way to receive alerts if it goes down. In such cases, you probably don't want to deploy the entire OpenTelemetry stack with all the required infrastructure and integration. **Sometimes, all you want is something simple.** This is where "tinystatus" comes into play; it couldn't be simpler.
 

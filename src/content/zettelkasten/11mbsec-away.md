@@ -2,7 +2,7 @@
 link: https://thmsmlr.com/cheap-infra
 title: Glory is only 11MB/sec away
 added_date: 2024-04-17
-tags: []
+tags: ["awesome",]
 ---
 
 A good article against the necessity of horizontal scaling and deploying on the edges. 

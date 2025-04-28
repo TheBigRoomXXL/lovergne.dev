@@ -2,7 +2,7 @@
 link: https://htmx.org/docs/
 title: HTMX
 added_date: 2023-08-16
-tags: ["tool"]
+tags: ["awesome","tool"]
 ---
 Make the web simple again! HTMX is a framework for building frontend with the
 hypermedia design philosophy. It's dependency free and weight only ~14k

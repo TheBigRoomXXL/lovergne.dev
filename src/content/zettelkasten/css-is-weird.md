@@ -2,7 +2,7 @@
 link: https://www.youtube.com/watch?v=aHUtMbJw8iA&t=906s
 title: Why is CSS so Weird?
 added_date: 2023-08-23
-tags: ["css"]
+tags: ["awesome","css"]
 ---
 Because the web has been build with a set of value at it's core
 : **the web is open, it's for everyone and everything**. By

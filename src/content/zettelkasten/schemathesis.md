@@ -2,7 +2,7 @@
 link: https://github.com/schemathesis/schemathesis
 title: Schemathesis
 added_date: 2023-08-17
-tags: ["tool", "test" ]
+tags: ["awesome","tool", "test" ]
 pin: true
 ---
 Schemathesis is an incredible fuzzer for REST and GraphQL API. It

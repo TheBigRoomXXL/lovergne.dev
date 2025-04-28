@@ -2,7 +2,7 @@
 link: https://github.com/restic/restic
 title: Restic
 added_date: 2024-03-30
-tags: ["tool"]
+tags: ["awesome","tool"]
 ---
 Restic is the tool you **should** be using for your backups: 
 1. You can always find what you need in a restic backup because it uses incremental snapshots (like git).

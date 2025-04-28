@@ -2,7 +2,7 @@
 link: https://github.com/rakyll/hey
 title: "Hey: tiny program that sends some load to a web application"
 added_date: 2023-12-13
-tags: ["tool", "ops", "test"]
+tags: ["awesome","tool", "ops", "test"]
 ---
 When I deploy a new app in production, I like to do a quick load test to have
 an idea of how much traffic I can support while staying under my latency target. 

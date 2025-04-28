@@ -2,7 +2,7 @@
 link: https://buttondown.com/hillelwayne/archive/what-makes-concurrency-so-hard/
 title: "What makes concurrency so hard?"
 added_date: 2025-03-09
-tags: ["article", "distributed"]
+tags: ["awesome","article", "distributed"]
 ---
 
 The short version: Concurrency is difficult due to the **state space explosion** that occurs

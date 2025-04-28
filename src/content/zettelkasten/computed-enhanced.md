@@ -2,7 +2,7 @@
 link: https://www.computerenhance.com/p/table-of-contents
 title: "Computer, Enhance!"
 added_date: 2025-03-09
-tags: ["learning-ressource"]
+tags: ["awesome","learning-ressource"]
 ---
 An excellent **performance-Aware programming** course by Casey Muratori. If you're not
 familiar with him, Casey Muratori is a programmer who specializes in game engine research

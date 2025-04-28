@@ -2,7 +2,7 @@
 link: https://www.htmhell.dev/
 title: "HTMHell: collection of bad (and good) practices in HTML"
 added_date: 2023-11-03
-tags: ["learning-ressource"]
+tags: ["awesome","learning-ressource"]
 ---
 I considered myself pretty up to date with the functionality offered by HTML 
 but HTMLHell show me I was wrong. Notably I discovered the existence of 

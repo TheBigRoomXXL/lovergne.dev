@@ -4,7 +4,7 @@ title: The Rise of Worse is Better
 author: R. P. Gabriel
 added_date: 2023-08-17
 published_date: 1991-01-01
-tags: ["article"]
+tags: ["awesome","article"]
 ---
 This article discusses the trade-off between implementation
 simplicity and interface simplicity and argues in favor of implementation
