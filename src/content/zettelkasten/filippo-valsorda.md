@@ -1,7 +1,7 @@
 ---
 link: https://words.filippo.io//
 title: Filipo Valsorda
-tags: ["cybersecurity", "blog"]
+tags: ["cybersecurity", "blogroll"]
 added_date: 2024-03-29
 ---
 

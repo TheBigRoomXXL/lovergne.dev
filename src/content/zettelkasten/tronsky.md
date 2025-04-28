@@ -1,7 +1,7 @@
 ---
 link: https://tonsky.me/
 title: Tronsky
-tags: ["blog"]
+tags: ["blogroll"]
 added_date: 2024-04-18
 ---
 

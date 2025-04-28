@@ -1,7 +1,7 @@
 ---
 link: https://hamvocke.com
 title: Ham Vock
-tags: [ "blog"]
+tags: [ "blogroll"]
 added_date: 2024-03-29
 ---
 

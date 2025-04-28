@@ -1,7 +1,7 @@
 ---
 link: https://www.troyhunt.com/
 title: Troy Hunt
-tags: ["cybersecurity" , "blog"]
+tags: ["cybersecurity" , "blogroll"]
 added_date: 2024-03-29
 ---
 

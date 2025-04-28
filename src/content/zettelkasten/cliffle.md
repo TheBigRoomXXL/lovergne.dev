@@ -1,7 +1,7 @@
 ---
 link: https://cliffle.com/
 title: Clifffle
-tags: [ "blog"]
+tags: [ "blogroll"]
 added_date: 2024-04-15
 ---
 

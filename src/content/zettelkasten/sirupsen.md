@@ -1,7 +1,7 @@
 ---
 link: https://sirupsen.com/
 title: Simon Hørup Eskildsen
-tags: ["database", "blog"]
+tags: ["database", "blogroll"]
 added_date: 2024-03-29
 ---
 

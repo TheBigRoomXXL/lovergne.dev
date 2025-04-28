@@ -1,7 +1,7 @@
 ---
 link: https://words.filippo.io//
 title: Cofessions Of A Code Addict
-tags: ["blog"]
+tags: ["blogroll"]
 added_date: 2025-03-19
 ---
 

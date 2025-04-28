@@ -6,7 +6,7 @@ import { getCollection } from "astro:content";
 
 let blogroll = await getCollection("zettelkasten");
 blogroll = blogroll
-    .filter((n) => n.data.tags.includes("blog"))
+    .filter((n) => n.data.tags.includes("blogroll"))
     .sort((b1, b2) => {
         if (b2.data.pin) return 1;
         if (b1.data.pin) return -1;

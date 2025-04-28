@@ -1,7 +1,7 @@
 ---
 link: http://len.falken.directory/feed.xml
 title: Len Falken's Writing
-tags: ["blog"]
+tags: ["blogroll"]
 added_date: 2024-03-29
 ---
 

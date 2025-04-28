@@ -1,7 +1,7 @@
 ---
 link: https://www.petemillspaugh.com/
 title: Pete Millspaugh
-tags: ["css", "blog"]
+tags: ["css", "blogroll"]
 added_date: 2024-03-29
 ---
 
