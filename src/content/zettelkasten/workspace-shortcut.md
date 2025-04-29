@@ -1,11 +1,11 @@
 ---
 link: null
-title: "VSCode Workspace Shortcuts with .desktop Files on Linux"
+title: "VSCode workspace shortcuts with .desktop files on Linux"
 added_date: 2025-04-28
 tags: ["tool", "blog-post"]
 ---
 
-One big frustration I have with my workflow currently is that I open all my apps with the app launcher (the menu that appears when you press the command key `⌘`) except one: VSCode[^1]. And that's a big "but" because this is probably the app I use the most after my browser. Instead, I open a terminal and type `code-oss repos/name-of-my-repo`; if I don’t, it just opens VSCode with the last workspace instead of the one I specifically want. But today, no more! Today I fixed my workflow with a simple hack: generating `.desktop` files.
+One big frustration I have with my workflow currently is that I open all my apps with the app launcher (the menu that appears when you press the command key `⌘`) except one: VSCode[^clarification]. And that's a big "but" because this is probably the app I use the most after my browser. Instead, I open a terminal and type `code-oss repos/name-of-my-repo`; if I don’t, it just opens VSCode with the last workspace instead of the one I specifically want. But today, no more! Today I fixed my workflow with a simple hack: generating `.desktop` files.
 
 
 ### But what is a `.desktop` file?
@@ -53,9 +53,9 @@ As you can see, it contains a lot of metadata to help your desktop environment p
 - **Comment**: a short description for tooltips  
 - **GenericName**: what category of application it belongs to  
 - **Exec**: how the application is launched. Note here that `%F` tells the system that VSCode can open one or multiple files at once. This is why when you select some files, right-click, and then click on "Open With," VSCode appears as an option  
-- **Icon**: the icon of the app; can be an absolute path or, as in this case, a URI compatible with the [Icon Themes Specification](https://specifications.freedesktop.org/icon-theme-spec/latest/)  
+- **Icon**: the icon of the app; can be an absolute path or, as in this case, a URI compatible with the [icon-themes specification](https://specifications.freedesktop.org/icon-theme-spec/latest/)  
 - **Type**: whether it's an application, a directory, or a link  
-- **StartupNotify**: this one is a little bit complicated and is linked to the [startup-notification standard](https://cgit.freedesktop.org/startup-notification/tree/doc/startup-notification.xml). What you need to know is that `false` only means that it is up to the application to manage its own startup notification, not that it won’t notify you on start. I really wish it would just stop startup notifications  
+- **StartupNotify**: this one is a little bit complicated and is linked to the [startup-specification standard](https://cgit.freedesktop.org/startup-notification/tree/doc/startup-notification.xml). What you need to know is that `false` only means that it is up to the application to manage its own startup notification, not that it won’t notify you on start. I really wish it would just stop startup notifications  
 - **StartupWMClass**: an ID used to know which windows belong to the same application  
 - **Categories**: like GenericName, it's a categorization, but it follows the [desktop-menu specification](https://specifications.freedesktop.org/menu-spec/latest/) instead of being free text  
 - **MimeType**: a list of MIME types that the application can open. In this case, VSCode registers its own custom MIME type for workspaces, because listing everything VSCode can open would be too long—as it can basically open anything  
@@ -95,7 +95,7 @@ Let's analyze it step by step:
 - An absolute path to our workspace replaces the `%F` argument. It's important that the path is absolute, as `~` would not be expanded.  
 - The rest of the metadata is kept from the base file.  
 
-This gives us the following search result in the app launcher when I search for "tinyfeed[^2]":
+This gives us the following search result in the app launcher when I search for "tinyfeed[^self-promotion]":
 
 ![workspace-shortcut-1](/workspace-shortcut-1.png)
 
@@ -147,9 +147,9 @@ This is the final result:
 
 ![workspace-shortcut-2](/workspace-shortcut-2.png)
 
-Just for completion: another solution could have been to use a customizable app launcher like [Ulauncher](https://ulauncher.io/) with a [VSCode extension](https://ext.ulauncher.io/-/github-brpaz-ulauncher-vscode-projects), but I like to keep my setup as standard as possible for portability.
+Just for completeness: another solution could have been to use a customizable app launcher like [Ulauncher](https://ulauncher.io/) with a [VSCode extension](https://ext.ulauncher.io/-/github-brpaz-ulauncher-vscode-projects), but I like to keep my setup as standard as possible for portability.
 
-[^1]: *VSCode vs Code-OSS vs Codium*: In this article, when I refer to VSCode I actually refer to [code-oss](https://github.com/microsoft/vscode), the open-source version of VSCode—not the proprietary version, and also not [Codium](https://github.com/VSCodium/vscodium), the open-source and slightly modified version of VSCode. It matters because I launch it with the command `code-oss`, not `code`. You might need to adapt my scripts accordingly. Same goes for file paths.
+[^clarification]: *VSCode vs Code-OSS vs Codium*: In this article, when I refer to VSCode I actually refer to [code-oss](https://github.com/microsoft/vscode), the open-source version of VSCode—not the proprietary version, and also not [Codium](https://github.com/VSCodium/vscodium), the open-source and slightly modified version of VSCode. It matters because I launch it with the command `code-oss`, not `code`. You might need to adapt my scripts accordingly. Same goes for file paths.
 
-[^2]: Check out [tinyfeed](https://github.com/TheBigRoomXXL/tinyfeed), a minimalist self-hosted RSS reader that generates static HTML pages for your consumption.
+[^self-promotion]: Check out [tinyfeed](https://github.com/TheBigRoomXXL/tinyfeed), a minimalist self-hosted RSS reader that generates static HTML pages for your consumption.
 
