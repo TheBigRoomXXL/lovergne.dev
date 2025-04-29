@@ -11,7 +11,6 @@ const { Content } = await thing.render();
 
 <fieldset id={thing.slug}>
     <legend>
-        <!-- ( -->
         <strong>
             {thing.data.pin ? "📌 " : ""}
             {thing.data.title}
@@ -23,9 +22,8 @@ const { Content } = await thing.render();
             }
         </strong>
         <a href={thing.data.link} target="_blank"
-            >{shortenLink(thing.data.link)}</a
+            >{shortenLink(thing.data.link || "")}</a
         >
-        <!-- ) -->
     </legend>
     <Content />
 </fieldset>

@@ -1,9 +1,9 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
-import { shortenLink } from "src/components/utils";
 
 import BaseLayout from "@layouts/Base";
+import Post from "@components/Post";
 
 export async function getStaticPaths() {
     const notes = await getCollection("zettelkasten");
@@ -34,19 +34,7 @@ const { Content } = await note.render();
 ---
 
 <BaseLayout title={note.data.title} description="Something awesome">
-    <h2>
-        {note.data.title}
-        {note.data.author ? `by ${note.data.author}` : ""}
-        {
-            note.data.published_date
-                ? `(${note.data.published_date.getFullYear()})`
-                : ""
-        }
-    </h2>
-    <a href={note.data.link}>
-        {shortenLink(note.data.link)}
-    </a>
-    <Content />
+    <Post post={note} />
     <div slot="before-footer" class="next-and-previous">
         {
             props.previous && (

@@ -4,6 +4,7 @@ const Tag = z.enum([
   "project",
   "awesome",
   "blogroll",
+  "blog-post",
   "article",
   "paper",
   "tool",
@@ -18,14 +19,13 @@ const Tag = z.enum([
   "database",
   "learning-ressource",
 ])
-// 
 
 // published_date is used to publish the original publishing date of the awesome
 // thing, not the date on my site. 
 const zettelkastenCollection = defineCollection({
   schema: z.object({
     title: z.string(),
-    link: z.string(),
+    link: z.string().nullable(),
     added_date: z.date(),
     published_date: z.date().optional(),
     author: z.string().optional(),

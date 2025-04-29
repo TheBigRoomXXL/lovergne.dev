@@ -1,0 +1,38 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { shortenLink } from "./utils";
+import { nullable } from "astro:schema";
+
+interface Props {
+    post: CollectionEntry<"zettelkasten">;
+}
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<article>
+    <h1>
+        {post.data.pin ? "📌 " : ""}
+        {post.data.title}
+        {post.data.author ? `by ${post.data.author}` : ""}
+        {
+            post.data.published_date
+                ? `(${post.data.published_date.getFullYear()})`
+                : ""
+        }</h1>
+    <strong>
+        Published {post.data.added_date.toLocaleDateString()}
+        {
+            post.data.link != null ? (
+                    <span>about</span>
+                    <a href={post.data.link} target="_blank">
+                        {shortenLink(post.data.link)}
+                    </a>
+            ) : (
+                ""
+            )
+        }
+    </strong>
+    
+    <Content />
+</article>

@@ -65,15 +65,15 @@ h4+h5 {
 }
 
 h1 {
-    font-size: 2.8rem;
-}
-
-h2 {
     font-size: 2.2rem;
 }
 
+h2 {
+    font-size: 1.9rem;
+}
+
 h3 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
 }
 
 h4,
@@ -167,7 +167,9 @@ legend>*:last-child {
     }
 }
 
-code {
+
+/* This only apply to inline code, not to multiline code block */
+code:not(pre code) {
     font-family: "Monospace Code", monospace, courier;
     font-size: 0.85em;
     background-color: var(--color-grey-darker);
@@ -181,9 +183,16 @@ code {
 
 
 @media (prefers-color-scheme: light) {
-    code {
+    code:not(pre code) {
         background-color: rgb(240, 240, 240);
     }
+}
+
+/* This apply to the code-block-wapper by astro */
+pre.astro-code {
+    padding: 1em;
+    margin: 1em;
+    font-size: 0.8em;
 }
 
 mark {
@@ -192,11 +201,16 @@ mark {
     padding: 0 0.25ch;
 }
 
-/* In light primary need some more peps */
+/* In light mode primary need more peps */
 @media (prefers-color-scheme: light) {
     mark {
         filter: brightness(140%);
     }
+}
+
+dfn {
+    font-style: normal;
+    text-decoration: underline dotted;
 }
 
 
@@ -206,7 +220,7 @@ ul {
     margin-block-end: 0.5em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-    padding-inline-start: 0.75em;
+    padding-inline-start: 2em;
 }
 
 li {
