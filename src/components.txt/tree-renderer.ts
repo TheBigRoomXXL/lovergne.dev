@@ -1,6 +1,6 @@
 import {
     paragraph, bold, link, italic, center, image, TXT_WIDTH,
-    listOrdered, listUnordered
+    listOrdered, listUnordered, h1, h2, h3
 } from "./formatter"
 import { fromMarkdown } from 'mdast-util-from-markdown'
 
@@ -17,6 +17,12 @@ type Parent = Node & {
 }
 type Literal = Node & {
     value: string
+}
+
+type Heading = {
+    type: "heading";
+    depth: number;
+    children: Array<Parent | Literal>
 }
 
 type Image = {
@@ -66,6 +72,9 @@ function isLiteral(node: Parent | Literal): node is Literal {
 
 
 function defaultNodeRenderer(node: Parent | Literal, c: Context): string {
+    if (node.type == "heading") {
+        console.log(node)
+    }
     // Base case: we return the value
     if (isLiteral(node)) {
         return node.value
@@ -104,6 +113,24 @@ function paragraphRenderer(node: Parent | Literal, c: Context): string {
     return paragraph(result, c.width)
 }
 
+function headingRenderer(node: Parent | Literal, c: Context): string {
+    const heading = node as unknown as Heading
+    let result = ""
+    heading.children.forEach((child) => {
+        const renderer = renderers[child.type] || defaultNodeRenderer
+        result += renderer(child, c)
+    })
+    switch (heading.depth) {
+        case 1:
+            return h1(result)
+        case 2:
+            return h2(result)
+        case 3:
+            return h3(result)
+        default:
+            throw new Error("Not implemented Pignouf");
+    }
+}
 
 function inlineCodeRenderer(node: Parent | Literal, c: Context): string {
     if (!isLiteral(node)) {
@@ -146,13 +173,18 @@ function imageRenderer(node: Parent | Literal, c: Context): string {
     const imgs_ascii = import.meta.glob(
         "/public/images_ascii/*.txt", { query: '?raw', eager: true }
     )
+    console.log("here")
     for (const img_path in imgs_ascii) {
         if (img_path.includes(img.url)) {
+            console.log("A")
             let img_ascii = imgs_ascii[img_path].default as string
             if (!img_ascii.endsWith("\n")) {
                 img_ascii += "\n"
             }
             return image(img_ascii, img.alt, c.width)
+        } else {
+            console.log("B")
+            return "illustration: " + img.url + "\n\n"
         }
     }
 
@@ -197,6 +229,7 @@ function listRenderer(node: Parent | Literal, c: Context): string {
 
 const renderers: Record<string, Renderer> = {
     "paragraph": paragraphRenderer,
+    "heading": headingRenderer,
     "inlineCode": inlineCodeRenderer,
     "image": imageRenderer,
     "html": htmlRenderer,
