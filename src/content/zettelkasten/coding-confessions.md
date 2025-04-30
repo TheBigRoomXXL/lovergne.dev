@@ -1,5 +1,5 @@
 ---
-link: https://words.filippo.io//
+link: https://blog.codingconfessions.com/
 title: Cofessions Of A Code Addict
 tags: ["blogroll"]
 added_date: 2025-03-19
