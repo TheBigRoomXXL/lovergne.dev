@@ -97,7 +97,7 @@ Let's analyze it step by step:
 
 This gives us the following search result in the app launcher when I search for "tinyfeed[^self-promotion]":
 
-![workspace-shortcut-1](/workspace-shortcut-1.png)
+![workspace-shortcut-1](/workspace-shortcut-1.avif)
 
 And when we press `Enter ⏎` it will open the tinyfeed workspace successfully
 
@@ -143,9 +143,9 @@ This script will create a templated `.desktop` file for each folder in the `~/re
 
 Then you only have to call it in your `.bashrc`, and your workspace shortcuts will be updated every time you open a terminal. You could also just do it in a cron job if you prefer.  
 
-This is the final result:
+This is the final result, all my workspaces are searchable in the app launcher:
 
-![workspace-shortcut-2](/workspace-shortcut-2.png)
+![workspace-shortcut-2](/workspace-shortcut-2.avif)
 
 Just for completeness: another solution could have been to use a customizable app launcher like [Ulauncher](https://ulauncher.io/) with a [VSCode extension](https://ext.ulauncher.io/-/github-brpaz-ulauncher-vscode-projects), but I like to keep my setup as standard as possible for portability.
 
