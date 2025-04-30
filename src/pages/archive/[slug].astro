@@ -30,10 +30,13 @@ type Props = {
 };
 const props = Astro.props;
 const note = props.note;
-const { Content } = await note.render();
 ---
 
-<BaseLayout title={note.data.title} description="Something awesome">
+<BaseLayout
+    title={note.data.title}
+    description="Something awesome"
+    openGraphImage={note.data.open_graph_image}
+>
     <Post post={note} />
     <div slot="before-footer" class="next-and-previous">
         {

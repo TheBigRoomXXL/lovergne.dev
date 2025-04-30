@@ -12,6 +12,7 @@ interface SiteConfig {
 	themeColor: string;
 	menuLinks: Link[];
 	socialLinks: Link[];
+	openGraphImage: string;
 }
 
 export const siteConfig: SiteConfig = {
@@ -34,4 +35,5 @@ export const siteConfig: SiteConfig = {
 		{ name: "email", url: "mailto:seb.lovergne+site@gmail.com?Subject=Hello" },
 		{ name: "RSS", url: "/rss.xml" },
 	],
+	openGraphImage: "/social-card.png",
 };

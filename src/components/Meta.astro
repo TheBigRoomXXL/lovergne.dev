@@ -3,15 +3,12 @@ import { siteConfig } from "@site-config";
 import "@csstools/normalize.css";
 import Fonts from "./Fonts.astro";
 
-const { title, description, ogImage, articleDate } = Astro.props;
+const { title, description, openGraphImage, articleDate } = Astro.props;
 
 const titleSeparator = "•";
 const pageTitle = `${title} ${titleSeparator} ${siteConfig.title}`;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const socialImageURL = new URL(
-  ogImage ? ogImage : "/social-card.png",
-  Astro.url,
-).href;
+const socialImageURL = new URL(openGraphImage, Astro.url).href;
 ---
 
 <!-- Global Metadata -->

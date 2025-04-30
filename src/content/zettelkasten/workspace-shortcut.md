@@ -3,6 +3,7 @@ link: null
 title: "VSCode workspace shortcuts with .desktop files on Linux"
 added_date: 2025-04-28
 tags: ["tool", "blog-post"]
+open_graph_image: /workspace-shortcut-1.avif
 ---
 
 One big frustration I have with my workflow currently is that I open all my apps with the app launcher (the menu that appears when you press the command key `⌘`) except one: VSCode[^clarification]. And that's a big "but" because this is probably the app I use the most after my browser. Instead, I open a terminal and type `code-oss repos/name-of-my-repo`; if I don’t, it just opens VSCode with the last workspace instead of the one I specifically want. But today, no more! Today I fixed my workflow with a simple hack: generating `.desktop` files.

@@ -31,6 +31,7 @@ const zettelkastenCollection = defineCollection({
     author: z.string().optional(),
     tags: z.array(Tag).default([]),
     pin: z.boolean().optional(),
+    open_graph_image: z.string().optional()
   }),
 });
 

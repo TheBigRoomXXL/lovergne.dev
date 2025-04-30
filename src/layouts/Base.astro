@@ -7,27 +7,24 @@ import { siteConfig } from "src/site.config";
 interface Props {
 	title?: string;
 	description?: string;
+	openGraphImage?: string;
 	frontmatter?: any;
 }
 
 let {
 	title = siteConfig.title,
 	description = siteConfig.description,
-	frontmatter,
+	openGraphImage = siteConfig.openGraphImage,
 } = Astro.props;
-
-if (frontmatter?.title != undefined) {
-	title = frontmatter.title;
-}
-
-if (frontmatter?.description != undefined) {
-	description = frontmatter.description;
-}
 ---
 
 <html lang={siteConfig.lang}>
 	<head>
-		<Meta title={title} description={description} />
+		<Meta
+			title={title}
+			description={description}
+			openGraphImage={openGraphImage}
+		/>
 	</head>
 	<body>
 		<Header />
