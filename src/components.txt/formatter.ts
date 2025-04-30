@@ -252,13 +252,19 @@ export function justifify(text: string, width: number = TXT_WIDTH): string {
 
         // 4. Add random spaces.
         const n = line.length - 1 //how many place available for spaces
-        while (m > 0) {
+        let s = 0
+        while (m > 0 && n > 0) {
             const indexs = randomUinqueIntegers(Math.min(n, m), 0, n - 1)
             indexs.forEach(i => {
                 line[i] += " "
             });
-
             m -= Math.min(n, m)
+
+            // Sanity check
+            s++
+            if (s > 100_000) {
+                throw new Error("Infinity loop");
+            }
         }
 
         // 5. start a new line

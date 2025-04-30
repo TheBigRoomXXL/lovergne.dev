@@ -12,10 +12,10 @@ One big frustration I have with my workflow currently is that I open all my apps
 
 A `.desktop` file, or rather a desktop entry file, is a very simple config that applications can use to register themselves with <dfn title="GNOME is a free and open-source desktop environment for Unix-like operating systems. Many major Linux distributions, including Debian, Fedora Linux, Ubuntu, Red Hat Enterprise Linux, and SUSE Linux Enterprise distribute GNOME as their default desktop environment">GNOME</dfn> or <dfn title="KDE is a free and open-source desktop environment for Unix-like operating systems. In its default configuration it resembles Microsoft Windows XP; however, extensive configurability allows radical departures from the default layout.">KDE</dfn>'s application system. For example, the reason you can find VSCode in the app launcher is because when you installed it, it created a file called `code.desktop` in one of the following locations:
 
-<!-- - System package: `/usr/share/applications/code-oss.desktop`
+- System package: `/usr/share/applications/code-oss.desktop`
 - Manual install: `~/.local/share/applications/code-oss.desktop`
 - Snap: `/var/lib/snapd/desktop/applications/code-oss_code-oss.desktop`
-- Flatpak: `~/.local/share/flatpak/exports/share/applications/com.visualstudio.code_oss.desktop` -->
+- Flatpak: `~/.local/share/flatpak/exports/share/applications/com.visualstudio.code_oss.desktop`
 
 The content of `/usr/share/applications/code-oss.desktop` on Alpine Linux is:
 ```
