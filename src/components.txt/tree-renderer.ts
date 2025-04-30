@@ -10,39 +10,45 @@ import { fromMarkdown } from 'mdast-util-from-markdown'
 // just override the type with the `as` in a safe context.
 
 type Node = {
-    type: string,
+    type: string;
 }
 type Parent = Node & {
-    children: Array<Parent | Literal>
+    children: Array<Parent | Literal>;
 }
 type Literal = Node & {
-    value: string
+    value: string;
 }
 
 type Heading = {
     type: "heading";
     depth: number;
-    children: Array<Parent | Literal>
+    children: Array<Parent | Literal>;
 }
 
 type Image = {
     type: "image";
     url: string;
-    alt: string
+    alt: string;
 }
 
 type Link = Parent & {
-    url: string
+    url: string;
 }
 
 type List = Parent & {
-    ordered?: boolean
-    start: number
+    ordered?: boolean;
+    start: number;
+}
+
+type Code = {
+    type: "code";
+    value: string;
+    lang: string;
 }
 
 type Context = {
     width: number; // max length of a line
-    footerNotes: string[]
+    footerNotes: string[];
 }
 type Renderer = (n: Parent | Literal, c: Context) => string
 
@@ -72,9 +78,6 @@ function isLiteral(node: Parent | Literal): node is Literal {
 
 
 function defaultNodeRenderer(node: Parent | Literal, c: Context): string {
-    if (node.type == "heading") {
-        console.log(node)
-    }
     // Base case: we return the value
     if (isLiteral(node)) {
         return node.value
@@ -138,6 +141,11 @@ function inlineCodeRenderer(node: Parent | Literal, c: Context): string {
     }
 
     return "`" + node.value + "`"
+}
+
+function codeRenderer(node: Parent | Literal, c: Context): string {
+    const code = node as unknown as Code
+    return "```" + code.lang + "\n" + code.value + "\n```\n\n"
 }
 
 // Disabled because it breack monospace fonts
@@ -230,6 +238,7 @@ function listRenderer(node: Parent | Literal, c: Context): string {
 const renderers: Record<string, Renderer> = {
     "paragraph": paragraphRenderer,
     "heading": headingRenderer,
+    "code": codeRenderer,
     "inlineCode": inlineCodeRenderer,
     "image": imageRenderer,
     "html": htmlRenderer,

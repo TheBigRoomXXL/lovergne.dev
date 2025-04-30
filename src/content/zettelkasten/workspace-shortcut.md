@@ -8,14 +8,14 @@ tags: ["tool", "blog-post"]
 One big frustration I have with my workflow currently is that I open all my apps with the app launcher (the menu that appears when you press the command key `⌘`) except one: VSCode[^clarification]. And that's a big "but" because this is probably the app I use the most after my browser. Instead, I open a terminal and type `code-oss repos/name-of-my-repo`; if I don’t, it just opens VSCode with the last workspace instead of the one I specifically want. But today, no more! Today I fixed my workflow with a simple hack: generating `.desktop` files.
 
 
-### But what is a `.desktop` file?
+## But what is a `.desktop` file?
 
 A `.desktop` file, or rather a desktop entry file, is a very simple config that applications can use to register themselves with <dfn title="GNOME is a free and open-source desktop environment for Unix-like operating systems. Many major Linux distributions, including Debian, Fedora Linux, Ubuntu, Red Hat Enterprise Linux, and SUSE Linux Enterprise distribute GNOME as their default desktop environment">GNOME</dfn> or <dfn title="KDE is a free and open-source desktop environment for Unix-like operating systems. In its default configuration it resembles Microsoft Windows XP; however, extensive configurability allows radical departures from the default layout.">KDE</dfn>'s application system. For example, the reason you can find VSCode in the app launcher is because when you installed it, it created a file called `code.desktop` in one of the following locations:
 
-- System package: `/usr/share/applications/code-oss.desktop`
+<!-- - System package: `/usr/share/applications/code-oss.desktop`
 - Manual install: `~/.local/share/applications/code-oss.desktop`
 - Snap: `/var/lib/snapd/desktop/applications/code-oss_code-oss.desktop`
-- Flatpak: `~/.local/share/flatpak/exports/share/applications/com.visualstudio.code_oss.desktop`
+- Flatpak: `~/.local/share/flatpak/exports/share/applications/com.visualstudio.code_oss.desktop` -->
 
 The content of `/usr/share/applications/code-oss.desktop` on Alpine Linux is:
 ```
@@ -67,7 +67,7 @@ As you can see, it contains a lot of metadata to help your desktop environment p
 If you are interested, there are other options for more advanced functionality described in the [desktop-entry specification](https://specifications.freedesktop.org/desktop-entry-spec/latest-single/#recognized-keys). Most of those options won't be very useful to us, but it's always good to know what we are working with.
 
 
-### How does that help me open a workspace quickly?
+## How does that help me open a workspace quickly?
 
 We could add a custom action to VSCode to open a specific folder, but the downside of that is that the action is hidden behind a right-click and is not directly searchable.
 
@@ -101,7 +101,7 @@ This gives us the following search result in the app launcher when I search for 
 
 And when we press `Enter ⏎` it will open the tinyfeed workspace successfully
 
-### Okay but now I need to manually maintain a file for each repos?
+## Okay but now I need to manually maintain a file for each repos?
 
 Indeed, maintaining that by hand would be annoying but you can trivially write a bash script to automate the generation of `.desktop` files: 
 
@@ -152,4 +152,3 @@ Just for completeness: another solution could have been to use a customizable ap
 [^clarification]: *VSCode vs Code-OSS vs Codium*: In this article, when I refer to VSCode I actually refer to [code-oss](https://github.com/microsoft/vscode), the open-source version of VSCode—not the proprietary version, and also not [Codium](https://github.com/VSCodium/vscodium), the open-source and slightly modified version of VSCode. It matters because I launch it with the command `code-oss`, not `code`. You might need to adapt my scripts accordingly. Same goes for file paths.
 
 [^self-promotion]: Check out [tinyfeed](https://github.com/TheBigRoomXXL/tinyfeed), a minimalist self-hosted RSS reader that generates static HTML pages for your consumption.
-
