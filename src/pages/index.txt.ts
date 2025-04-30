@@ -4,14 +4,6 @@ import { Footer } from "src/components.txt/Footer";
 import { Activity } from "src/components.txt/Activity.txt";
 import { getCollection } from "astro:content";
 
-let notes = await getCollection("zettelkasten");
-
-notes.sort((n1, n2) => {
-    if (n1.data.added_date > n2.data.added_date) return -1;
-    else if (n1.data.added_date < n2.data.added_date) return 1;
-    else return 0;
-});
-
 export async function GET() {
     return new Response(
         Header() +

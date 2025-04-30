@@ -10,9 +10,7 @@ const postAndProject = notes
         (n) => n.data.tags.includes("blog-post") || n.data.tags.includes("project"),
     )
     .sort((n1, n2) => {
-        if (n2.data.pin) return 1;
-        if (n1.data.pin) return -1;
-        else if (n1.data.added_date > n2.data.added_date) return -1;
+        if (n1.data.added_date > n2.data.added_date) return -1;
         else if (n1.data.added_date < n2.data.added_date) return 1;
         else return 0;
     });
@@ -23,9 +21,7 @@ const others = notes
             !n.data.tags.includes("blog-post") && !n.data.tags.includes("project"),
     )
     .sort((n1, n2) => {
-        if (n2.data.pin) return 1;
-        if (n1.data.pin) return -1;
-        else if (n1.data.added_date > n2.data.added_date) return -1;
+        if (n1.data.added_date > n2.data.added_date) return -1;
         else if (n1.data.added_date < n2.data.added_date) return 1;
         else return 0;
     });
