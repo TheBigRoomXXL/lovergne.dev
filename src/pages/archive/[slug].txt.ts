@@ -1,11 +1,10 @@
-import { preview, type APIRoute } from 'astro';
+import { type APIRoute } from 'astro';
 import type { CollectionEntry } from "astro:content";
-import { TXT_WIDTH, h1, paragraph } from "src/components.txt/formatter"
+import { TXT_WIDTH } from "src/components.txt/formatter"
 import { Header } from "src/components.txt/Header.txt"
 import { Footer } from "src/components.txt/Footer";
 import { getCollection } from "astro:content";
-
-import { renderMarkdownToPlainTxt } from 'src/components.txt/tree-renderer';
+import { Post } from 'src/components.txt/Post.txt';
 
 
 export async function getStaticPaths() {
@@ -35,18 +34,7 @@ type Props = {
 
 export const GET: APIRoute<Props> = ({ props }) => {
     let result = Header()
-    const note = props.note
-    let title = note.data.title
-    if (note.data.author) {
-        title += ` by ${note.data.author}`
-    }
-    if (note.data.published_date) {
-        title += ` (${note.data.published_date.getFullYear()})`
-    }
-    result += h1(title)
-    result += paragraph("This page is about : " + note.data.link)
-
-    result += renderMarkdownToPlainTxt(note.body, {})
+    result += Post(props.note)
 
     const left = props.previous ? `<< ${props.previous.slug}` : ""
     const right = props.next ? `${props.next.slug} >>` : ""

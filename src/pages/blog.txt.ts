@@ -2,6 +2,7 @@ import { h1, paragraph, bold } from "src/components.txt/formatter"
 import { Header } from "src/components.txt/Header.txt"
 import { Footer } from "src/components.txt/Footer";
 import { Card } from "src/components.txt/Card.txt";
+import { Post } from 'src/components.txt/Post.txt';
 import { getCollection } from "astro:content";
 
 let notes = await getCollection("zettelkasten");
@@ -18,7 +19,7 @@ notes = notes
 
 
 const cards = notes.reduce((acc, note) => {
-    return acc + Card(note) + "\n"
+    return acc + Post(note) + "\n\n"
 }, "")
 
 export async function GET() {
