@@ -49,8 +49,7 @@ h4,
 h5 {
     margin: 1.5em 0 .5rem;
     line-height: 1.2em;
-    letter-spacing: .1em;
-    font-weight: 600;
+    font-weight: bold;
     clear: both;
     font-family: 'Chakra Petch', ui-monospace, "monospace";
 }
@@ -65,15 +64,15 @@ h4+h5 {
 }
 
 h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
 }
 
 h2 {
-    font-size: 1.9rem;
+    font-size: 1.75rem;
 }
 
 h3 {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
 }
 
 h4,
