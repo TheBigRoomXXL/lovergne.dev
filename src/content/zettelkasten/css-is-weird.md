@@ -19,7 +19,7 @@ remarkably, the User.
 
 ![Author, browser, and user styles consolidate into one style throught cascade](/cascade.svg)
 
-It also allows us to fail gracefully by cascading upward wich is good for
+It also allows us to fail gracefully by cascading upward which is good for
 resilence and backward compatibility.
 But the tradeoff is that your instructions can be overridden, they became
 suggestions. This is one of the pitfalls of CCS and why we sometime have to use

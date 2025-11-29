@@ -7,6 +7,6 @@ tags: ["awesome","tool"]
 Make the web simple again! Alpine.js provide DOM reactivity and
 two-way data binding thought a lightweight framework. It's build on top of
 the `@vue/reactivity` package, which is it's only dependency, and the whole
-framework is ~16kb minified and compressed. Alpine.js work very well on it's
+framework is ~16KB minified and compressed. Alpine.js work very well on it's
 owm but I think it would be very interesting to see if it synergize well with
 HTMX for the place where client site reactivity is absolutly needed.

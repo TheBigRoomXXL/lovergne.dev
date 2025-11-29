@@ -23,7 +23,7 @@ export async function GET() {
         h1("Blogroll") +
         paragraph(`A (partial) list of blogs I like and consistently read. You can follow all
     of them through the magic of RSS.`) +
-        paragraph(`The list is sorted randomly, expect for my favorites wich are pinned.`) +
+        paragraph(`The list is sorted randomly, expect for my favorites which are pinned.`) +
         cards +
         Footer()
     )

@@ -31,7 +31,7 @@ export async function GET() {
         paragraph(`Potential subjects include, but are not limited to, programming,
         engineering, technology, and woodworking.`) +
         paragraph(`The list is sorted by date of addition (latest first), expect for my
-        favorites wich are pinned.`) +
+        favorites which are pinned.`) +
         cards +
         Footer()
     )

@@ -9,7 +9,7 @@ Schemathesis is an incredible fuzzer for REST and GraphQL API. It
 can be used through   CLI or integrate directly with your unit test in python.
 Thanks to it's property-based testing, I have found numerous bug, including
 inside my dependencies, . It also help me catch bad documentation with it's
-response schema validation. I definitly integrate it inside my CI/CD pipeline
+response schema validation. I definitely integrate it inside my CI/CD pipeline
 whenever I can.
 
 If you have been impressed by schemathesis capability like me and you want to

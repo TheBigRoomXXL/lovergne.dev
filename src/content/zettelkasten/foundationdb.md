@@ -6,7 +6,7 @@ published_date: 2021-06-18
 tags: ["awesome","paper", "database", "distributed"]
 ---
 
-FoundationDB is a distributed transactional key value store created in 2009 wich 
+FoundationDB is a distributed transactional key value store created in 2009 which 
 guarantee ACID transactions at scale.
 
 This is paper published by the FoundationDB team summarising there
