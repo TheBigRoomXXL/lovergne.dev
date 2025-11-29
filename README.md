@@ -17,6 +17,7 @@ it doesn't count!).
 - **Fully accessible:** built with semantic HTML and accessibility in mind
 - **Light and Fast:** 24.16kB landing page.
 - **It's simple** and has minimal runtime dependency.
+- **Every page is also rendered in plain texte:** this is done with a custom renderer based on the markdown AST. check out [lovergne.dev/index.txt](https://lovergne.dev/index.txt)  
 - **It's beautiful**, well for me at least. And I really my little isometric logo. 
 - **Dark / Light** theme based on `prefers-color-scheme`
 - **Sufficient SEO support**: see [Meta.astro](https://github.com/TheBigRoomXXL/my-site/blob/main/src/components/Meta.astro)
