@@ -18,6 +18,10 @@ export function GET(context: APIContext) {
       content: entry.body + `<br><a href="${entry.data.link}">${entry.data.link}</a>`,
       link: `${context.site}awesome#${entry.slug}`,
     })),
-    customData: `<language>${siteConfig.lang}</language>`,
+    xmlns: { atom: "http://www.w3.org/2005/Atom" },
+    customData: `
+      <language>${siteConfig.lang}</language>
+      <atom:link href="${context.site}rss.xml" rel="self" type="application/rss+xml"/>
+    `,
   });
 }
